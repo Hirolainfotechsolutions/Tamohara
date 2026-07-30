@@ -1,0 +1,313 @@
+import { useEffect, useRef, useState } from 'react'
+import { FaArrowRight, FaLeaf, FaRegHandshake, FaSeedling, FaSpa } from 'react-icons/fa6'
+import Button from '../ui/Button'
+
+function RoomsPreviewSection({ rooms }) {
+  const [activeRoomIndex, setActiveRoomIndex] = useState(0)
+
+  return (
+    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 max-w-3xl">
+          <p className="section-eyebrow mb-4">{rooms.eyebrow}</p>
+          <h2 className="heading-display text-[clamp(40px,5vw,64px)] leading-[1.02]">{rooms.title}</h2>
+          <p className="body-copy mt-5 max-w-2xl text-base leading-8">{rooms.description}</p>
+        </div>
+
+        <div className="overflow-hidden rounded-[var(--radius-app)] border border-[var(--color-border)]">
+          {rooms.items.map((room, index) => {
+            const isActive = activeRoomIndex === index
+            const roomImage = room.image ?? rooms.items[0].image
+            const roomImageAlt = room.imageAlt ?? `${room.title} at Tamohra Resort`
+
+            return (
+              <article
+                className={`grid border-b border-[var(--color-border)] transition-[grid-template-columns,min-height,background-color,color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] last:border-b-0 lg:grid-cols-[0fr_1fr] ${
+                  isActive
+                    ? 'min-h-[180px] bg-[var(--color-primary-dark)] text-[var(--color-white)] lg:grid-cols-[280px_1fr]'
+                    : 'min-h-[112px] bg-[var(--color-surface)] text-[var(--color-black)]'
+                }`}
+                key={room.title}
+                onFocus={() => setActiveRoomIndex(index)}
+                onMouseEnter={() => setActiveRoomIndex(index)}
+                tabIndex={0}
+              >
+                <div
+                  className={`overflow-hidden transition-[height,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] lg:h-auto ${
+                    isActive ? 'h-44 opacity-100' : 'h-0 opacity-0 lg:opacity-100'
+                  }`}
+                >
+                  <img
+                    className={`h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                      isActive ? 'scale-100' : 'scale-105'
+                    }`}
+                    src={roomImage}
+                    alt={roomImageAlt}
+                  />
+                </div>
+                <div className="grid content-center overflow-hidden px-6 py-7 transition-[padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                  <h3 className="heading-display text-3xl font-semibold text-inherit transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                    {room.title}
+                  </h3>
+                  <p
+                    className={`mt-3 text-sm leading-6 transition-[color,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                      isActive ? 'translate-y-0 text-white/82 opacity-100' : 'translate-y-1 body-copy opacity-80'
+                    }`}
+                  >
+                    {room.description}
+                  </p>
+                </div>
+              </article>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function WellnessSection({ wellness }) {
+  const sectionRef = useRef(null)
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  useEffect(() => {
+    const updateProgress = () => {
+      if (!sectionRef.current) return
+
+      const rect = sectionRef.current.getBoundingClientRect()
+      const viewportHeight = window.innerHeight || 1
+      const progress = (viewportHeight - rect.top) / (viewportHeight + rect.height)
+      setScrollProgress(Math.min(Math.max(progress, 0), 1))
+    }
+
+    updateProgress()
+    window.addEventListener('scroll', updateProgress, { passive: true })
+    window.addEventListener('resize', updateProgress)
+
+    return () => {
+      window.removeEventListener('scroll', updateProgress)
+      window.removeEventListener('resize', updateProgress)
+    }
+  }, [])
+
+  const motion = Math.min(Math.max((scrollProgress - 0.18) / 0.48, 0), 1)
+  const leftTransform = `translateX(${(1 - motion) * 72}px) rotate(${-6 * motion}deg)`
+  const rightTransform = `translateX(${(1 - motion) * -72}px) rotate(${6 * motion}deg)`
+  const centerTransform = `translateY(${motion * 42}px) scale(${0.96 + motion * 0.04})`
+
+  return (
+    <section ref={sectionRef} className="soft-section grid min-h-svh overflow-hidden px-4 py-14 sm:px-6 lg:py-16">
+      <div className="mx-auto grid w-full max-w-6xl content-center text-center">
+        <p className="section-eyebrow mb-4">{wellness.eyebrow}</p>
+        <h2 className="heading-display mx-auto max-w-5xl text-[clamp(42px,6vw,82px)] font-semibold leading-[0.95]">{wellness.title}</h2>
+        <p className="body-copy mx-auto mt-6 max-w-2xl text-lg leading-8">{wellness.description}</p>
+
+        <div className="mt-12 grid items-center gap-5 lg:grid-cols-3">
+          {wellness.images.map((image, index) => (
+            <img
+              className="h-[280px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] transition-transform duration-200 ease-out sm:h-[320px] lg:h-[360px]"
+              style={{
+                transform: index === 0 ? leftTransform : index === 2 ? rightTransform : centerTransform,
+                zIndex: index === 1 ? 2 : 1,
+              }}
+              src={image.src}
+              alt={image.alt}
+              key={image.alt}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ElegantRoomsGallerySection({ gallery }) {
+  const renderTitle = () => {
+    if (!gallery.highlight || !gallery.title.includes(gallery.highlight)) {
+      return gallery.title
+    }
+
+    const [before, after] = gallery.title.split(gallery.highlight)
+
+    return (
+      <>
+        {before}
+        <span className="italic text-[var(--color-primary-dark)]">{gallery.highlight}</span>
+        {after}
+      </>
+    )
+  }
+
+  const imageSizes = [
+    'h-[240px] w-[220px] sm:h-[280px] sm:w-[260px]',
+    'h-[310px] w-[230px] sm:h-[360px] sm:w-[300px]',
+    'h-[230px] w-[220px] sm:h-[270px] sm:w-[280px]',
+    'h-[190px] w-[220px] sm:h-[230px] sm:w-[270px]',
+    'h-[250px] w-[220px] sm:h-[300px] sm:w-[280px]',
+    'h-[210px] w-[220px] sm:h-[250px] sm:w-[270px]',
+    'h-[260px] w-[220px] sm:h-[310px] sm:w-[280px]',
+  ]
+
+  return (
+    <section className="soft-section overflow-hidden px-4 py-16 sm:px-6 lg:py-24">
+      <div className="mx-auto max-w-7xl text-center">
+        <h2 className="heading-display text-[clamp(42px,6vw,76px)] font-semibold leading-none">
+          {renderTitle()}
+        </h2>
+        <p className="body-copy mx-auto mt-5 max-w-xl leading-7">{gallery.description}</p>
+        <Button className="mx-auto mt-7" to={gallery.button.href}>
+          {gallery.button.label}
+          <FaArrowRight aria-hidden="true" />
+        </Button>
+      </div>
+
+      <div className="relative left-1/2 mt-20 w-screen -translate-x-1/2 overflow-hidden py-10 lg:mt-24">
+        <div
+          className="flex w-max items-center gap-4 will-change-transform sm:gap-6"
+          style={{ animation: 'roomsMarquee 34s linear infinite' }}
+        >
+          {[...gallery.images, ...gallery.images].map((image, index) => (
+            <div
+              className={`shrink-0 ${imageSizes[index % imageSizes.length]}`}
+              key={`${image.alt}-${index}`}
+            >
+              <img
+                className="h-full w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)]"
+                src={image.src}
+                alt={image.alt}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function FeaturedStaySection({ stay }) {
+  return (
+    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[1.35fr_0.75fr]">
+        <img className="min-h-[460px] rounded-[var(--radius-app)] object-cover" src={stay.image} alt={stay.imageAlt} />
+        <div className="grid content-end rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] p-8 text-[var(--color-white)] lg:p-14">
+          <p className="banner-eyebrow mb-5">{stay.eyebrow}</p>
+          <h2 className="heading-display text-5xl font-semibold leading-none text-[var(--color-white)]">{stay.title}</h2>
+          <p className="mt-5 max-w-sm text-lg leading-8 text-white/75">{stay.description}</p>
+          <Button className="mt-8 w-fit" to={stay.button.href}>{stay.button.label}</Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ValuesSection({ values }) {
+  const icons = [FaRegHandshake, FaSpa, FaLeaf]
+
+  return (
+    <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[var(--radius-app)]">
+        <img className="h-[560px] w-full object-cover" src={values.image} alt={values.imageAlt} />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-hero-overlay-start),var(--color-hero-overlay-end))]" />
+        <div className="absolute left-6 top-8 max-w-2xl text-[var(--color-white)] lg:left-10 lg:top-12">
+          <p className="banner-eyebrow mb-5">{values.eyebrow}</p>
+          <h2 className="banner-title max-w-2xl text-[clamp(42px,5vw,70px)]">{values.title}</h2>
+          <p className="banner-copy mt-5 max-w-xl">{values.description}</p>
+        </div>
+      </div>
+
+      <div className="relative z-10 mx-auto -mt-28 grid max-w-4xl gap-5 px-6 sm:grid-cols-3">
+        {values.items.map((item, index) => {
+          const Icon = icons[index] ?? FaSeedling
+          return (
+            <article className="soft-card grid min-h-[190px] rounded-[var(--radius-app)] border border-[var(--color-border)] p-6 shadow-[var(--shadow-soft)]" key={item}>
+              <h3 className="heading-display text-2xl font-semibold">{item}</h3>
+              <Icon className="mt-auto h-8 w-8 text-[var(--color-primary-dark)]" aria-hidden="true" />
+            </article>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+function OffersSection({ offers }) {
+  return (
+    <section className="relative overflow-hidden px-4 py-20 text-center text-[var(--color-white)] sm:px-6 lg:py-28">
+      <img className="absolute inset-0 h-full w-full object-cover" src={offers.image} alt={offers.imageAlt} />
+      <div className="absolute inset-0 bg-[var(--color-overlay-strong)]" />
+      <div className="relative z-10 mx-auto max-w-3xl">
+        <p className="banner-eyebrow mb-5">{offers.eyebrow}</p>
+        <h2 className="heading-display text-[clamp(42px,6vw,76px)] font-semibold leading-[1.02] text-[var(--color-white)]">{offers.title}</h2>
+        <p className="banner-copy mx-auto mt-6 max-w-2xl">{offers.description}</p>
+        <Button className="mt-8" to={offers.button.href}>{offers.button.label}</Button>
+      </div>
+    </section>
+  )
+}
+
+function ExperiencesSection({ experiences }) {
+  return (
+    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+      <div className="mx-auto max-w-7xl">
+        <p className="section-eyebrow mb-5">{experiences.eyebrow}</p>
+        <h2 className="heading-display max-w-5xl text-[clamp(44px,6vw,82px)] font-semibold leading-[1.02]">{experiences.title}</h2>
+        <p className="body-copy mt-5 max-w-2xl text-lg leading-8">{experiences.description}</p>
+
+        <div className="mt-10 grid gap-4 lg:grid-cols-[1.1fr_0.75fr]">
+          <a className="group relative min-h-[520px] overflow-hidden rounded-[var(--radius-app)]" href={experiences.primary.href}>
+            <img className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src={experiences.primary.image} alt={experiences.primary.imageAlt} />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,var(--color-overlay-strong))]" />
+            <div className="absolute bottom-8 left-8 max-w-xl text-[var(--color-white)]">
+              <h3 className="banner-title text-[clamp(40px,5vw,64px)]">{experiences.primary.title}</h3>
+              <span className="primary-button mt-6">Book Now</span>
+            </div>
+          </a>
+
+          <div className="grid gap-4">
+            {experiences.items.map((item) => (
+              <a className="group relative min-h-[160px] overflow-hidden rounded-[var(--radius-app)]" href={item.href} key={item.title}>
+                <img className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src={item.image} alt={item.imageAlt} />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,var(--color-overlay-strong))]" />
+                <h3 className="heading-display absolute bottom-6 right-6 flex items-center gap-3 text-4xl text-[var(--color-white)]">
+                  {item.title}
+                  <FaArrowRight className="h-5 w-5" aria-hidden="true" />
+                </h3>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function FinalCtaSection({ cta }) {
+  return (
+    <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+      <div className="mx-auto max-w-7xl">
+        <p className="section-eyebrow mb-5">{cta.eyebrow}</p>
+        <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto_1fr]">
+          <h2 className="heading-display text-[clamp(74px,13vw,180px)] font-semibold leading-[0.82]">Escape</h2>
+          <Button className="mb-4 w-fit" to={cta.button.href}>
+            {cta.button.label}
+            <FaArrowRight aria-hidden="true" />
+          </Button>
+          <h2 className="heading-display text-[clamp(74px,13vw,180px)] font-semibold leading-[0.82] lg:text-right">Reality</h2>
+        </div>
+        <p className="body-copy mt-6 max-w-2xl text-lg leading-8">{cta.description}</p>
+        <img className="mt-10 h-[420px] w-full rounded-[var(--radius-app)] object-cover" src={cta.image} alt={cta.imageAlt} />
+      </div>
+    </section>
+  )
+}
+
+export {
+  ElegantRoomsGallerySection,
+  ExperiencesSection,
+  FeaturedStaySection,
+  FinalCtaSection,
+  OffersSection,
+  RoomsPreviewSection,
+  ValuesSection,
+  WellnessSection,
+}

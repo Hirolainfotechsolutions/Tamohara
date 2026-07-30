@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #c89b63;
+  --color-primary-hover: #b8894f;
+  --color-primary-dark: #1f3d32;
+  --color-secondary: #a3b19b;
+  --color-secondary-soft: #e8eee3;
+  --color-secondary-light: #f2f6ef;
+  --color-black: #14231d;
+  --color-white: #ffffff;
+  --color-surface: #f7f5ef;
+  --color-muted: #5f6d64;
+  --color-border: rgba(31, 61, 50, 0.22);
+  --color-overlay: rgba(20, 35, 29, 0.42);
+  --color-overlay-strong: rgba(20, 35, 29, 0.72);
+  --color-hero-overlay-start: rgba(20, 35, 29, 0.88);
+  --color-hero-overlay-mid: rgba(31, 61, 50, 0.62);
+  --color-hero-overlay-end: rgba(31, 61, 50, 0.28);
+  --color-primary-dark-overlay: rgba(31, 61, 50, 0.82);
+  --color-primary-soft-overlay: rgba(163, 177, 155, 0.58);
+  --color-white-glow: rgba(255, 255, 255, 0.14);
+  --color-black-soft: rgba(20, 35, 29, 0.12);
+  --color-black-medium: rgba(20, 35, 29, 0.18);
+  --color-ornament: #ffffff;
+
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+
+  --radius-app: 8px;
+  --shadow-soft: 0 18px 50px rgba(20, 35, 29, 0.12);
+  --shadow-round: 0 10px 28px rgba(20, 35, 29, 0.1);
+  --shadow-header: 0 10px 30px rgba(20, 35, 29, 0.08);
+
+  font-family: var(--font-body);
+  color: var(--color-black);
+  background: var(--color-surface);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: var(--color-surface);
+    color: var(--color-black);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatUpReturn {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+
+  @keyframes floatDownReturn {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(30px);
+    }
+  }
+
+  @keyframes roomsMarquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer components {
+  .app-section {
+    background: var(--color-surface);
+  }
+
+  .soft-section {
+    background: linear-gradient(180deg, var(--color-surface), var(--color-secondary-soft));
+  }
+
+  .soft-card {
+    background: var(--color-secondary-light);
+  }
+
+  .heading-display {
+    font-family: var(--font-display);
+    color: var(--color-black);
+    letter-spacing: 0;
+  }
+
+  .section-eyebrow {
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .body-copy {
+    color: var(--color-muted);
+  }
+
+  .brand-title {
+    font-family: var(--font-display);
+    font-size: clamp(34px, 3vw, 42px);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .brand-subtitle {
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.42em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .nav-text {
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 640px) {
+    .nav-text {
+      font-size: 0.8125rem;
+    }
+  }
+
+  .meta-text {
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .card-title {
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .banner-eyebrow {
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .banner-title {
+    font-family: var(--font-display);
+    color: var(--color-white);
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 0.98;
+  }
+
+  .banner-copy {
+    color: rgb(255 255 255 / 0.9);
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .banner-copy {
+      font-size: 1.125rem;
+    }
+  }
+
+  .hero-ornament {
+    background: radial-gradient(
+        circle at 6px 50%,
+        transparent 5px,
+        var(--color-ornament) 5.6px,
+        transparent 6.2px
+      )
+      0 0 / 19px 18px repeat-x;
+  }
+
+  .primary-button {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-radius: var(--radius-app);
+    background: var(--color-primary);
+    color: var(--color-black);
+    padding: 0 1.75rem;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .primary-button:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .rooms-carousel {
+    --rooms-visible: 1;
+    --rooms-gap: 20px;
+  }
+
+  .rooms-carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - ((var(--rooms-visible) - 1) * var(--rooms-gap))) / var(--rooms-visible));
+    gap: var(--rooms-gap);
+  }
+
+  @media (min-width: 640px) {
+    .rooms-carousel {
+      --rooms-visible: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .rooms-carousel {
+      --rooms-visible: 3;
+    }
+  }
+}
