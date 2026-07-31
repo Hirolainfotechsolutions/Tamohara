@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa6'
+import ContactPeaceBanner from '../components/contact/ContactPeaceBanner'
 import SiteFooter from '../components/layout/SiteFooter'
 import SiteHeader from '../components/layout/SiteHeader'
 import { siteData } from '../data/site.data'
@@ -139,6 +140,8 @@ function ContactFormPage({ data }) {
         <div className="sticky top-0 z-50">
           <SiteHeader isSticky />
         </div>
+
+        <ContactPeaceBanner />
 
         <section className="px-5 py-16 sm:px-8 lg:py-24">
           <div className="mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[0.78fr_1fr] lg:gap-24">

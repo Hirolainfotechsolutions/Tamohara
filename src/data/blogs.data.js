@@ -8,7 +8,7 @@ export const blogsPageData = {
   eyebrow: 'Tamohra Resort Journal',
   title: 'Stories from the Western Ghats',
   description:
-    'Modern travel notes from Sakleshpur: coffee estate mornings, mist-clad trails, relaxed rooms, generous meals, and slower mountain weekends.',
+    'Modern travel notes from Sakleshpur: nearby forts and falls, coffee estate activities, buffet meals, relaxed rooms, and slower mountain weekends.',
   featuredLabel: 'Featured Story',
   readMoreLabel: 'Read Story',
   posts: [
@@ -23,9 +23,9 @@ export const blogsPageData = {
       image: bannerImage,
       imageAlt: 'Tamohra Resort pool and mountain view',
       body: [
-        'Sakleshpur rewards the guest who refuses to rush. At Tamohra Resort, the weekend can begin with quiet poolside light, warm breakfast, and the kind of mountain air that makes even ordinary mornings feel ceremonial.',
-        'Keep the first day gentle. Walk the property, settle into your room, and let the Western Ghats do their quiet work. The best stays here are not packed with too many plans; they leave room for coffee, conversation, and long pauses.',
-        'On the second morning, step out early for estate roads or forest trails. Return for a relaxed meal, an afternoon nap, and an evening by the pool. That rhythm is the real luxury.',
+        'Sakleshpur rewards the guest who refuses to rush. At Tamohra Resort, the weekend can begin with quiet poolside light, South Indian breakfast, and the kind of mountain air that makes even ordinary mornings feel ceremonial.',
+        'Keep the first day gentle. Walk the property, settle into your room, try the pool, and leave room for hi-tea snacks, coffee, conversation, and long pauses.',
+        'On the second morning, step out for an estate trek, Burma bridge, rope activities, shuttle, cricket, or a nearby drive. Return for buffet meals, an afternoon nap, and an evening of campfire and music.',
       ],
     },
     {
@@ -41,7 +41,7 @@ export const blogsPageData = {
       body: [
         'The trails around Sakleshpur shift quickly from shaded forest to open hilltops. Some paths are damp and intimate, with streams, small waterfalls, insects, and birds. Others rise toward windier grasslands where the clouds feel close enough to touch.',
         'Guests who enjoy active weekends should start early, carry water, wear practical shoes, and ask the team about routes that match their comfort level. The hills are beautiful, but the best walks are the ones planned with care.',
-        'A flask of filter coffee turns a view into a memory. Pause often, look slowly, and return before the day gets too heavy.',
+        'Nearby options include Manzerabad Fort and Hanbal Falls around 10 km away, Bettada Byraveshwara and Railway Tunnel around 25 km away, Devaramane around 35 km away, and Bisle Ghat, Belur, and Halebeed around 40 km away.',
       ],
     },
     {
@@ -51,12 +51,12 @@ export const blogsPageData = {
       readTime: '3 min read',
       title: 'Why an all-meals stay feels easier',
       excerpt:
-        'Breakfast, lunch, and dinner are part of the Tamohra stay, giving groups more time to relax and less time to plan.',
+        'Breakfast, lunch, dinner, and hi-tea are part of the Tamohra rhythm, giving groups more time to relax and less time to plan.',
       image: diningImage,
       imageAlt: 'Dining and banquet space at Tamohra Resort',
       body: [
-        'Meals shape the pace of a resort stay. When breakfast, lunch, and dinner are already included, the day becomes simpler for couples, families, and larger groups.',
-        'Instead of coordinating restaurant runs or splitting plans, guests can stay close to the pool, rooms, trails, and shared spaces. The experience feels more complete because the essentials are already handled.',
+        'Meals shape the pace of a resort stay. Lunch and dinner at Tamohra follow a buffet format with pickle, pappad, salad, soup, roti or kulcha, veg sabzi, rice varieties, sambar, rasam, curds, dessert, and vegetarian and non-vegetarian options.',
+        'Breakfast includes two South Indian dishes, cut fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk. Hi-tea is served with veg pakoda or bajji, making the late afternoon feel easy after pool time or activities.',
         'For group stays, this is especially useful. Everyone can gather naturally, eat comfortably, and return to the weekend without turning every meal into a decision.',
       ],
     },
@@ -88,8 +88,8 @@ export const blogsPageData = {
       imageAlt: 'Sharing room at Tamohra Resort',
       body: [
         'Tamohra Resort offers rooms for different group sizes, from 2 sharing to 12 sharing. The right choice depends less on the label and more on how your group likes to spend time.',
-        'Couples or close friends may prefer the quieter 2-sharing room. Families and small groups often settle well into 4 or 6 sharing options. Larger gatherings can look at 8 and 12 sharing rooms for a more connected stay.',
-        'If you are unsure, share your guest count and dates with the team. The best room is the one that gives everyone enough comfort while keeping the group experience easy.',
+        'There are three rooms for 2 sharing, one room for 4 sharing, two rooms for 6 sharing, two rooms for 8 sharing, and one room for 12 sharing. The villa block has four AC rooms with two-guest occupancy each.',
+        'Tariffs are Rs 6000 + taxes for 2 sharing, Rs 7000 + taxes for villa 2 occupancy, Rs 12000 + taxes for 4 sharing, Rs 16500 + taxes for 6 sharing, Rs 20000 + taxes for 8 sharing, and Rs 30000 + taxes for 12 sharing. Extra beds are available on request.',
       ],
     },
   ],

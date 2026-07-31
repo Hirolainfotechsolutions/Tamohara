@@ -11,11 +11,12 @@ export const siteData = {
   address: 'Debbegadde Village, Kyamanahally Post Hanbal Hobali, Sakaleshpur Taluk, Post, Mavinahalli, Karnataka 573165',
   booking: {
     label: 'Book Now',
-    href: '/book',
+    href: '/#book',
   },
   navigation: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Blogs', href: '/blogs' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
@@ -24,6 +25,7 @@ export const siteData = {
     navigation: [
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
+      { label: 'Gallery', href: '/gallery' },
       { label: 'Blogs', href: '/blogs' },
       { label: 'FAQ', href: '/faq' },
       { label: 'Contact', href: '/contact' },

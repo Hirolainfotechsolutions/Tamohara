@@ -5,16 +5,16 @@ export const contactPageData = {
   title: 'Get in touch',
   subtitle: 'Got questions or need travel advice?',
   description:
-    'Our friendly team is here to help you plan your dream trip and make it unforgettable.',
+    'Our team can help you choose the right sharing room, villa stay, activities, nearby places, and meal plan for your Sakleshpur trip.',
   detailsTitle: 'Contact details:',
   detailGroups: [
     {
       title: 'Office address:',
-      lines: ['Tamohra Resort', 'Sakleshpur, Karnataka', 'Western Ghats, India'],
+      lines: ['Tamohra Resort', 'Debbegadde Village, Kyamanahally Post', 'Hanbal Hobali, Sakleshpur Taluk', 'Mavinahalli, Karnataka 573165'],
     },
     {
       title: 'Registered Address',
-      lines: ['Sakleshpur Coffee Country', 'Hassan District', 'Karnataka, India'],
+      lines: ['Western Ghats Coffee Country', 'Sakleshpur, Hassan District', 'Karnataka, India'],
     },
     {
       title: 'Contact',
@@ -24,16 +24,16 @@ export const contactPageData = {
   form: {
     thankYouMessage: 'Thank you. we will contact you in a while',
     submitLabel: 'Submit Enquiry',
-    destinations: ['Room 1 - 2 Sharing', 'Room 2 - 4 Sharing', 'Room 3 - 6 Sharing', 'Room 4 - 8 Sharing', 'Room 5 - 12 Sharing', 'Banquet enquiry', 'General enquiry'],
-    budgets: ['Rs 3000 + 18% per person', 'Family stay package', 'Group stay package', 'Banquet package'],
+    destinations: ['Room for 2 Sharing', 'Villa Room - 2 Occupancy AC', 'Room for 4 Sharing', 'Room for 6 Sharing', 'Room for 8 Sharing', 'Room for 12 Sharing', 'Activities enquiry', 'Banquet enquiry', 'General enquiry'],
+    budgets: ['Rs 6000 + taxes', 'Rs 7000 + taxes villa', 'Rs 12000 + taxes', 'Rs 16500 + taxes', 'Rs 20000 + taxes', 'Rs 30000 + taxes', 'Group stay package'],
   },
   faq: {
     eyebrow: 'Frequently Asked Questions',
-    title: 'Everything you need to know before touring with us.',
+    title: 'Everything you need to know before staying with us.',
     items: [
       {
         question: 'What types of stay packages do you offer?',
-        answer: 'We offer sharing-room stays from 2 to 12 guests, with pricing from Rs 3000 + 18% per person including all 3 meals.',
+        answer: 'We offer 2, 4, 6, 8, and 12 sharing rooms, plus 2-occupancy AC villa rooms. Taxes are additional as applicable.',
       },
       {
         question: 'Can I customize my trip package?',
@@ -41,7 +41,7 @@ export const contactPageData = {
       },
       {
         question: 'What is included in the stay package?',
-        answer: 'Breakfast, lunch, dinner, linens, toiletries, swimming pool access, and essential resort amenities are included.',
+        answer: 'The stay includes breakfast, lunch, dinner, linens, toiletries, swimming pool access, and essential resort amenities.',
       },
       {
         question: 'How do you ensure quality?',
@@ -53,7 +53,7 @@ export const contactPageData = {
       },
       {
         question: 'Why should I choose Tamohra Resort?',
-        answer: 'Tamohra Resort combines Western Ghats views, coffee-country calm, all-meals convenience, and warm Sakleshpur hospitality.',
+        answer: 'Tamohra Resort combines Western Ghats views, coffee-country calm, buffet meals, activities, and warm Sakleshpur hospitality.',
       },
     ],
   },

@@ -1,4 +1,8 @@
-import heroBannerImage from '../assets/images/Tamohara-resorts-banner.jpg'
+// import heroBannerImage from '../assets/images/Tamohara-resorts-banner.jpg'
+// import heroBannerImage from '../assets/images/homebanner.webp'
+import heroBannerImage from '../assets/images/contactbanner1.webp'
+
+
 import aboutBannerImage from '../assets/images/aboutbanner.webp'
 import exteriorImage from '../assets/images/1.webp'
 import roomTwoImage from '../assets/images/8.webp'
@@ -36,58 +40,107 @@ export const homePageData = {
   amenities: {
     eyebrow: 'Amenities',
     title:
-      'From crisp linens and essential toiletries to breakfast, fine dining, banquet spaces, and a serene swimming pool, Tamohra Resort keeps every stay effortless.',
+      'Buffet meals, pool time, estate treks, rope activities, and campfire evenings shape every stay at Tamohra Resort.',
     image: diningHallImage,
     imageAlt: 'Tamohra Resort poolside view',
     items: [
       { label: 'Linens', icon: 'package' },
       { label: 'Toiletries', icon: 'spa' },
-      { label: 'Breakfast', icon: 'dining' },
+      { label: 'Buffet Meals', icon: 'dining' },
       { label: 'Swimming Pool', icon: 'pool' },
-      { label: 'Fine Dining', icon: 'dining' },
-      { label: 'Banquet Hall', icon: 'events' },
+      { label: 'Rope Activities', icon: 'events' },
+      { label: 'Campfire & Music', icon: 'events' },
+    ],
+  },
+  facilitiesScroll: {
+    eyebrow: 'Resort Facilities',
+    title: 'Facilities shaped for mountain comfort',
+    image: aboutBannerImage,
+    imageAlt: 'Tamohra Resort pool and Western Ghats view',
+    items: [
+      {
+        icon: 'rooms',
+        title: 'Comfortable Sharing Rooms',
+        description:
+          'Choose practical, relaxed rooms for 2 to 12 sharing, planned for couples, families, friends, and larger groups.',
+      },
+      {
+        icon: 'pool',
+        title: 'Serene Swimming Pool',
+        description:
+          'Spend slow hours by the pool with mountain air, coffee-estate calm, and easy spaces for group downtime.',
+      },
+      {
+        icon: 'dining',
+        title: 'Buffet Meals Included',
+        description:
+          'Lunch and dinner are served buffet-style, with South Indian breakfast, tea, coffee, milk, hi-tea snacks, and simple group-friendly menus.',
+      },
+      {
+        icon: 'banquet',
+        title: 'Banquet Hall',
+        description:
+          'Host reunions, celebrations, and small group occasions with resort hospitality and a warm indoor setting.',
+      },
+      {
+        icon: 'essentials',
+        title: 'Linens and Toiletries',
+        description:
+          'Essential stay comforts are kept ready, so guests can arrive, settle in, and enjoy the hills without fuss.',
+      },
+      {
+        icon: 'trails',
+        title: 'Estate Treks and Activities',
+        description:
+          'Enjoy trekking inside the coffee estate, the Burma bridge, rope activities, outdoor shuttle, cricket, rain dance, trampoline, and campfire music.',
+      },
     ],
   },
   roomsPreview: {
     eyebrow: 'Accommodations',
     title: 'Rooms for couples, families, and groups of every size.',
     description:
-      'Choose from sharing options designed for 2 to 12 guests. Pricing starts at Rs 3000 + 18% per person and includes all 3 meals.',
+      'Choose from 2, 4, 6, 8, and 12 sharing rooms, plus 2-occupancy AC villa rooms. Tariffs are room-wise with taxes additional as applicable.',
     items: [
       {
         number: '01',
         title: 'Room 1 - 2 Sharing',
-        description: 'A comfortable 2-sharing room for couples or close friends visiting Sakleshpur.',
+        description: 'Three 2-sharing rooms are available for couples or close friends, with extra bed options on request.',
         image: roomTwoImage,
         imageAlt: 'Tamohra Resort general room view',
+        href: '/rooms/room-1',
       },
       {
         number: '02',
         title: 'Room 2 - 4 Sharing',
-        description: 'A 4-sharing stay suited for small families and easy weekend getaways.',
+        description: 'One 4-sharing room suited for small families and easy weekend getaways.',
         image: roomTwoImage,
         imageAlt: 'Tamohra Resort 4 sharing room',
+        href: '/rooms/room-2',
       },
       {
         number: '03',
         title: 'Room 3 - 6 Sharing',
-        description: 'A 6-sharing option for groups who want comfort, meals, and mountain air together.',
+        description: 'Two 6-sharing rooms for groups who want comfort, meals, and mountain air together.',
         image: roomSixImage,
         imageAlt: 'Tamohra Resort 6 sharing room',
+        href: '/rooms/room-3',
       },
       {
         number: '04',
         title: 'Room 4 - 8 Sharing',
-        description: 'An 8-sharing room made for larger families, friends, and relaxed group stays.',
+        description: 'Two 8-sharing rooms made for larger families, friends, and relaxed group stays.',
         image: roomEightImage,
         imageAlt: 'Tamohra Resort 8 sharing room',
+        href: '/rooms/room-4',
       },
       {
         number: '05',
         title: 'Room 5 - 12 Sharing',
-        description: 'A spacious 12-sharing stay for celebrations, reunions, and full-group retreats.',
+        description: 'One spacious 12-sharing room for celebrations, reunions, and full-group retreats.',
         image: roomTwelveImage,
         imageAlt: 'Tamohra Resort 12 sharing room',
+        href: '/rooms/room-5',
       },
     ],
   },
@@ -102,6 +155,23 @@ export const homePageData = {
       { src: aboutBannerImage, alt: 'Tamohra pool and mountain wellness view' },
     ],
   },
+  nearbyPlaces: {
+    eyebrow: 'Nearby Places',
+    title: 'Step out to forts, falls, ghats, and heritage towns.',
+    description:
+      'Tamohra Resort keeps you close to Sakleshpur favourites, from quick waterfall visits to longer scenic drives through the Western Ghats.',
+    image: estatePathImage,
+    imageAlt: 'Coffee estate road near Tamohra Resort',
+    items: [
+      { name: 'Manzerabad Fort', distance: '10 km' },
+      { name: 'Hanbal Falls', distance: '10 km' },
+      { name: 'Bettada Byraveshwara', distance: '25 km' },
+      { name: 'Railway Tunnel', distance: '25 km' },
+      { name: 'Devaramane', distance: '35 km' },
+      { name: 'Bisle Ghat', distance: '40 km' },
+      { name: 'Belur and Halebeed', distance: '40 km' },
+    ],
+  },
   elegantRooms: {
     title: 'Explore our elegant rooms',
     highlight: 'elegant rooms',
@@ -109,7 +179,7 @@ export const homePageData = {
       'Comfortable sharing rooms, poolside calm, and warm interiors designed for relaxed Sakleshpur stays.',
     button: {
       label: 'Explore Rooms',
-      href: '/book',
+      href: '/#book',
     },
     images: [
       { src: roomTwoImage, alt: 'Tamohra 2 sharing room' },
@@ -123,47 +193,47 @@ export const homePageData = {
   },
   featuredStay: {
     eyebrow: 'Stay Includes',
-    title: 'All 3 Meals Included',
+    title: 'Meals, mist,  mountain hospitality',
     description:
-      'Enjoy a simple, transparent stay plan at Rs 3000 + 18% per person, inclusive of breakfast, lunch, and dinner.',
+      'Breakfast includes South Indian dishes, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk. Lunch and dinner include buffet staples with vegetarian and non-vegetarian options.',
     image: buffetImage,
     imageAlt: 'Tamohra premium suite exterior',
     button: {
       label: 'More Info',
-      href: '/book',
+      href: '/#book',
     },
   },
   values: {
     eyebrow: 'Sakleshpur Hospitality',
     title: 'Old-school warmth in the heart of coffee country.',
     description:
-      'Whether you spend your vacation trekking the Western Ghats or reading from a bean bag, Tamohra Resort keeps the experience warm, grounded, and deeply local.',
+      'Spend your day trekking estate trails, crossing the Burma bridge, playing shuttle or cricket, enjoying the pool, or ending the evening with campfire and music.',
     image: forestBridgeImage,
     imageAlt: 'Tamohra resort landscape',
-    items: ['Coffee Trails', 'Mountain Hikes', 'Quiet Weekends'],
+    items: ['Estate Activities', 'Mountain Hikes', 'Campfire Nights'],
   },
   offers: {
     eyebrow: 'Pricing',
-    title: 'Stay from Rs 3000 + 18% per person',
+    title: 'Room tariffs for every group size',
     description:
-      'Your stay includes all 3 meals, access to essential amenities, and a refreshing Sakleshpur resort experience.',
+      '2 sharing starts at Rs 6000 + taxes, villa 2 sharing at Rs 7000 + taxes, 4 sharing at Rs 12000 + taxes, 6 sharing at Rs 16500 + taxes, 8 sharing at Rs 20000 + taxes, and 12 sharing at Rs 30000 + taxes.',
     image: nightPoolImage,
     imageAlt: 'Tamohra resort evening offer',
     button: {
       label: 'Book Now',
-      href: '/book',
+      href: '/#book',
     },
   },
   experiences: {
     eyebrow: 'Experiences',
     title: 'Choose your kind of Western Ghats weekend',
     description:
-      'Spend your time around the pool, explore coffee estates, hike through forests, chase waterfalls, or settle into a slow weekend of reading and rest.',
+      'Spend your time around the pool, explore coffee estates, visit nearby viewpoints and waterfalls, play outdoor games, or settle into a slow weekend of reading and rest.',
     primary: {
       title: 'Book Your Stay',
       image: exteriorImage,
       imageAlt: 'Tamohra guest experience',
-      href: '/book',
+      href: '/#book',
     },
     items: [
       {
@@ -194,14 +264,14 @@ export const homePageData = {
     imageAlt: 'Tamohra resort escape',
     button: {
       label: 'Book a Room',
-      href: '/book',
+      href: '/#book',
     },
   },
   bookingRequest: {
     title: 'Book',
     description: 'Ready for your next retreat? Fill out the form below and we will help you confirm your stay.',
     thankYouMessage: 'Thank you. we will contact you in a while',
-    roomOptions: ['Room 1 - 2 Sharing', 'Room 2 - 4 Sharing', 'Room 3 - 6 Sharing', 'Room 4 - 8 Sharing', 'Room 5 - 12 Sharing'],
+    roomOptions: ['Room for 2 Sharing', 'Villa Room - 2 Occupancy AC', 'Room for 4 Sharing', 'Room for 6 Sharing', 'Room for 8 Sharing', 'Room for 12 Sharing'],
     fields: {
       room: 'Villas',
       arrival: 'Arrival',
@@ -213,6 +283,29 @@ export const homePageData = {
       action: 'Send Request',
     },
   },
+  bookingFeature: {
+    eyebrow: 'Room & Suite',
+    title: 'Let us plan your Sakleshpur stay',
+    titleLines: ['Let us plan your', 'Sakleshpur stay'],
+    description:
+      'Share your dates and group size. We will help you choose the right room, villa option, meals, and resort experience.',
+    image: nightPoolImage,
+    imageAlt: 'Tamohra Resort evening poolside stay',
+    action: {
+      label: 'Explore Now',
+      href: '/about',
+    },
+    form: {
+      eyebrow: 'Room & Suite',
+      title: 'Booking Form',
+      arrival: 'Arrival Date',
+      departure: 'Departure Date',
+      people: 'Number of People',
+      peopleOptions: ['2 Sharing', 'Villa 2 Occupancy AC', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
+      submitLabel: 'Book a Room',
+      thankYouMessage: 'Thank you. we will contact you in a while',
+    },
+  },
   faqs: {
     eyebrow: 'FAQs',
     title: 'Frequently asked questions',
@@ -220,7 +313,7 @@ export const homePageData = {
       'Everything you need to know before planning your Sakleshpur stay at Tamohra Resort.',
     button: {
       label: 'Book Your Stay',
-      href: '/book',
+      href: '/#book',
     },
     initialVisibleCount: 12,
     loadMoreCount: 10,
@@ -233,22 +326,22 @@ export const homePageData = {
       {
         question: 'What is the price per person?',
         answer:
-          'The stay starts at Rs 3000 + 18% per person. This includes all 3 meals during your stay.',
+          'Current room tariffs start at Rs 6000 + taxes for a 2-sharing room. Villa 2 occupancy is Rs 7000 + taxes, 4 sharing is Rs 12000 + taxes, 6 sharing is Rs 16500 + taxes, 8 sharing is Rs 20000 + taxes, and 12 sharing is Rs 30000 + taxes.',
       },
       {
         question: 'Are meals included in the stay?',
         answer:
-          'Yes. Breakfast, lunch, and dinner are included as part of the stay package.',
+          'Yes. Breakfast, lunch, dinner, and hi-tea are part of the Tamohra stay rhythm. Breakfast includes South Indian dishes, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk.',
       },
       {
         question: 'What room sharing options are available?',
         answer:
-          'Tamohra Resort offers Room 1 for 2 sharing, Room 2 for 4 sharing, Room 3 for 6 sharing, Room 4 for 8 sharing, and Room 5 for 12 sharing.',
+          'Tamohra Resort has three 2-sharing rooms, one 4-sharing room, two 6-sharing rooms, two 8-sharing rooms, one 12-sharing room, and four AC villa rooms with 2 occupancy each.',
       },
       {
         question: 'What amenities are available at the resort?',
         answer:
-          'Amenities include linens, toiletries, breakfast, swimming pool, fine dining, and banquet hall facilities.',
+          'Amenities and activities include linens, toiletries, buffet meals, swimming pool, kids pool, banquet hall, Burma bridge, rope activities, outdoor shuttle, cricket, estate trekking, coffee plantation experience in harvest season, campfire and music, rain dance, and trampoline.',
       },
       {
         question: 'Is Tamohra suitable for families and groups?',
@@ -278,12 +371,12 @@ export const homePageData = {
       {
         question: 'What is included in the Rs 3000 + 18% price?',
         answer:
-          'The price includes the stay and all 3 meals: breakfast, lunch, and dinner.',
+          'The older per-person price has been replaced with room-wise tariffs. Please check the current room tariff for your group size; taxes are additional as applicable.',
       },
       {
         question: 'Is GST included in the listed price?',
         answer:
-          'The listed price is Rs 3000 + 18% per person, so GST is added separately.',
+          'Taxes are additional as applicable on the listed room tariffs.',
       },
       {
         question: 'Which room is best for two guests?',

@@ -70,7 +70,7 @@ function HomeBookingSection({ booking }) {
   }
 
   return (
-    <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+    <section id="book" className="soft-section px-4 py-16 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="heading-display text-[clamp(64px,9vw,120px)] font-normal uppercase leading-none">
           {booking.title}

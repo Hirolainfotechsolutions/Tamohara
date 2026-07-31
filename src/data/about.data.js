@@ -1,235 +1,219 @@
 import aboutBannerImage from '../assets/images/aboutbanner.webp'
-import storyImage from '../assets/images/16.webp'
-import collagePoolImage from '../assets/images/aboutbanner.webp'
-import collageDiningImage from '../assets/images/22.webp'
-import collageExteriorImage from '../assets/images/1.webp'
-import collageBridgeImage from '../assets/images/11.webp'
-import collageNightPoolImage from '../assets/images/23.webp'
-import roomTwoSharingImage from '../assets/images/8.webp'
-import roomFourSharingImage from '../assets/images/13.webp'
-import roomSixSharingImage from '../assets/images/14.webp'
-import roomEightSharingImage from '../assets/images/15.webp'
-import roomTwelveSharingImage from '../assets/images/24.webp'
-import guestImageOne from '../assets/images/1.webp'
-import guestImageTwo from '../assets/images/7.webp'
-import guestImageThree from '../assets/images/aboutbanner.webp'
-import guestImageFour from '../assets/images/11.webp'
-import guestImageFive from '../assets/images/5.webp'
-import guestImageSix from '../assets/images/19.webp'
-import guestImageSeven from '../assets/images/17.webp'
-import guestImageEight from '../assets/images/22.webp'
+import exteriorImage from '../assets/images/1.webp'
+import diningHallImage from '../assets/images/3.webp'
+import buffetImage from '../assets/images/4.webp'
+import estatePathImage from '../assets/images/7.webp'
+import roomTwoImage from '../assets/images/8.webp'
+import forestBridgeImage from '../assets/images/11.webp'
+import roomSixImage from '../assets/images/14.webp'
+import roomEightImage from '../assets/images/15.webp'
+import nightDeckImage from '../assets/images/23.webp'
+import roomTwelveImage from '../assets/images/24.webp'
 
 export const aboutPageData = {
-  eyebrow: 'About Tamohra Resort',
-  title: 'A Sakleshpur resort framed by mist, mountains, coffee estates, and calm.',
+  eyebrow: 'About Tamohra',
+  title: 'A Sakleshpur resort wrapped in mist, coffee estates, and old-school hospitality.',
   description:
-    'Tamohra Resort sits amidst the mist-clad mountains of the Western Ghats, offering bungalow-inspired architecture, serene pool views, verdant estates, and warm local hospitality.',
-  highlights: ['Western Ghats', 'Coffee estates', 'Swimming pool', 'All 3 meals included'],
+    'Tamohra Resort is snuggled amidst the mist-clad mountains of the Western Ghats, with bungalow-inspired architecture, serene pool views, verdant estates, and relaxed spaces for families, friends, and group retreats.',
+  highlights: ['Western Ghats setting', 'Coffee estate experiences', 'Buffet meals', 'Group-friendly stays'],
   hero: {
-    eyebrow: 'Sakleshpur, Karnataka',
-    title: 'A Stay Among Mist-Clad Mountains',
+    eyebrow: 'Timeless comfort. Grounded hospitality.',
+    title: 'A Stay That Stays With You',
     description:
-      'Discover Tamohra Resort, where luxury living meets thicketed mountain views, emerald coffee slopes, forest trails, waterfalls, and old-school Sakleshpur hospitality.',
+      'Experience Tamohra Resort in every detail. Discover a calm Sakleshpur retreat where nature, comfort, hearty meals, and thoughtful service come together beautifully.',
     backgroundImage: aboutBannerImage,
     primaryAction: {
       label: 'Explore Our Resort',
-      href: '/book',
+      href: '/about',
     },
     secondaryAction: {
-      label: 'Watch Our Story',
-      href: '/about',
+      label: 'Plan Your Stay',
+      href: '/#book',
     },
     booking: {
       checkIn: '2026-05-20',
       checkOut: '2026-05-22',
-      guests: '1 Adult',
-      guestOptions: ['1 Adult', '2 Adults', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
+      guests: '2 Sharing',
+      guestOptions: ['2 Sharing', 'Villa 2 Occupancy AC', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
       actionLabel: 'Check Availability',
       thankYouMessage: 'Thank you. we will contact you in a while',
     },
   },
   story: {
     eyebrow: 'Our Story',
-    title: 'Discover the journey behind Tamohra Resort',
-    image: storyImage,
-    imageAlt: 'Tamohra Resort bungalow inspired architecture',
+    title: 'Discover the Western Ghats side of Tamohra',
+    image: exteriorImage,
+    imageAlt: 'Tamohra Resort exterior with pool in Sakleshpur',
     paragraphs: [
-      'Snuggled amidst the mist-clad mountains of the Western Ghats, Tamohra Resort in Sakleshpur was created as a getaway where refined living meets the calm of coffee country.',
-      'The resort is shaped by bungalow-inspired architecture, serene pool views, verdant estates, and warm old-school Sakleshpur hospitality. Guests come here to slow down, trek forest trails, discover waterfalls, and experience the quiet luxury of the hills.',
+      'Tamohra Resort is set in Sakleshpur, a landscape permanently swathed in emerald and jade. The resort is shaped by misty mountain air, coffee estate calm, poolside leisure, and bungalow-inspired spaces that feel warm without losing their sense of quiet luxury.',
+      'The Western Ghats around us are filled with hiking trails, gurgling streams, intimate waterfalls, orchids, birds, colourful frogs, and grass-topped peaks. Some trails are gentle, while others reward effort with wind, clouds, and unforgettable views.',
+      'For slower weekends, guests can read, nap, enjoy buffet meals, sit by the pool, or gather around campfire and music. For active groups, Tamohra offers estate trekking, Burma bridge, rope activities, outdoor shuttle, cricket, rain dance, trampoline, and more.',
     ],
   },
   services: {
     eyebrow: 'Services',
-    title: 'Elevate your stay with our services',
+    title: 'Elevate your stay with our resort comforts',
     items: [
       {
         icon: 'dining',
-        title: 'All 3 Meals Included',
-        description: 'Breakfast, lunch, and dinner are included with every stay package.',
+        title: 'Buffet Lunch and Dinner',
+        description:
+          'Enjoy pickle, pappad, salad, soup, roti or kulcha, veg sabzi, rice varieties, sambar, rasam, curds, dessert, and seasonal non-vegetarian options.',
+      },
+      {
+        icon: 'coffee',
+        title: 'Breakfast and Hi-Tea',
+        description:
+          'Start with South Indian breakfast, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk, with hi-tea snacks like pakoda or bajji.',
       },
       {
         icon: 'pool',
-        title: 'Swimming Pool',
-        description: 'Spend slow hours by the serene pool with mountain and estate views.',
+        title: 'Swimming and Kids Pool',
+        description:
+          'Relax by the pool after a trail walk or group activity. Swimming pool use requires proper swimming costume.',
+      },
+      {
+        icon: 'trek',
+        title: 'Estate Activities',
+        description:
+          'Try trekking within the coffee estate, rope activities, Burma bridge, outdoor games, rain dance, trampoline, and campfire music.',
+      },
+      {
+        icon: 'linen',
+        title: 'Stay Essentials',
+        description:
+          'Fresh linens, toiletries, practical rooms, and warm service keep group stays simple and comfortable.',
       },
       {
         icon: 'banquet',
         title: 'Banquet Hall',
-        description: 'Host group gatherings and occasions with warm resort hospitality.',
-      },
-      {
-        icon: 'linen',
-        title: 'Linens and Toiletries',
-        description: 'Essential comforts are kept ready so your stay feels easy from arrival.',
-      },
-      {
-        icon: 'coffee',
-        title: 'Coffee Country Retreat',
-        description: 'Settle into Sakleshpur’s coffee-estate calm and old-school hospitality.',
-      },
-      {
-        icon: 'trek',
-        title: 'Excursions and Treks',
-        description: 'Explore Western Ghat trails, waterfalls, orchids, birds, and forest routes.',
+        description:
+          'A comfortable indoor setting for reunions, group occasions, celebrations, and relaxed gatherings.',
       },
     ],
   },
   collage: {
-    eyebrow: 'Tamohra Moments',
-    title: 'Timeless luxury, crafted for you',
+    eyebrow: 'Around Tamohra',
+    title: 'Timeless Sakleshpur, crafted for you',
     description:
-      'From poolside mornings and estate views to warm dining spaces and forest trails, every moment at Tamohra Resort is shaped for comfort, calm, and connection.',
+      'Nearby places include Manzerabad Fort and Hanbal Falls at 10 km, Bettada Byraveshwara and Railway Tunnel at 25 km, Devaramane at 35 km, and Bisle Ghat, Belur, and Halebeed at 40 km.',
     images: [
-      {
-        src: collagePoolImage,
-        alt: 'Tamohra Resort swimming pool with Western Ghats view',
-      },
-      {
-        src: collageDiningImage,
-        alt: 'Tamohra Resort banquet and dining hall',
-      },
-      {
-        src: collageExteriorImage,
-        alt: 'Tamohra Resort bungalow exterior and pool',
-      },
-      {
-        src: collageBridgeImage,
-        alt: 'Tamohra Resort forest bridge trail',
-      },
-      {
-        src: collageNightPoolImage,
-        alt: 'Tamohra Resort night pool',
-      },
+      { src: aboutBannerImage, alt: 'Tamohra Resort pool and mountain view' },
+      { src: diningHallImage, alt: 'Tamohra dining and banquet hall' },
+      { src: estatePathImage, alt: 'Coffee estate path near Tamohra Resort' },
+      { src: exteriorImage, alt: 'Tamohra Resort exterior in Sakleshpur' },
+      { src: nightDeckImage, alt: 'Tamohra Resort evening deck' },
     ],
   },
   elegantRooms: {
     title: 'Explore our elegant rooms',
     highlight: 'elegant rooms',
     description:
-      'From intimate 2-sharing rooms to spacious group stays, each room keeps comfort, meals, and mountain living close.',
+      'Choose sharing rooms and villa stays shaped for couples, families, friends, and larger Sakleshpur groups.',
     button: {
       label: 'Explore Rooms',
-      href: '/book',
+      href: '/#book',
     },
     images: [
-      { src: roomTwoSharingImage, alt: 'Tamohra Room 1 for 2 sharing' },
-      { src: roomFourSharingImage, alt: 'Tamohra Room 2 for 4 sharing' },
-      { src: collageExteriorImage, alt: 'Tamohra resort exterior and pool' },
-      { src: collagePoolImage, alt: 'Tamohra pool with Western Ghats view' },
-      { src: roomSixSharingImage, alt: 'Tamohra Room 3 for 6 sharing' },
-      { src: roomEightSharingImage, alt: 'Tamohra Room 4 for 8 sharing' },
-      { src: roomTwelveSharingImage, alt: 'Tamohra Room 5 for 12 sharing' },
+      { src: roomTwoImage, alt: 'Tamohra 2 sharing room' },
+      { src: roomSixImage, alt: 'Tamohra 6 sharing room' },
+      { src: exteriorImage, alt: 'Tamohra resort exterior' },
+      { src: aboutBannerImage, alt: 'Tamohra pool and mountain view' },
+      { src: roomEightImage, alt: 'Tamohra 8 sharing room' },
+      { src: nightDeckImage, alt: 'Tamohra night deck' },
+      { src: roomTwelveImage, alt: 'Tamohra 12 sharing room' },
     ],
   },
   roomsSuites: {
     eyebrow: 'Accommodations',
     title: 'Rooms & Suites',
-    description: 'Discover sharing rooms designed for comfort, meals, and mountain living.',
+    description:
+      'Room-wise tariffs are available for every group size, with extra beds and villa room options on request.',
     items: [
       {
-        title: 'Room 1',
-        subtitle: '2 Sharing',
-        description: 'A comfortable room for couples or close friends visiting Sakleshpur.',
-        image: roomTwoSharingImage,
-        imageAlt: 'Tamohra Room 1 for 2 sharing',
-        href: '/book',
+        title: 'Room for 2 Sharing',
+        subtitle: 'Rs 6000 + taxes',
+        description: 'Three rooms available. Extra bed at Rs 2000 + taxes.',
+        image: roomTwoImage,
+        imageAlt: 'Tamohra 2 sharing room',
+        href: '/rooms/room-1',
       },
       {
-        title: 'Room 2',
-        subtitle: '4 Sharing',
-        description: 'A relaxed option for small families and weekend getaways.',
-        image: roomFourSharingImage,
-        imageAlt: 'Tamohra Room 2 for 4 sharing',
-        href: '/book',
+        title: 'Villa Room',
+        subtitle: '2 Occupancy AC',
+        description: 'Four AC villa rooms with 2 occupancy each. Extra bed at Rs 2500 + taxes.',
+        image: exteriorImage,
+        imageAlt: 'Tamohra villa block',
+        href: '/#book',
       },
       {
-        title: 'Room 3',
-        subtitle: '6 Sharing',
-        description: 'A group-friendly stay with all meals included.',
-        image: roomSixSharingImage,
-        imageAlt: 'Tamohra Room 3 for 6 sharing',
-        href: '/book',
+        title: 'Room for 4 Sharing',
+        subtitle: 'Rs 12000 + taxes',
+        description: 'One room available. Extra bed at Rs 2000 + taxes.',
+        image: roomTwoImage,
+        imageAlt: 'Tamohra 4 sharing room',
+        href: '/rooms/room-2',
       },
       {
-        title: 'Room 4',
-        subtitle: '8 Sharing',
-        description: 'Made for larger families, friends, and relaxed group stays.',
-        image: roomEightSharingImage,
-        imageAlt: 'Tamohra Room 4 for 8 sharing',
-        href: '/book',
+        title: 'Room for 6 Sharing',
+        subtitle: 'Rs 16500 + taxes',
+        description: 'Two rooms available for families and groups.',
+        image: roomSixImage,
+        imageAlt: 'Tamohra 6 sharing room',
+        href: '/rooms/room-3',
       },
       {
-        title: 'Room 5',
-        subtitle: '12 Sharing',
-        description: 'A spacious choice for reunions, celebrations, and full-group retreats.',
-        image: roomTwelveSharingImage,
-        imageAlt: 'Tamohra Room 5 for 12 sharing',
-        href: '/book',
+        title: 'Room for 8 Sharing',
+        subtitle: 'Rs 20000 + taxes',
+        description: 'Two rooms available. Extra bed at Rs 2000 + taxes.',
+        image: roomEightImage,
+        imageAlt: 'Tamohra 8 sharing room',
+        href: '/rooms/room-4',
+      },
+      {
+        title: 'Room for 12 Sharing',
+        subtitle: 'Rs 30000 + taxes',
+        description: 'One room available for reunions and large group retreats.',
+        image: roomTwelveImage,
+        imageAlt: 'Tamohra 12 sharing room',
+        href: '/rooms/room-5',
       },
     ],
   },
   guestStories: {
-    eyebrow: '200+ happy guests so far',
-    title: 'Guest stories',
+    eyebrow: 'Happy guests from coffee country weekends',
     testimonials: [
       {
         rating: 5,
         quote:
-          'Every corner of Tamohra felt intentional - beautiful yet effortless. The misty mornings, warm meals, and quiet poolside hours reminded us how to slow down and breathe again.',
-        guestName: 'Ananya Rao',
-        guestMeta: 'From Bengaluru - stayed in Room 2',
+          'The pool, meals, and estate air made our group weekend feel easy from check-in to campfire.',
+        guestName: 'A Weekend Guest',
+        guestMeta: 'Stayed in an 8 sharing room',
       },
       {
         rating: 5,
         quote:
-          'The food, the pool, and the mountain views made our family weekend feel complete. It was quiet, clean, and wonderfully warm.',
-        guestName: 'Rohit Menon',
-        guestMeta: 'From Mysuru - stayed in Room 4',
+          'Breakfast, hi-tea, and the buffet meals kept the whole trip simple for our family.',
+        guestName: 'Family Traveller',
+        guestMeta: 'Stayed at Tamohra Resort',
       },
       {
         rating: 5,
         quote:
-          'We came for a group stay and loved how easy everything felt. Meals were sorted, rooms were spacious, and the staff made us feel at home.',
-        guestName: 'Priya Nair',
-        guestMeta: 'From Mangaluru - stayed in Room 5',
-      },
-      {
-        rating: 5,
-        quote:
-          'The Sakleshpur air, coffee estate calm, and forest trail nearby gave us exactly the reset we needed.',
-        guestName: 'Karthik Shetty',
-        guestMeta: 'From Hassan - stayed in Room 1',
+          'The estate trek, Burma bridge, and evening music gave everyone something to enjoy.',
+        guestName: 'Group Guest',
+        guestMeta: 'Visited Sakleshpur',
       },
     ],
     images: [
-      { src: guestImageOne, alt: 'Guests enjoying Tamohra Resort exterior and pool' },
-      { src: guestImageTwo, alt: 'Tamohra Resort estate pathway in Sakleshpur' },
-      { src: guestImageThree, alt: 'Tamohra Resort pool with Western Ghats view' },
-      { src: guestImageFour, alt: 'Tamohra Resort forest bridge experience' },
-      { src: guestImageFive, alt: 'Tamohra Resort outdoor seating deck' },
-      { src: guestImageSix, alt: 'Tamohra Resort pool and bungalow view' },
-      { src: guestImageSeven, alt: 'Tamohra Resort bungalow architecture' },
-      { src: guestImageEight, alt: 'Tamohra Resort dining and banquet space' },
+      { src: exteriorImage, alt: 'Tamohra Resort pool exterior' },
+      { src: estatePathImage, alt: 'Tamohra coffee estate road' },
+      { src: aboutBannerImage, alt: 'Tamohra pool mountain reflection' },
+      { src: forestBridgeImage, alt: 'Tamohra rope bridge activity' },
+      { src: nightDeckImage, alt: 'Tamohra campfire style deck' },
+      { src: diningHallImage, alt: 'Tamohra dining hall' },
+      { src: buffetImage, alt: 'Tamohra dining experience' },
+      { src: roomSixImage, alt: 'Tamohra group room' },
     ],
   },
 }

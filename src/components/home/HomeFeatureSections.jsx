@@ -1,5 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
-import { FaArrowRight, FaLeaf, FaRegHandshake, FaSeedling, FaSpa } from 'react-icons/fa6'
+import {
+  FaArrowRight,
+  FaBed,
+  FaBoxOpen,
+  FaBuildingColumns,
+  FaLeaf,
+  FaPersonSwimming,
+  FaRegHandshake,
+  FaSeedling,
+  FaSpa,
+  FaTree,
+  FaUtensils,
+} from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 import Button from '../ui/Button'
 
 function RoomsPreviewSection({ rooms }) {
@@ -21,7 +34,7 @@ function RoomsPreviewSection({ rooms }) {
             const roomImageAlt = room.imageAlt ?? `${room.title} at Tamohra Resort`
 
             return (
-              <article
+              <Link
                 className={`grid border-b border-[var(--color-border)] transition-[grid-template-columns,min-height,background-color,color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] last:border-b-0 lg:grid-cols-[0fr_1fr] ${
                   isActive
                     ? 'min-h-[180px] bg-[var(--color-primary-dark)] text-[var(--color-white)] lg:grid-cols-[280px_1fr]'
@@ -31,6 +44,7 @@ function RoomsPreviewSection({ rooms }) {
                 onFocus={() => setActiveRoomIndex(index)}
                 onMouseEnter={() => setActiveRoomIndex(index)}
                 tabIndex={0}
+                to={room.href}
               >
                 <div
                   className={`overflow-hidden transition-[height,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] lg:h-auto ${
@@ -57,7 +71,7 @@ function RoomsPreviewSection({ rooms }) {
                     {room.description}
                   </p>
                 </div>
-              </article>
+              </Link>
             )
           })}
         </div>
@@ -115,6 +129,101 @@ function WellnessSection({ wellness }) {
               key={image.alt}
             />
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function FacilitiesScrollSection({ facilities }) {
+  const facilityIcons = {
+    banquet: FaBuildingColumns,
+    dining: FaUtensils,
+    essentials: FaBoxOpen,
+    pool: FaPersonSwimming,
+    rooms: FaBed,
+    trails: FaTree,
+  }
+
+  return (
+    <section className="bg-[var(--color-primary-dark)] px-4 py-16 text-[var(--color-white)] sm:px-6 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1fr] lg:gap-20">
+        <div className="lg:max-w-[640px]">
+          <div className="mb-12 lg:mb-14">
+            <p className="banner-eyebrow mb-5">{facilities.eyebrow}</p>
+            <h2 className="heading-display max-w-xl text-[clamp(40px,4.8vw,66px)] font-semibold leading-[1.04] text-[var(--color-white)]">
+              {facilities.title}
+            </h2>
+          </div>
+
+          <div className="grid gap-8 lg:gap-10">
+            {facilities.items.map((item) => {
+              const Icon = facilityIcons[item.icon] ?? FaLeaf
+
+              return (
+                <article
+                  className="min-h-[300px] rounded-[var(--radius-app)] border border-white/10 bg-[var(--color-secondary-light)] p-8 text-[var(--color-black)] sm:p-10 lg:sticky lg:top-24 lg:min-h-[350px] lg:p-10"
+                  key={item.title}
+                >
+                  <div className="grid h-16 w-16 place-items-center rounded-full bg-[var(--color-primary-dark)] text-2xl text-[var(--color-white)]">
+                    <Icon aria-hidden="true" />
+                  </div>
+                  <h3 className="heading-display mt-8 text-3xl font-semibold leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="body-copy mt-7 max-w-xl text-lg leading-8">
+                    {item.description}
+                  </p>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="lg:sticky lg:top-24 lg:h-fit">
+          <img
+            className="h-[420px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] sm:h-[520px] lg:h-[calc(100svh-160px)] lg:min-h-[560px]"
+            src={facilities.image}
+            alt={facilities.imageAlt}
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function NearbyPlacesSection({ nearbyPlaces }) {
+  return (
+    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.05fr] lg:gap-16">
+        <div>
+          <p className="section-eyebrow mb-5">{nearbyPlaces.eyebrow}</p>
+          <h2 className="heading-display max-w-3xl text-[clamp(42px,5vw,72px)] font-semibold leading-[1.02]">
+            {nearbyPlaces.title}
+          </h2>
+          <p className="body-copy mt-6 max-w-xl text-lg leading-8">
+            {nearbyPlaces.description}
+          </p>
+
+          <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            {nearbyPlaces.items.map((place) => (
+              <article
+                className="flex items-center justify-between gap-5 rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-secondary-light)] px-5 py-4"
+                key={place.name}
+              >
+                <h3 className="font-semibold text-[var(--color-black)]">{place.name}</h3>
+                <p className="meta-text whitespace-nowrap text-[var(--color-primary-dark)]">{place.distance}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-[var(--radius-app)] shadow-[var(--shadow-soft)]">
+          <img
+            className="h-[420px] w-full object-cover sm:h-[520px] lg:h-[640px]"
+            src={nearbyPlaces.image}
+            alt={nearbyPlaces.imageAlt}
+          />
         </div>
       </div>
     </section>
@@ -304,8 +413,10 @@ function FinalCtaSection({ cta }) {
 export {
   ElegantRoomsGallerySection,
   ExperiencesSection,
+  FacilitiesScrollSection,
   FeaturedStaySection,
   FinalCtaSection,
+  NearbyPlacesSection,
   OffersSection,
   RoomsPreviewSection,
   ValuesSection,

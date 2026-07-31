@@ -121,7 +121,7 @@ a {
   }
 
   .soft-section {
-    background: linear-gradient(180deg, var(--color-surface), var(--color-secondary-soft));
+    background: var(--color-surface);
   }
 
   .soft-card {
@@ -263,6 +263,15 @@ a {
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - ((var(--rooms-visible) - 1) * var(--rooms-gap))) / var(--rooms-visible));
     gap: var(--rooms-gap);
+  }
+
+  .booking-date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .booking-date-input {
+    color-scheme: light;
   }
 
   @media (min-width: 640px) {
