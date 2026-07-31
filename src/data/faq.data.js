@@ -5,5 +5,6 @@ export const faqPageData = {
   title: 'FAQs',
   description:
     'Quick answers about Tamohra Resort, Sakleshpur stays, room sharing, pricing, meals, amenities, and availability.',
-  initialVisibleCount: homePageData.faqs.items.length,
+  initialVisibleCount: 20,
+  loadMoreCount: 20,
 }

@@ -12,7 +12,7 @@ function FaqSection({ faqs }) {
       <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.72fr_1fr] lg:gap-24">
         <div className="lg:sticky lg:top-28 lg:h-fit">
           <p className="section-eyebrow mb-5">{faqs.eyebrow}</p>
-          <h2 className="heading-display text-[clamp(58px,8vw,112px)] font-semibold leading-[0.9]">
+          <h2 className="heading-display text-[clamp(42px,5.8vw,76px)] font-semibold leading-[0.98]">
             {faqs.title}
           </h2>
           <p className="body-copy mt-7 max-w-[430px] text-lg leading-7">

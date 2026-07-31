@@ -1,8 +1,8 @@
-import PageHeader from '../components/layout/PageHeader'
+import ContactFormPage from './ContactFormPage'
 import { contactPageData } from '../data/contact.data'
 
 function ContactPage() {
-  return <PageHeader page={contactPageData} />
+  return <ContactFormPage data={contactPageData} />
 }
 
 export default ContactPage
