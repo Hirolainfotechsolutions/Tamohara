@@ -4,10 +4,12 @@ import { siteData } from '../../data/site.data'
 import BrandMark from '../ui/BrandMark'
 import Button from '../ui/Button'
 
-function SiteHeader({ isSticky = false }) {
+function SiteHeader({ isSticky = false, tone = 'light' }) {
   const headerClasses = isSticky
     ? 'grid items-center gap-6 border-b border-[var(--color-border)] bg-[var(--color-secondary-light)] px-6 py-4 text-[var(--color-black)] shadow-[var(--shadow-header)] lg:grid-cols-[1fr_auto_1fr]'
-    : 'relative z-20 grid items-center gap-6 px-6 pt-6 text-[var(--color-white)] lg:grid-cols-[1fr_auto_1fr]'
+    : `relative z-20 grid items-center gap-6 px-6 pt-6 lg:grid-cols-[1fr_auto_1fr] ${
+        tone === 'dark' ? 'text-[var(--color-black)]' : 'text-[var(--color-white)]'
+      }`
 
   return (
     <header

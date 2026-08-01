@@ -37,9 +37,10 @@ function HomePage() {
         <AboutRoomsSuitesSection roomsSuites={aboutPageData.roomsSuites} />
 
         <FacilitiesScrollSection facilities={homePageData.facilitiesScroll} />
-        <AmenitiesSection amenities={homePageData.amenities} />
+        
 
         <ExperiencesSection experiences={homePageData.experiences} />
+         <AmenitiesSection amenities={homePageData.amenities} />
         <FeaturedStaySection stay={homePageData.featuredStay} />
         <ValuesSection values={homePageData.values} />
         <ElegantRoomsGallerySection gallery={homePageData.elegantRooms} />

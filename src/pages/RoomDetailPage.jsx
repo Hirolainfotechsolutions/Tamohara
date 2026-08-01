@@ -9,7 +9,9 @@ import {
 import { Link, Navigate, useParams } from 'react-router-dom'
 import SiteFooter from '../components/layout/SiteFooter'
 import SiteHeader from '../components/layout/SiteHeader'
+import StayFacilitiesSection from '../components/stay/StayFacilitiesSection'
 import { roomDetailsData } from '../data/rooms.data'
+import { stayPageData } from '../data/stay.data'
 
 const amenityIcons = [FaBed, FaRegSnowflake, FaPersonSwimming, FaUtensils, FaChampagneGlasses, FaHouse]
 
@@ -96,6 +98,8 @@ function RoomDetailPage() {
                 </Link>
               </aside>
             </div>
+
+            <StayFacilitiesSection facilities={stayPageData.facilities} />
 
             <section className="mt-20">
               <p className="section-eyebrow mb-4">(Similar Rooms & Suites)</p>

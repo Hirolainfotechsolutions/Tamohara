@@ -27,7 +27,7 @@ function SiteFooter({ reveal = false }) {
     <footer className={`${footerPositionClass} min-h-[76svh] overflow-hidden bg-[#070807] px-5 py-12 text-white sm:px-8 lg:px-10`}>
       <div className="mx-auto flex min-h-[calc(76svh-96px)] max-w-[1480px] flex-col justify-between gap-12">
         <div className="grid items-start gap-x-14 gap-y-10 sm:grid-cols-2 lg:grid-cols-[1fr_1.25fr_auto]">
-          <FooterLinks items={siteData.footer.navigation} title="Navigation" />
+          <FooterLinks items={siteData.footer.navigation} title="Pages" />
 
           <div>
             <h2 className="meta-text mb-5 text-white/58">Contact Us</h2>

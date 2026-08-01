@@ -1,6 +1,30 @@
 import { siteData } from './site.data'
+import aboutBannerImage from '../assets/images/aboutbanner.webp'
 
 export const contactPageData = {
+  hero: {
+    eyebrow: 'Plan Your Sakleshpur Stay',
+    title: 'Let Us Help You Plan Tamohra',
+    description:
+      'Tell us your dates, group size, and room preference. Our team will help you confirm the right stay with meals, activities, and resort details.',
+    backgroundImage: aboutBannerImage,
+    primaryAction: {
+      label: 'Send An Enquiry',
+      href: '/contact#contact-form',
+    },
+    secondaryAction: {
+      label: 'Call Us',
+      href: siteData.phone.href,
+    },
+    booking: {
+      checkIn: '2026-05-20',
+      checkOut: '2026-05-22',
+      guests: '2 Sharing',
+      guestOptions: ['2 Sharing', 'Villa 2 Occupancy AC', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
+      actionLabel: 'Check Availability',
+      thankYouMessage: 'Thank you. we will contact you in a while',
+    },
+  },
   eyebrow: 'Contact Tamohra Resort',
   title: 'Get in touch',
   subtitle: 'Got questions or need travel advice?',

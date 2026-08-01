@@ -8,6 +8,7 @@ import GalleryPage from './pages/GalleryPage'
 import HomePage from './pages/HomePage'
 import RoomDetailPage from './pages/RoomDetailPage'
 import ScrollToTop from './components/layout/ScrollToTop'
+import StayPage from './pages/StayPage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/stay" element={<StayPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/blogs/:slug" element={<BlogDetailPage />} />
         <Route path="/gallery" element={<GalleryPage />} />

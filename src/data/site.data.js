@@ -16,6 +16,7 @@ export const siteData = {
   navigation: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
+    { label: 'Stay', href: '/stay' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'Blogs', href: '/blogs' },
     { label: 'FAQ', href: '/faq' },
@@ -25,6 +26,7 @@ export const siteData = {
     navigation: [
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
+      { label: 'Stay', href: '/stay' },
       { label: 'Gallery', href: '/gallery' },
       { label: 'Blogs', href: '/blogs' },
       { label: 'FAQ', href: '/faq' },

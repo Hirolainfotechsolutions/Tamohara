@@ -39,9 +39,19 @@ export const aboutPageData = {
       thankYouMessage: 'Thank you. we will contact you in a while',
     },
   },
+  splitBanner: {
+    eyebrow: 'About Tamohra Resort',
+    titleLines: ['We are', 'Tamohra.'],
+    description:
+      'A mist-clad Sakleshpur retreat shaped by coffee estates, bungalow-inspired stays, hearty buffet meals, and slow mountain hospitality.',
+    foregroundImage: exteriorImage,
+    foregroundAlt: 'Tamohra Resort bungalow exterior and pool',
+    backgroundImage: estatePathImage,
+    backgroundAlt: 'Coffee estate road and greenery at Tamohra Resort',
+  },
   story: {
     eyebrow: 'Our Story',
-    title: 'Discover the Western Ghats side of Tamohra',
+    title: 'Discover the Western Ghats  of Tamohra  ',
     image: exteriorImage,
     imageAlt: 'Tamohra Resort exterior with pool in Sakleshpur',
     paragraphs: [
@@ -90,6 +100,18 @@ export const aboutPageData = {
         description:
           'A comfortable indoor setting for reunions, group occasions, celebrations, and relaxed gatherings.',
       },
+    ],
+  },
+  journey: {
+    eyebrow: 'Our Journey, Your Story',
+    title: 'Rooted in Sakleshpur, driven by warm hospitality',
+    images: [
+      { src: aboutBannerImage, alt: 'Tamohra Resort pool with Western Ghats views' },
+      { src: forestBridgeImage, alt: 'Tamohra Resort rope activity in the estate' },
+    ],
+    paragraphs: [
+      'Tamohra Resort began with the simple idea of making Sakleshpur stays feel generous, calm, and close to nature. Misty hills, coffee estate paths, poolside afternoons, and bungalow-inspired spaces shape every part of the experience.',
+      'From family weekends to group retreats, each stay is planned around comfort, hearty buffet meals, estate activities, and thoughtful service that lets guests slow down without losing the joy of discovery.',
     ],
   },
   collage: {

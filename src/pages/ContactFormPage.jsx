@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa6'
-import ContactPeaceBanner from '../components/contact/ContactPeaceBanner'
+import AboutHeroBanner from '../components/about/AboutHeroBanner'
 import SiteFooter from '../components/layout/SiteFooter'
-import SiteHeader from '../components/layout/SiteHeader'
+import StickySiteHeader from '../components/layout/StickySiteHeader'
 import { siteData } from '../data/site.data'
 
 const initialFormValues = {
@@ -137,13 +137,13 @@ function ContactFormPage({ data }) {
   return (
     <main className="app-section min-h-svh">
       <div className="relative z-10 bg-[var(--color-surface)]">
-        <div className="sticky top-0 z-50">
-          <SiteHeader isSticky />
+        <StickySiteHeader />
+
+        <div className="p-2 sm:p-3">
+          <AboutHeroBanner hero={data.hero} />
         </div>
 
-        <ContactPeaceBanner />
-
-        <section className="px-5 py-16 sm:px-8 lg:py-24">
+        <section className="px-5 py-16 sm:px-8 lg:py-24" id="contact-form">
           <div className="mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[0.78fr_1fr] lg:gap-24">
             <div className="lg:pt-4">
               <p className="section-eyebrow mb-6">{data.eyebrow}</p>

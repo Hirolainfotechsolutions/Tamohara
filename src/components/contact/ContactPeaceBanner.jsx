@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
-import centerBannerImage from '../../assets/images/contactbanner1.webp'
+import centerBannerImage from '../../assets/images/1.webp'
 import leafBackgroundImage from '../../assets/images/contactbanner.webp'
 import SiteHeader from '../layout/SiteHeader'
 
 function ContactPeaceBanner({ showHeader = false }) {
   return (
-    <section className="relative grid min-h-[calc(100svh-92px)] overflow-hidden bg-[var(--color-primary-dark)] px-4 py-10 sm:px-6 lg:min-h-[calc(100svh-88px)] lg:py-12">
+    <section className="relative grid min-h-svh overflow-hidden bg-[var(--color-primary-dark)] px-4 py-10 sm:px-6 lg:py-12">
       <img
         className="absolute inset-0 h-full w-full object-cover"
         src={leafBackgroundImage}
