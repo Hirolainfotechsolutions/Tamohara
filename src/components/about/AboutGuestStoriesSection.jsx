@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa6'
 import BrandMark from '../ui/BrandMark'
 
@@ -16,15 +16,23 @@ function AboutGuestStoriesSection({ guestStories }) {
     setActiveIndex((currentIndex) => (currentIndex + 1) % guestStories.testimonials.length)
   }
 
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveIndex((currentIndex) => (currentIndex + 1) % guestStories.testimonials.length)
+    }, 3000)
+
+    return () => window.clearInterval(timer)
+  }, [guestStories.testimonials.length])
+
   return (
-    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
+    <section className="app-section px-4 pb-3 pt-8 sm:px-6 sm:pb-5 lg:pb-6 lg:pt-10">
       <div className="mx-auto max-w-6xl text-center">
         <p className="body-copy text-sm font-semibold">{guestStories.eyebrow}</p>
         <h2 className="heading-display mt-4 text-[clamp(44px,5vw,72px)] font-normal leading-none">
           Guest <span className="italic text-[var(--color-primary)]">stories</span>
         </h2>
 
-        <div className="relative mx-auto mt-10 min-h-[260px] max-w-3xl">
+        <div className="relative mx-auto mt-8 min-h-[230px] max-w-3xl sm:min-h-[250px]">
           <button
             className="absolute left-0 top-[92px] hidden h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] sm:grid"
             type="button"
@@ -34,7 +42,7 @@ function AboutGuestStoriesSection({ guestStories }) {
             <FaArrowLeft aria-hidden="true" />
           </button>
 
-          <div className="mx-auto grid min-h-[260px] max-w-xl content-start">
+          <div className="mx-auto grid min-h-[230px] max-w-xl content-start transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:min-h-[250px]">
             <div className="flex items-center justify-center gap-3">
               <BrandMark className="scale-[0.58] text-[var(--color-primary-dark)]" subtitleClassName="text-[10px]" />
               <span className="h-px w-7 bg-[var(--color-border)]" aria-hidden="true" />
@@ -51,6 +59,25 @@ function AboutGuestStoriesSection({ guestStories }) {
 
             <p className="meta-text mt-8 text-[var(--color-muted)]">{activeStory.guestName}</p>
             <p className="meta-text mt-1 text-[var(--color-muted)]">{activeStory.guestMeta}</p>
+
+            <div className="mt-5 flex items-center justify-center gap-4 sm:hidden">
+              <button
+                className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
+                type="button"
+                aria-label="Previous guest story"
+                onClick={goToPrevious}
+              >
+                <FaArrowLeft aria-hidden="true" />
+              </button>
+              <button
+                className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
+                type="button"
+                aria-label="Next guest story"
+                onClick={goToNext}
+              >
+                <FaArrowRight aria-hidden="true" />
+              </button>
+            </div>
           </div>
 
           <button
@@ -63,7 +90,7 @@ function AboutGuestStoriesSection({ guestStories }) {
           </button>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-5xl gap-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-6 grid max-w-5xl gap-5 pb-3 pt-6 sm:grid-cols-2 sm:pb-5 lg:mt-8 lg:grid-cols-4 lg:pb-6 lg:pt-8">
           {guestStories.images.map((image, index) => (
             <div
               className="will-change-transform"
