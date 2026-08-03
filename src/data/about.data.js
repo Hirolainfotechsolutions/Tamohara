@@ -63,6 +63,8 @@ export const aboutPageData = {
   services: {
     eyebrow: 'Services',
     title: 'Elevate your stay with our resort comforts',
+    image: diningHallImage,
+    imageAlt: 'Tamohra Resort dining hall and buffet comfort',
     items: [
       {
         icon: 'dining',

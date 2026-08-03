@@ -25,7 +25,17 @@ function AboutServicesSection({ services }) {
           {services.title}
         </h2>
 
-        <div className="mt-10 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        {services.image ? (
+          <figure className="mx-auto mt-7 block w-[85%] overflow-hidden rounded-[var(--radius-app)] shadow-[var(--shadow-soft)] lg:hidden">
+            <img
+              className="h-[220px] w-full object-cover sm:h-[320px]"
+              src={services.image}
+              alt={services.imageAlt}
+            />
+          </figure>
+        ) : null}
+
+        <div className="mt-8 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3 lg:gap-y-12">
           {services.items.map((service) => {
             const Icon = serviceIcons[service.icon]
 

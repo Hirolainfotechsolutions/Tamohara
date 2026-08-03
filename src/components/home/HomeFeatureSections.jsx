@@ -16,7 +16,65 @@ import { Link } from 'react-router-dom'
 import Button from '../ui/Button'
 
 function RoomsPreviewSection({ rooms }) {
+  const roomsListRef = useRef(null)
   const [activeRoomIndex, setActiveRoomIndex] = useState(0)
+
+  useEffect(() => {
+    const list = roomsListRef.current
+    if (!list) return undefined
+
+    const mediaQuery = window.matchMedia('(max-width: 1023px)')
+    let animationFrame
+
+    const updateActiveRoom = () => {
+      if (!mediaQuery.matches) return
+
+      const roomLinks = [...list.querySelectorAll('[data-room-index]')]
+      const viewportCenter = window.innerHeight * 0.5
+      const closestRoom = roomLinks
+        .map((roomLink) => {
+          const rect = roomLink.getBoundingClientRect()
+          const roomCenter = rect.top + rect.height * 0.5
+          return {
+            distance: Math.abs(roomCenter - viewportCenter),
+            index: Number(roomLink.dataset.roomIndex),
+          }
+        })
+        .sort((a, b) => a.distance - b.distance)[0]
+
+      if (closestRoom) {
+        setActiveRoomIndex((currentIndex) =>
+          currentIndex === closestRoom.index ? currentIndex : closestRoom.index,
+        )
+      }
+    }
+
+    const requestUpdate = () => {
+      window.cancelAnimationFrame(animationFrame)
+      animationFrame = window.requestAnimationFrame(updateActiveRoom)
+    }
+
+    const toggleScrollListener = () => {
+      window.removeEventListener('scroll', requestUpdate)
+      window.removeEventListener('resize', requestUpdate)
+
+      if (mediaQuery.matches) {
+        requestUpdate()
+        window.addEventListener('scroll', requestUpdate, { passive: true })
+        window.addEventListener('resize', requestUpdate)
+      }
+    }
+
+    toggleScrollListener()
+    mediaQuery.addEventListener('change', toggleScrollListener)
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.removeEventListener('scroll', requestUpdate)
+      window.removeEventListener('resize', requestUpdate)
+      mediaQuery.removeEventListener('change', toggleScrollListener)
+    }
+  }, [])
 
   return (
     <section className="app-section px-4 pb-16 pt-8 sm:px-6 sm:pt-12 lg:py-12">
@@ -27,7 +85,7 @@ function RoomsPreviewSection({ rooms }) {
           <p className="body-copy mt-5 max-w-2xl text-base leading-8">{rooms.description}</p>
         </div>
 
-        <div className="overflow-hidden rounded-[var(--radius-app)] border border-[var(--color-border)]">
+        <div ref={roomsListRef} className="overflow-hidden rounded-[var(--radius-app)] border border-[var(--color-border)]">
           {rooms.items.map((room, index) => {
             const isActive = activeRoomIndex === index
             const roomImage = room.image ?? rooms.items[0].image
@@ -35,36 +93,37 @@ function RoomsPreviewSection({ rooms }) {
 
             return (
               <Link
-                className={`grid border-b border-[var(--color-border)] transition-[grid-template-columns,min-height,background-color,color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] last:border-b-0 lg:grid-cols-[0fr_1fr] ${
+                className={`grid border-b border-[var(--color-border)] transition-[grid-template-columns,min-height,background-color,color] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] last:border-b-0 lg:grid-cols-[0fr_1fr] ${
                   isActive
                     ? 'min-h-[180px] bg-[var(--color-primary-dark)] text-[var(--color-white)] lg:grid-cols-[280px_1fr]'
                     : 'min-h-[112px] bg-[var(--color-surface)] text-[var(--color-primary-dark)]'
                 }`}
                 key={room.title}
+                data-room-index={index}
                 onFocus={() => setActiveRoomIndex(index)}
                 onMouseEnter={() => setActiveRoomIndex(index)}
                 tabIndex={0}
                 to={room.href}
               >
                 <div
-                  className={`overflow-hidden transition-[height,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] lg:h-auto ${
+                  className={`overflow-hidden transition-[height,opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] lg:h-auto ${
                     isActive ? 'h-44 opacity-100' : 'h-0 opacity-0 lg:opacity-100'
                   }`}
                 >
                   <img
-                    className={`h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    className={`h-full w-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       isActive ? 'scale-100' : 'scale-105'
                     }`}
                     src={roomImage}
                     alt={roomImageAlt}
                   />
                 </div>
-                <div className="grid content-center overflow-hidden px-6 py-7 transition-[padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
-                  <h3 className="heading-display text-3xl font-semibold text-inherit transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                <div className="grid content-center overflow-hidden px-6 py-7 transition-[padding] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                  <h3 className="heading-display text-3xl font-semibold text-inherit transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]">
                     {room.title}
                   </h3>
                   <p
-                    className={`mt-3 text-sm leading-6 transition-[color,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                    className={`mt-3 text-sm leading-6 transition-[color,opacity,transform] duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       isActive ? 'translate-y-0 text-white/82 opacity-100' : 'translate-y-1 body-copy opacity-80'
                     }`}
                   >
