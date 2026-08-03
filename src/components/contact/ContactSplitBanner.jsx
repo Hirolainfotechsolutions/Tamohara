@@ -31,7 +31,7 @@ function ContactSplitBanner({ banner = defaultBanner, showHeader = false }) {
         <div className="absolute inset-0 bg-[var(--color-primary-dark)]/10" />
       </div>
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-92px)] max-w-7xl items-start gap-8 px-5 pb-8 pt-[calc(40svh+270px)] sm:px-8 sm:py-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-12 lg:py-12">
+      <div className="relative mx-auto grid min-h-[calc(100svh-92px)] max-w-7xl items-start gap-8 px-5 pb-8 pt-[calc(40svh+235px)] sm:px-8 sm:py-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-12 lg:py-12">
         <div className="relative z-10 mt-0 max-w-none sm:max-w-xl">
           <p className="section-eyebrow mb-5 sm:mb-8">{banner.eyebrow}</p>
           <h1 className="heading-display text-[clamp(38px,10vw,116px)] font-normal leading-[1] text-[var(--color-primary-dark)]">
