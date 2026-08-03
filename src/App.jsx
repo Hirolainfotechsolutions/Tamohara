@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { BookingModalProvider } from './components/booking/BookingModal'
 import AboutPage from './pages/AboutPage'
 import BlogDetailPage from './pages/BlogDetailPage'
 import BlogsPage from './pages/BlogsPage'
@@ -12,7 +13,7 @@ import StayPage from './pages/StayPage'
 
 function App() {
   return (
-    <>
+    <BookingModalProvider>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -26,7 +27,7 @@ function App() {
         <Route path="/rooms/:slug" element={<RoomDetailPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </>
+    </BookingModalProvider>
   )
 }
 

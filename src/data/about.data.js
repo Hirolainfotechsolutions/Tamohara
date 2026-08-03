@@ -116,6 +116,21 @@ export const aboutPageData = {
       'From family weekends to group retreats, each stay is planned around comfort, hearty buffet meals, estate activities, and thoughtful service that lets guests slow down without losing the joy of discovery.',
     ],
   },
+  nearbyPlaces: {
+    eyebrow: 'Nearby places to visit',
+    title: 'Explore Sakleshpur around Tamohra',
+    description:
+      'Step out from Tamohra Resort to forts, waterfalls, temple hills, tunnels, ghats, and heritage towns within an easy scenic drive.',
+    items: [
+      { name: 'Manzerabad Fort', distance: '10 km' },
+      { name: 'Hanbal Falls', distance: '10 km' },
+      { name: 'Bettada Byraveshwara', distance: '25 km' },
+      { name: 'Devaramane', distance: '35 km' },
+      { name: 'Railway Tunnel', distance: '25 km' },
+      { name: 'Bisle Ghat', distance: '40 km' },
+      { name: 'Belur and Halebeed', distance: '40 km' },
+    ],
+  },
   collage: {
     eyebrow: 'Around Tamohra',
     title: 'Timeless Sakleshpur, crafted for you',

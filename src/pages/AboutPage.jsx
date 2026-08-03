@@ -1,6 +1,7 @@
 import AboutCollageSection from "../components/about/AboutCollageSection";
 import AboutGuestStoriesSection from "../components/about/AboutGuestStoriesSection";
 import AboutJourneySection from "../components/about/AboutJourneySection";
+import AboutNearbyPlacesSection from "../components/about/AboutNearbyPlacesSection";
 import AboutServicesSection from "../components/about/AboutServicesSection";
 import AboutStorySection from "../components/about/AboutStorySection";
 import AboutVisitSection from "../components/about/AboutVisitSection";
@@ -20,6 +21,7 @@ function AboutPage() {
         <AboutStorySection story={aboutPageData.story} />
         <AboutServicesSection services={aboutPageData.services} />
         <AboutJourneySection journey={aboutPageData.journey} />
+        <AboutNearbyPlacesSection nearbyPlaces={aboutPageData.nearbyPlaces} />
         <RoomsPreviewSection rooms={homePageData.roomsPreview} />
         <AboutGuestStoriesSection guestStories={aboutPageData.guestStories} />
         <AboutCollageSection collage={aboutPageData.collage} />

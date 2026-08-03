@@ -35,9 +35,15 @@ function SiteFooter({ reveal = false }) {
           <div className="mx-auto w-full max-w-[360px] text-center sm:mx-0 sm:max-w-md sm:text-left">
             <h2 className="meta-text mb-5 text-white/58">Contact Us</h2>
             <div className="space-y-4 text-base font-medium sm:text-lg">
-              <p className="max-w-md leading-7 text-white/82">
+              <a
+                className="block max-w-md leading-7 text-white/82 transition-colors hover:text-[var(--color-primary)]"
+                href={siteData.addressHref}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open Tamohra Resort location in Google Maps"
+              >
                 {siteData.address}
-              </p>
+              </a>
               <a className="block transition-opacity hover:opacity-70" href={siteData.phone.href}>
                 {siteData.phone.label}
               </a>
@@ -48,16 +54,16 @@ function SiteFooter({ reveal = false }) {
           </div>
 
           <div className="mx-auto flex w-full max-w-[360px] justify-center gap-6 text-2xl sm:col-start-2 sm:mx-0 sm:max-w-none sm:justify-start lg:col-start-auto lg:justify-end">
-            <a aria-label="Facebook" className="transition-opacity hover:opacity-70" href="https://facebook.com">
+            <a aria-label="Facebook" className="transition-opacity hover:opacity-70" href={siteData.socialLinks.facebook} target="_blank" rel="noreferrer">
               <FaFacebookF aria-hidden="true" />
             </a>
-            <a aria-label="Instagram" className="transition-opacity hover:opacity-70" href="https://instagram.com">
+            <a aria-label="Instagram" className="transition-opacity hover:opacity-70" href={siteData.socialLinks.instagram} target="_blank" rel="noreferrer">
               <FaInstagram aria-hidden="true" />
             </a>
-            <a aria-label="LinkedIn" className="transition-opacity hover:opacity-70" href="https://linkedin.com">
+            <a aria-label="LinkedIn" className="transition-opacity hover:opacity-70" href={siteData.socialLinks.linkedin} target="_blank" rel="noreferrer">
               <FaLinkedinIn aria-hidden="true" />
             </a>
-            <a aria-label="Twitter" className="transition-opacity hover:opacity-70" href="https://twitter.com">
+            <a aria-label="Twitter" className="transition-opacity hover:opacity-70" href={siteData.socialLinks.twitter} target="_blank" rel="noreferrer">
               <FaXTwitter aria-hidden="true" />
             </a>
           </div>
