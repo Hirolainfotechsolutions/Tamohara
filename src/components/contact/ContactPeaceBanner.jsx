@@ -28,14 +28,28 @@ function ContactPeaceBanner({ showHeader = false }) {
             alt="Tamohra Resort pool and peaceful Sakleshpur greenery"
           />
 
-          <div className="absolute left-4 right-4 top-1/2 w-auto -translate-y-1/2 sm:left-8 sm:right-auto sm:w-[min(560px,76vw)] lg:-translate-x-[32%]">
-            <h1 className="heading-display text-[clamp(31px,9.5vw,48px)] font-normal leading-[0.98] text-[var(--color-white)] sm:text-[clamp(48px,6vw,84px)]">
+          <div className="absolute bottom-8 left-4 right-4 hidden w-auto sm:left-8 sm:right-auto sm:top-1/2 sm:block sm:w-[min(560px,76vw)] sm:-translate-y-1/2 lg:-translate-x-[32%]">
+            <h1 className="heading-display max-w-[250px] text-[clamp(29px,8.6vw,42px)] font-normal leading-[0.98] text-[var(--color-white)] sm:max-w-none sm:text-[clamp(48px,6vw,84px)]">
               <span className="block">So close,</span>
               <span className="block">so peaceful</span>
             </h1>
 
             <Link
               className="meta-text mt-5 inline-flex min-h-11 min-w-[156px] items-center justify-center border border-white/78 px-5 text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary-dark)] sm:mt-10 sm:min-h-16 sm:min-w-[228px] sm:px-8"
+              to="/#book"
+            >
+              BOOK A ROOM
+            </Link>
+          </div>
+
+          <div className="mt-5 max-w-[220px] sm:hidden">
+            <h1 className="heading-display text-[clamp(34px,10vw,42px)] font-normal leading-[0.98] text-[var(--color-white)]">
+              <span className="block">So close,</span>
+              <span className="block">so peaceful</span>
+            </h1>
+
+            <Link
+              className="meta-text mt-5 inline-flex min-h-11 min-w-[156px] items-center justify-center border border-white/78 px-5 text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary-dark)]"
               to="/#book"
             >
               BOOK A ROOM
