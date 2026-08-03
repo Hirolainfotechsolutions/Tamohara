@@ -4,7 +4,7 @@ import { siteData } from '../../data/site.data'
 
 function FooterLinks({ items, title }) {
   return (
-    <div>
+    <div className="mx-auto w-full max-w-[260px] text-center sm:mx-0 sm:max-w-none sm:text-left">
       <h2 className="meta-text mb-5 text-white/58">{title}</h2>
       <ul className="grid grid-cols-2 gap-x-6 gap-y-3.5 sm:block sm:space-y-3.5">
         {items.map((item) => (
@@ -64,9 +64,9 @@ function SiteFooter({ reveal = false }) {
           <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(44px,16vw,250px)] font-semibold uppercase leading-[0.82] text-white sm:text-[clamp(64px,18vw,250px)]">
             {siteData.brandName}
           </p>
-          <div className="mt-6 flex flex-col gap-4 text-sm font-semibold sm:flex-row sm:items-center sm:justify-between sm:text-base">
+          <div className="mt-6 flex flex-row items-start justify-between gap-4 text-left text-[11px] font-semibold sm:items-center sm:text-base">
             <p>&copy; {year} All rights reserved.</p>
-            <p>{siteData.footer.tagline}</p>
+            <p className="max-w-[48%] text-right sm:max-w-none">{siteData.footer.tagline}</p>
           </div>
         </div>
       </div>
