@@ -6,7 +6,7 @@ function FooterLinks({ items, title }) {
   return (
     <div>
       <h2 className="meta-text mb-5 text-white/58">{title}</h2>
-      <ul className="space-y-3.5">
+      <ul className="grid grid-cols-2 gap-x-6 gap-y-3.5 sm:block sm:space-y-3.5">
         {items.map((item) => (
           <li key={item.label}>
             <Link className="text-base font-medium leading-none text-white transition-opacity hover:opacity-70 sm:text-lg" to={item.href}>
@@ -61,7 +61,7 @@ function SiteFooter({ reveal = false }) {
         </div>
 
         <div className="overflow-hidden">
-          <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(64px,18vw,250px)] font-semibold uppercase leading-[0.82] text-white">
+          <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(44px,16vw,250px)] font-semibold uppercase leading-[0.82] text-white sm:text-[clamp(64px,18vw,250px)]">
             {siteData.brandName}
           </p>
           <div className="mt-6 flex flex-col gap-4 text-sm font-semibold sm:flex-row sm:items-center sm:justify-between sm:text-base">
