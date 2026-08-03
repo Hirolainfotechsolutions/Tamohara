@@ -42,10 +42,10 @@ function ContactPeaceBanner({ showHeader = false }) {
             </Link>
           </div>
 
-          <div className="mt-5 max-w-[220px] sm:hidden">
-            <h1 className="heading-display text-[clamp(34px,10vw,42px)] font-normal leading-[0.98] text-[var(--color-white)]">
-              <span className="block">So close,</span>
-              <span className="block">so peaceful</span>
+          <div className="mt-5 w-full sm:hidden">
+            <h1 className="heading-display w-full text-[clamp(34px,10vw,42px)] font-normal leading-[0.98] text-[var(--color-white)]">
+              <span className="block whitespace-nowrap">So close,</span>
+              <span className="block whitespace-nowrap">so peaceful</span>
             </h1>
 
             <Link
