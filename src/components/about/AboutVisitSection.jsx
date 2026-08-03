@@ -75,9 +75,10 @@ function AboutVisitSection() {
             <label className="grid gap-2">
               <span className="text-base font-semibold text-[var(--color-primary-dark)]">Name</span>
               <input
-                className="h-12 rounded-sm border border-transparent bg-white px-4 text-base outline-none transition-colors focus:border-[var(--color-primary-dark)]"
+                className="h-12 rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 text-base text-[var(--color-primary-dark)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary)]"
                 name="name"
                 onChange={handleChange}
+                placeholder="Your name"
                 required
                 value={values.name}
               />
@@ -86,9 +87,10 @@ function AboutVisitSection() {
             <label className="grid gap-2">
               <span className="text-base font-semibold text-[var(--color-primary-dark)]">Email Address</span>
               <input
-                className="h-12 rounded-sm border border-transparent bg-white px-4 text-base outline-none transition-colors focus:border-[var(--color-primary-dark)]"
+                className="h-12 rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 text-base text-[var(--color-primary-dark)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary)]"
                 name="email"
                 onChange={handleChange}
+                placeholder="your@email.com"
                 required
                 type="email"
                 value={values.email}
@@ -98,9 +100,10 @@ function AboutVisitSection() {
             <label className="grid gap-2">
               <span className="text-base font-semibold text-[var(--color-primary-dark)]">Message</span>
               <textarea
-                className="min-h-20 rounded-sm border border-transparent bg-white px-4 py-3 text-base outline-none transition-colors focus:border-[var(--color-primary-dark)]"
+                className="min-h-28 rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-base text-[var(--color-primary-dark)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary)]"
                 name="message"
                 onChange={handleChange}
+                placeholder="Write your message"
                 required
                 value={values.message}
               />
