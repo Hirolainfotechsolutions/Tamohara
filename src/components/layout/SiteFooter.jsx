@@ -61,7 +61,7 @@ function SiteFooter({ reveal = false }) {
         </div>
 
         <div className="overflow-hidden">
-          <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(44px,16vw,250px)] font-semibold uppercase leading-[0.82] text-white sm:text-[clamp(64px,18vw,250px)]">
+          <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(40px,18vw,250px)] font-semibold uppercase leading-[0.82] text-white sm:text-[clamp(64px,18vw,250px)]">
             {siteData.brandName}
           </p>
           <div className="mt-6 flex flex-row items-start justify-between gap-4 text-left text-[11px] font-semibold sm:items-center sm:text-base">
