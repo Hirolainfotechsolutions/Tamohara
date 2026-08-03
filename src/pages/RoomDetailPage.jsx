@@ -55,16 +55,16 @@ function RoomDetailPage() {
                 <h2 className="heading-display mt-10 text-2xl font-semibold">Room Facilities</h2>
                 <p className="body-copy mt-4 text-base leading-7">{room.details}</p>
 
-                <div className="mt-9 grid gap-4 sm:grid-cols-2">
+                <div className="mt-9 grid grid-cols-2 gap-3 sm:gap-4">
                   {roomDetailsData.amenities.map((amenity, index) => {
                     const Icon = amenityIcons[index] ?? FaHouse
 
                     return (
-                      <div className="rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5" key={amenity}>
-                        <div className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-primary-dark)] text-sm text-[var(--color-white)]">
+                      <div className="rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] p-3 sm:p-5" key={amenity}>
+                        <div className="grid h-9 w-9 place-items-center rounded-full bg-[var(--color-primary-dark)] text-xs text-[var(--color-white)] sm:h-10 sm:w-10 sm:text-sm">
                           <Icon aria-hidden="true" />
                         </div>
-                        <p className="mt-4 text-sm font-semibold text-[var(--color-primary-dark)]">{amenity}</p>
+                        <p className="mt-4 text-xs font-semibold text-[var(--color-primary-dark)] sm:text-sm">{amenity}</p>
                       </div>
                     )
                   })}

@@ -67,12 +67,13 @@ function GalleryPage() {
               {galleryPageData.description}
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <div className="-mx-4 mt-10 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:px-0">
+              <div className="flex w-max min-w-full flex-nowrap items-center gap-3 sm:justify-center">
               {categories.map((category) => (
                 <button
-                  className={`rounded-full border px-5 py-3 text-sm font-semibold transition-colors ${
+                  className={`shrink-0 rounded-full border px-5 py-3 text-sm font-semibold transition-colors ${
                     activeCategory === category
-                      ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-dark)]'
+                      ? 'border-[var(--color-primary-dark)] bg-[var(--color-primary-dark)] text-[var(--color-white)]'
                       : 'border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-dark)] hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]'
                   }`}
                   key={category}
@@ -82,6 +83,7 @@ function GalleryPage() {
                   {category}
                 </button>
               ))}
+              </div>
             </div>
           </div>
         </section>
