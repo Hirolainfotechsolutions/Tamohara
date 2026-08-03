@@ -8,8 +8,8 @@ function FaqSection({ faqs }) {
   const visibleFaqs = faqs.items.slice(0, visibleCount)
 
   return (
-    <section className="app-section px-5 py-16 text-[var(--color-primary-dark)] sm:px-8 lg:py-24">
-      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-24">
+    <section className="app-section px-5 py-12 text-[var(--color-primary-dark)] sm:px-8 lg:py-12">
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-12">
         <div className="lg:sticky lg:top-28 lg:h-fit">
           <p className="section-eyebrow mb-5">{faqs.eyebrow}</p>
           <h2 className="heading-display text-[clamp(36px,10vw,76px)] font-semibold leading-[1]">

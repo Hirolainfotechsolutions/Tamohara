@@ -19,7 +19,7 @@ function RoomsPreviewSection({ rooms }) {
   const [activeRoomIndex, setActiveRoomIndex] = useState(0)
 
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="app-section px-4 pb-16 pt-8 sm:px-6 sm:pt-12 lg:py-12">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 max-w-3xl">
           <p className="section-eyebrow mb-4">{rooms.eyebrow}</p>
@@ -115,7 +115,7 @@ function WellnessSection({ wellness }) {
   const centerTransform = `translateY(${motion * 42}px) scale(${0.96 + motion * 0.04})`
 
   return (
-    <section ref={sectionRef} className="soft-section grid overflow-hidden px-4 py-14 sm:px-6 lg:min-h-svh lg:py-16">
+    <section ref={sectionRef} className="soft-section grid overflow-hidden px-4 py-12 sm:px-6 lg:min-h-svh lg:py-12">
       <div className="mx-auto grid w-full max-w-6xl content-center text-center">
         <p className="section-eyebrow mb-4">{wellness.eyebrow}</p>
         <h2 className="heading-display mx-auto max-w-5xl text-[clamp(38px,11vw,82px)] font-semibold leading-[1]">{wellness.title}</h2>
@@ -151,23 +151,23 @@ function FacilitiesScrollSection({ facilities }) {
   }
 
   return (
-    <section className="bg-[var(--color-primary-dark)] px-4 py-16 text-[var(--color-white)] sm:px-6 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1fr] lg:gap-20">
+    <section className="bg-[var(--color-primary-dark)] px-4 py-12 text-[var(--color-white)] sm:px-6 lg:py-12">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1fr] lg:gap-10">
         <div className="lg:max-w-[640px]">
-          <div className="mb-12 lg:mb-14">
+          <div className="mb-12 lg:mb-10">
             <p className="banner-eyebrow mb-5">{facilities.eyebrow}</p>
             <h2 className="heading-display max-w-xl text-[clamp(40px,4.8vw,66px)] font-semibold leading-[1.04] text-[var(--color-white)]">
               {facilities.title}
             </h2>
           </div>
 
-          <div className="grid gap-5 sm:gap-6 lg:gap-10">
+          <div className="grid gap-6 sm:gap-8 lg:gap-10">
             {facilities.items.map((item) => {
               const Icon = facilityIcons[item.icon] ?? FaLeaf
 
               return (
                 <article
-                  className="min-h-[240px] rounded-[var(--radius-app)] border border-white/10 bg-[var(--color-surface)] p-6 text-[var(--color-primary-dark)] sm:min-h-[280px] sm:p-8 lg:sticky lg:top-24 lg:min-h-[350px] lg:p-10"
+                  className="sticky top-20 min-h-[250px] rounded-[var(--radius-app)] border border-white/10 bg-[var(--color-surface)] p-6 text-[var(--color-primary-dark)] shadow-[var(--shadow-soft)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:top-24 sm:min-h-[280px] sm:p-8 lg:min-h-[350px] lg:p-10"
                   key={item.title}
                 >
                   <div className="grid h-16 w-16 place-items-center rounded-full bg-[var(--color-primary-dark)] text-2xl text-[var(--color-white)]">
@@ -199,8 +199,8 @@ function FacilitiesScrollSection({ facilities }) {
 
 function NearbyPlacesSection({ nearbyPlaces }) {
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.05fr] lg:gap-16">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.05fr] lg:gap-12">
         <div>
           <p className="section-eyebrow mb-5">{nearbyPlaces.eyebrow}</p>
           <h2 className="heading-display max-w-3xl text-[clamp(42px,5vw,72px)] font-semibold leading-[1.02]">
@@ -246,7 +246,7 @@ function ElegantRoomsGallerySection({ gallery }) {
     return (
       <>
         {before}
-        <span className="italic text-[var(--color-primary-dark)]">{gallery.highlight}</span>
+        <span className="italic text-[var(--color-primary)]">{gallery.highlight}</span>
         {after}
       </>
     )
@@ -263,7 +263,7 @@ function ElegantRoomsGallerySection({ gallery }) {
   ]
 
   return (
-    <section className="soft-section overflow-hidden px-4 py-16 sm:px-6 lg:py-24">
+    <section className="soft-section overflow-hidden px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="heading-display text-[clamp(42px,6vw,76px)] font-semibold leading-none">
           {renderTitle()}
@@ -275,7 +275,7 @@ function ElegantRoomsGallerySection({ gallery }) {
         </Button>
       </div>
 
-      <div className="relative left-1/2 mt-12 w-screen -translate-x-1/2 overflow-hidden py-8 sm:mt-16 lg:mt-24 lg:py-10">
+      <div className="relative left-1/2 mt-12 w-screen -translate-x-1/2 overflow-hidden py-8 sm:mt-12 lg:mt-12 lg:py-10">
         <div
           className="flex w-max items-center gap-4 will-change-transform sm:gap-6"
           style={{ animation: 'roomsMarquee 34s linear infinite' }}
@@ -300,7 +300,7 @@ function ElegantRoomsGallerySection({ gallery }) {
 
 function FeaturedStaySection({ stay }) {
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[1.35fr_0.75fr]">
         <img className="h-[320px] w-full rounded-[var(--radius-app)] object-cover sm:h-[420px] lg:min-h-[460px]" src={stay.image} alt={stay.imageAlt} />
         <div className="grid content-end rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] p-8 text-[var(--color-white)] lg:p-14">
@@ -318,7 +318,7 @@ function ValuesSection({ values }) {
   const icons = [FaRegHandshake, FaSpa, FaLeaf]
 
   return (
-    <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="soft-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[var(--radius-app)]">
         <img className="h-[500px] w-full object-cover sm:h-[560px]" src={values.image} alt={values.imageAlt} />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-hero-overlay-start),var(--color-hero-overlay-end))]" />
@@ -346,7 +346,7 @@ function ValuesSection({ values }) {
 
 function OffersSection({ offers }) {
   return (
-    <section className="relative overflow-hidden px-4 py-20 text-center text-[var(--color-white)] sm:px-6 lg:py-28">
+    <section className="relative overflow-hidden px-4 py-12 text-center text-[var(--color-white)] sm:px-6 lg:py-12">
       <img className="absolute inset-0 h-full w-full object-cover" src={offers.image} alt={offers.imageAlt} />
       <div className="absolute inset-0 bg-[var(--color-overlay-strong)]" />
       <div className="relative z-10 mx-auto max-w-3xl">
@@ -361,7 +361,7 @@ function OffersSection({ offers }) {
 
 function ExperiencesSection({ experiences }) {
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <p className="section-eyebrow mb-5">{experiences.eyebrow}</p>
         <h2 className="heading-display max-w-5xl text-[clamp(38px,11vw,82px)] font-semibold leading-[1.02]">{experiences.title}</h2>
@@ -397,7 +397,7 @@ function ExperiencesSection({ experiences }) {
 
 function FinalCtaSection({ cta }) {
   return (
-    <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="soft-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <p className="section-eyebrow mb-5">{cta.eyebrow}</p>
         <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto_1fr]">

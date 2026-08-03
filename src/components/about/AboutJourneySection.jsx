@@ -1,6 +1,6 @@
 function AboutJourneySection({ journey }) {
   return (
-    <section className="app-section px-4 py-12 sm:px-6 lg:py-16">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto grid w-full max-w-[90rem] items-center gap-10 lg:w-[90vw] lg:max-w-none lg:grid-cols-[1.44fr_0.78fr] lg:gap-12">
         <div className="grid gap-4 sm:grid-cols-[1.08fr_0.84fr] sm:gap-6">
           {journey.images.map((image, index) => (

@@ -70,7 +70,7 @@ function HomeBookingSection({ booking }) {
   }
 
   return (
-    <section id="book" className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+    <section id="book" className="soft-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="heading-display text-[clamp(54px,18vw,120px)] font-normal uppercase leading-none">
           {booking.title}
@@ -79,7 +79,7 @@ function HomeBookingSection({ booking }) {
           {booking.description}
         </p>
 
-        <form className="mx-auto mt-10 grid max-w-3xl gap-5 text-left sm:mt-16 sm:gap-8" onSubmit={handleSubmit}>
+        <form className="mx-auto mt-10 grid max-w-3xl gap-5 text-left sm:mt-12 sm:gap-8" onSubmit={handleSubmit}>
           <div className="grid gap-5 md:grid-cols-2 md:gap-8">
             <div className="relative">
               <select

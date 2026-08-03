@@ -54,7 +54,7 @@ function BlogListing({ data }) {
           <SiteHeader isSticky />
         </div>
 
-        <section className="px-4 py-12 sm:px-6 lg:py-20">
+        <section className="px-4 py-12 sm:px-6 lg:py-12">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-[0.95fr_0.9fr] lg:items-end">
               <div>
@@ -66,12 +66,12 @@ function BlogListing({ data }) {
               <p className="body-copy max-w-xl text-base leading-7 sm:text-lg sm:leading-8 lg:pb-3">{data.description}</p>
             </div>
 
-            <div className="mt-14">
+            <div className="mt-10">
               <p className="section-eyebrow mb-5">{data.featuredLabel}</p>
               <BlogCard post={featuredPost} isLarge />
             </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
               {posts.map((post) => (
                 <BlogCard post={post} key={post.slug} />
               ))}

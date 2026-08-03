@@ -22,7 +22,7 @@ function BlogDetailPage() {
         </div>
 
         <article>
-          <section className="px-4 py-10 sm:px-6 lg:py-16">
+          <section className="px-4 py-10 sm:px-6 lg:py-12">
             <div className="mx-auto max-w-7xl">
               <Link className="meta-text inline-flex items-center gap-3 text-[var(--color-primary-dark)]" to="/blogs">
                 <FaArrowLeft aria-hidden="true" />
@@ -56,7 +56,7 @@ function BlogDetailPage() {
             </div>
           </section>
 
-          <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+          <section className="soft-section px-4 py-12 sm:px-6 lg:py-12">
             <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.35fr_1fr]">
               <aside className="lg:sticky lg:top-28 lg:h-fit">
                 <p className="section-eyebrow">Tamohra Notes</p>

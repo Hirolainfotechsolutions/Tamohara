@@ -49,8 +49,8 @@ function AboutVisitSection() {
   }
 
   return (
-    <section className="app-section px-5 py-16 sm:px-8 lg:py-24">
-      <div className="mx-auto grid w-[92vw] max-w-none gap-16 lg:grid-cols-[0.9fr_1fr] lg:gap-24">
+    <section className="app-section px-5 py-12 sm:px-8 lg:py-12">
+      <div className="mx-auto grid w-[92vw] max-w-none gap-12 lg:grid-cols-[0.9fr_1fr] lg:gap-12">
         <div>
           <div className="space-y-1 text-base leading-7 text-[var(--color-primary-dark)] sm:text-lg">
             <p>

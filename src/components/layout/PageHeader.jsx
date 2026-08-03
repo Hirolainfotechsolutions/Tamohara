@@ -12,7 +12,7 @@ function PageHeader({ page }) {
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,var(--color-overlay-strong),var(--color-primary-dark-overlay)_48%,var(--color-primary-soft-overlay))]" />
           <SiteHeader />
 
-          <div className="relative z-10 mx-auto grid min-h-[calc(100svh-164px)] max-w-5xl place-content-center px-6 py-20 text-center">
+          <div className="relative z-10 mx-auto grid min-h-[calc(100svh-164px)] max-w-5xl place-content-center px-6 py-12 text-center">
             <p className="banner-eyebrow mb-5">
               {page.eyebrow}
             </p>

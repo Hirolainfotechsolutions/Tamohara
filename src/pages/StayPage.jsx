@@ -54,9 +54,9 @@ function StayPage() {
           <SiteHeader isSticky />
         </div>
 
-        <section className="px-5 py-14 sm:px-8 lg:py-24">
+        <section className="px-5 py-12 sm:px-8 lg:py-12">
           <div className="mx-auto max-w-6xl">
-            <div className="mb-12 max-w-2xl sm:mb-16">
+            <div className="mb-12 max-w-2xl sm:mb-12">
               <p className="section-eyebrow mb-4">{stayPageData.eyebrow}</p>
               <h1 className="heading-display text-[clamp(42px,12vw,88px)] font-semibold leading-[1]">
                 {stayPageData.title}

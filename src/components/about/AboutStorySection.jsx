@@ -1,7 +1,7 @@
 function AboutStorySection({ story }) {
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1fr] lg:gap-10">
         <div className="overflow-hidden rounded-[var(--radius-app)] shadow-[var(--shadow-soft)]">
           <img className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]" src={story.image} alt={story.imageAlt} />
         </div>

@@ -57,7 +57,7 @@ function GalleryPage() {
           <SiteHeader isSticky />
         </div>
 
-        <section className="px-4 py-12 sm:px-6 lg:py-16">
+        <section className="px-4 py-12 sm:px-6 lg:py-12">
           <div className="mx-auto max-w-7xl text-center">
             <p className="section-eyebrow mb-5">{galleryPageData.eyebrow}</p>
             <h1 className="heading-display mx-auto max-w-5xl text-[clamp(40px,12vw,82px)] font-semibold leading-[1]">

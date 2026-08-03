@@ -31,7 +31,7 @@ function RoomDetailPage() {
           <SiteHeader isSticky />
         </div>
 
-        <article className="px-4 py-14 sm:px-6 lg:py-20">
+        <article className="px-4 py-12 sm:px-6 lg:py-12">
           <div className="mx-auto max-w-5xl">
             <div className="text-center">
               <p className="section-eyebrow mb-5">({roomDetailsData.eyebrow})</p>
@@ -101,7 +101,7 @@ function RoomDetailPage() {
 
             <StayFacilitiesSection facilities={stayPageData.facilities} />
 
-            <section className="mt-20">
+            <section className="mt-12">
               <p className="section-eyebrow mb-4">(Similar Rooms & Suites)</p>
               <h2 className="heading-display text-[clamp(30px,9vw,54px)] font-semibold leading-[1.05]">
                 Explore Similar Rooms and Suites

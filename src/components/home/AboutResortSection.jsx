@@ -3,8 +3,8 @@ import Button from '../ui/Button'
 
 function AboutResortSection({ about }) {
   return (
-    <section id="about-resort" className="soft-section px-4 py-16 sm:px-6 lg:py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.92fr_1fr] lg:gap-16">
+    <section id="about-resort" className="soft-section px-4 py-12 sm:px-6 lg:py-12">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.92fr_1fr] lg:gap-12">
         <div className="relative mx-auto w-full max-w-[430px]">
           <div className="overflow-hidden rounded-[var(--radius-app)] shadow-[var(--shadow-soft)]">
             <img className="h-[420px] w-full object-cover" src={about.image} alt={about.imageAlt} />

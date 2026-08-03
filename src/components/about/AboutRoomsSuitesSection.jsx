@@ -61,7 +61,7 @@ function AboutRoomsSuitesSection({ roomsSuites }) {
   }
 
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>

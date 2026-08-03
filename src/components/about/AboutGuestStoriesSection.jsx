@@ -17,14 +17,14 @@ function AboutGuestStoriesSection({ guestStories }) {
   }
 
   return (
-    <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="app-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-6xl text-center">
         <p className="body-copy text-sm font-semibold">{guestStories.eyebrow}</p>
         <h2 className="heading-display mt-4 text-[clamp(44px,5vw,72px)] font-normal leading-none">
           Guest <span className="italic text-[var(--color-primary)]">stories</span>
         </h2>
 
-        <div className="relative mx-auto mt-14 min-h-[260px] max-w-3xl">
+        <div className="relative mx-auto mt-10 min-h-[260px] max-w-3xl">
           <button
             className="absolute left-0 top-[92px] hidden h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] sm:grid"
             type="button"
@@ -63,7 +63,7 @@ function AboutGuestStoriesSection({ guestStories }) {
           </button>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-5 py-16 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
           {guestStories.images.map((image, index) => (
             <div
               className="will-change-transform"

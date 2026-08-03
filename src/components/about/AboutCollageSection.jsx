@@ -1,6 +1,6 @@
 function AboutCollageSection({ collage }) {
   return (
-    <section className="app-section overflow-hidden px-4 py-16 sm:px-6 lg:py-24">
+    <section className="app-section overflow-hidden px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-3xl text-center">
         <div className="hero-ornament mx-auto mb-4 h-[18px] w-[76px]" aria-hidden="true" />
         <p className="section-eyebrow mb-4">{collage.eyebrow}</p>
@@ -12,7 +12,7 @@ function AboutCollageSection({ collage }) {
         </p>
       </div>
 
-      <div className="mx-[calc(50%-50vw)] mt-10 grid w-screen overflow-hidden sm:grid-cols-2 md:mt-14 md:grid-cols-4 md:grid-rows-[320px_320px]">
+      <div className="mx-[calc(50%-50vw)] mt-10 grid w-screen overflow-hidden sm:grid-cols-2 md:mt-10 md:grid-cols-4 md:grid-rows-[320px_320px]">
         <img
           className="h-[240px] w-full object-cover sm:h-[300px] md:col-span-2 md:h-full"
           src={collage.images[0].src}

@@ -11,7 +11,7 @@ const amenityIcons = {
 
 function AmenitiesSection({ amenities }) {
   return (
-    <section id="amenities" className="app-section px-4 py-16 sm:px-6 lg:px-6 lg:py-20">
+    <section id="amenities" className="app-section px-4 pb-8 pt-16 sm:px-6 sm:pb-12 lg:px-6 lg:py-12">
       <div className="mx-auto max-w-[1400px]">
         <p className="section-eyebrow mb-5">
           {amenities.eyebrow}
@@ -30,17 +30,17 @@ function AmenitiesSection({ amenities }) {
             />
           </div>
 
-          <div className="relative z-10 grid gap-4 sm:grid-cols-2 lg:-ml-32 lg:gap-5">
+          <div className="relative z-10 grid grid-cols-2 gap-3 sm:gap-4 lg:-ml-32 lg:gap-5">
             {amenities.items.map((item) => {
               const Icon = amenityIcons[item.icon]
 
               return (
                 <article
-                  className="soft-card grid min-h-[150px] rounded-[var(--radius-app)] border border-[var(--color-border)] p-5 text-[var(--color-muted)] sm:min-h-[170px] sm:p-6 lg:min-h-[186px] lg:rounded-none lg:p-7"
+                  className="soft-card grid min-h-[130px] rounded-[var(--radius-app)] border border-[var(--color-border)] p-4 text-[var(--color-muted)] sm:min-h-[170px] sm:p-6 lg:min-h-[186px] lg:rounded-none lg:p-7"
                   key={item.label}
                 >
-                  <Icon className="h-12 w-12 text-[var(--color-primary)]" aria-hidden="true" />
-                  <h3 className="card-title mt-auto">{item.label}</h3>
+                  <Icon className="h-9 w-9 text-[var(--color-primary)] sm:h-12 sm:w-12" aria-hidden="true" />
+                  <h3 className="card-title mt-auto text-sm leading-tight sm:text-[1.0625rem]">{item.label}</h3>
                 </article>
               )
             })}

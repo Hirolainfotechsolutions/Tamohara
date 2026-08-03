@@ -143,8 +143,8 @@ function ContactFormPage({ data }) {
           <AboutHeroBanner hero={data.hero} showBooking={false} />
         </div>
 
-        <section className="px-5 py-14 sm:px-8 lg:py-24" id="contact-form">
-          <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.78fr_1fr] lg:gap-24">
+        <section className="px-5 py-12 sm:px-8 lg:py-12" id="contact-form">
+          <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.78fr_1fr] lg:gap-12">
             <div className="lg:pt-4">
               <p className="section-eyebrow mb-6">{data.eyebrow}</p>
               <h1 className="heading-display max-w-xl text-[clamp(42px,12vw,86px)] font-semibold leading-[1]">
@@ -153,7 +153,7 @@ function ContactFormPage({ data }) {
               <p className="body-copy mt-6 text-lg leading-8 sm:mt-8 sm:text-xl">{data.subtitle}</p>
               <p className="body-copy mt-4 max-w-md text-lg leading-8 sm:mt-5 sm:text-xl">{data.description}</p>
 
-              <div className="mt-12 lg:mt-24">
+              <div className="mt-12 lg:mt-12">
                 <h2 className="heading-display text-3xl font-semibold leading-none sm:text-4xl">{data.detailsTitle}</h2>
                 <div className="mt-8 space-y-7 sm:mt-10 sm:space-y-9">
                   {data.detailGroups.map((group) => (

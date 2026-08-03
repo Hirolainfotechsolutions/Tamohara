@@ -18,14 +18,14 @@ const serviceIcons = {
 
 function AboutServicesSection({ services }) {
   return (
-    <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
+    <section className="soft-section px-4 py-12 sm:px-6 lg:py-12">
       <div className="mx-auto max-w-6xl text-center">
         <p className="section-eyebrow mb-5">{services.eyebrow}</p>
         <h2 className="heading-display mx-auto max-w-3xl text-[clamp(42px,5vw,68px)] font-semibold leading-[1.04]">
           {services.title}
         </h2>
 
-        <div className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {services.items.map((service) => {
             const Icon = serviceIcons[service.icon]
 
