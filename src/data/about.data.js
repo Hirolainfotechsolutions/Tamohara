@@ -44,10 +44,10 @@ export const aboutPageData = {
     titleLines: ['We are', 'Tamohra.'],
     description:
       'A mist-clad Sakleshpur retreat shaped by coffee estates, bungalow-inspired stays, hearty buffet meals, and slow mountain hospitality.',
-    foregroundImage: exteriorImage,
-    foregroundAlt: 'Tamohra Resort bungalow exterior and pool',
-    backgroundImage: estatePathImage,
-    backgroundAlt: 'Coffee estate road and greenery at Tamohra Resort',
+    foregroundImage: forestBridgeImage,
+    foregroundAlt: 'Rope activity inside the Tamohra Resort estate',
+    backgroundImage: aboutBannerImage,
+    backgroundAlt: 'Tamohra Resort pool with Western Ghats views',
   },
   story: {
     eyebrow: 'Our Story',
