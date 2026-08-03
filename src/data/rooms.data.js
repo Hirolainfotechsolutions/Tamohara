@@ -3,6 +3,7 @@ import roomTwoImage from '../assets/images/13.webp'
 import roomThreeImage from '../assets/images/14.webp'
 import roomFourImage from '../assets/images/15.webp'
 import roomFiveImage from '../assets/images/24.webp'
+import villaRoomImage from '../assets/images/1.webp'
 
 export const roomDetailsData = {
   eyebrow: 'Rooms & Suites Details',
@@ -64,6 +65,23 @@ export const roomDetailsData = {
         'Room 2 is a practical choice for guests who want a balanced stay with enough room to settle in and enjoy Sakleshpur without over-planning.',
       conclusion:
         'Choose Room 2 for a small group stay with meals, pool access, and a comfortable resort rhythm.',
+    },
+    {
+      slug: 'villa-room',
+      title: 'Villa Room',
+      subtitle: '2 Occupancy AC',
+      price: 'Rs 7000 + taxes',
+      size: '2 Guests',
+      bed: '1 AC Villa Room',
+      bathroom: '1 Bathroom',
+      image: villaRoomImage,
+      imageAlt: 'Tamohra villa room block in Sakleshpur',
+      overview:
+        'A 2-occupancy AC villa room for guests who want a quieter stay with added comfort. Tamohra has four villa block rooms in this category, with extra bed available at Rs 2500 + taxes.',
+      details:
+        'The villa room includes the Tamohra stay rhythm of buffet meals, breakfast, hi-tea, pool access, fresh linens, toiletries, and easy access to estate activities.',
+      conclusion:
+        'Choose the Villa Room for an AC stay with resort comfort, meals, and a calm Sakleshpur setting.',
     },
     {
       slug: 'room-3',

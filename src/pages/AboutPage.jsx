@@ -1,5 +1,6 @@
 import AboutCollageSection from "../components/about/AboutCollageSection";
 import AboutGuestStoriesSection from "../components/about/AboutGuestStoriesSection";
+import AboutFoodActivitiesStaySection from "../components/about/AboutFoodActivitiesStaySection";
 import AboutJourneySection from "../components/about/AboutJourneySection";
 import AboutNearbyPlacesSection from "../components/about/AboutNearbyPlacesSection";
 import AboutServicesSection from "../components/about/AboutServicesSection";
@@ -20,6 +21,7 @@ function AboutPage() {
         <ContactSplitBanner banner={aboutPageData.splitBanner} showHeader />
         <AboutStorySection story={aboutPageData.story} />
         <AboutServicesSection services={aboutPageData.services} />
+        <AboutFoodActivitiesStaySection section={aboutPageData.foodActivitiesStay} />
         <AboutJourneySection journey={aboutPageData.journey} />
         <AboutNearbyPlacesSection nearbyPlaces={aboutPageData.nearbyPlaces} />
         <RoomsPreviewSection rooms={homePageData.roomsPreview} />
