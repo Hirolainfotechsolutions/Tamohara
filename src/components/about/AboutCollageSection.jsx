@@ -12,29 +12,29 @@ function AboutCollageSection({ collage }) {
         </p>
       </div>
 
-      <div className="mx-[calc(50%-50vw)] mt-10 grid w-screen overflow-hidden sm:grid-cols-2 md:mt-10 md:grid-cols-4 md:grid-rows-[320px_320px]">
+      <div className="mx-[calc(50%-50vw)] mt-8 grid w-screen grid-cols-2 overflow-hidden md:mt-10 md:grid-cols-4 md:grid-rows-[320px_320px]">
         <img
-          className="h-[240px] w-full object-cover sm:h-[300px] md:col-span-2 md:h-full"
+          className="col-span-2 h-[220px] w-full object-cover sm:h-[300px] md:col-span-2 md:h-full"
           src={collage.images[0].src}
           alt={collage.images[0].alt}
         />
         <img
-          className="h-[240px] w-full object-cover sm:h-[300px] md:col-span-2 md:h-full"
+          className="col-span-2 h-[220px] w-full object-cover sm:h-[300px] md:col-span-2 md:h-full"
           src={collage.images[1].src}
           alt={collage.images[1].alt}
         />
         <img
-          className="h-[240px] w-full object-cover sm:h-[300px] md:h-full"
+          className="h-[180px] w-full object-cover sm:h-[300px] md:h-full"
           src={collage.images[2].src}
           alt={collage.images[2].alt}
         />
         <img
-          className="h-[240px] w-full object-cover sm:h-[300px] md:col-span-2 md:h-full"
+          className="row-span-2 h-[360px] w-full object-cover sm:h-[300px] md:col-span-2 md:row-span-1 md:h-full"
           src={collage.images[3].src}
           alt={collage.images[3].alt}
         />
         <img
-          className="h-[240px] w-full object-cover sm:h-[300px] md:h-full"
+          className="h-[180px] w-full object-cover sm:h-[300px] md:h-full"
           src={collage.images[4].src}
           alt={collage.images[4].alt}
         />
