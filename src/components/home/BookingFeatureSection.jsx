@@ -60,46 +60,46 @@ function BookingFeatureSection({ booking }) {
 
   return (
     <section className="app-section px-2 py-2 sm:px-3">
-      <div className="relative min-h-[calc(100svh-16px)] overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] sm:min-h-[calc(100svh-24px)]">
+      <div className="relative overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] lg:min-h-[calc(100svh-24px)]">
         <img
           className="absolute inset-0 h-full w-full object-cover"
           src={booking.image}
           alt={booking.imageAlt}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,35,29,0.92)_0%,rgba(20,35,29,0.68)_44%,rgba(20,35,29,0.22)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,33,27,0.92)_0%,rgba(18,33,27,0.68)_44%,rgba(18,33,27,0.22)_100%)]" />
 
-        <div className="relative z-10 mx-auto grid min-h-[calc(100svh-16px)] max-w-7xl items-center gap-10 px-6 py-16 sm:min-h-[calc(100svh-24px)] sm:px-8 lg:grid-cols-[0.95fr_0.78fr] lg:px-10">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 sm:py-16 lg:min-h-[calc(100svh-24px)] lg:grid-cols-[0.95fr_0.78fr] lg:gap-10 lg:px-10">
           <div className="max-w-2xl text-[var(--color-white)]">
-            <h2 className="heading-display text-[clamp(38px,4.4vw,68px)] font-semibold leading-[1.05] text-[var(--color-white)]">
+            <h2 className="heading-display text-[clamp(36px,10vw,68px)] font-semibold leading-[1.05] text-[var(--color-white)]">
               {booking.titleLines?.length
                 ? booking.titleLines.map((line) => (
-                    <span className="block whitespace-nowrap" key={line}>
+                    <span className="block lg:whitespace-nowrap" key={line}>
                       {line}
                     </span>
                   ))
                 : booking.title}
             </h2>
-            <p className="banner-copy mt-7 max-w-lg font-semibold">
+            <p className="banner-copy mt-5 max-w-lg font-semibold sm:mt-7">
               {booking.description}
             </p>
 
             <Link
-              className="group mt-10 inline-flex min-h-14 items-center gap-0 overflow-hidden rounded-[var(--radius-app)] border border-white/70 text-sm font-bold text-[var(--color-white)] transition-colors duration-300 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-black)]"
+              className="group mt-7 inline-flex min-h-14 items-center gap-0 overflow-hidden rounded-[var(--radius-app)] border border-white/70 text-sm font-bold text-[var(--color-white)] transition-colors duration-300 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-primary-dark)] sm:mt-10"
               to={booking.action.href}
             >
               <span className="px-5">{booking.action.label}</span>
-              <span className="grid h-14 w-14 place-items-center bg-[var(--color-white)] text-[var(--color-black)] transition-colors duration-300 group-hover:bg-[var(--color-primary-dark)] group-hover:text-[var(--color-white)]">
+              <span className="grid h-14 w-14 place-items-center bg-[var(--color-white)] text-[var(--color-primary-dark)] transition-colors duration-300 group-hover:bg-[var(--color-primary-dark)] group-hover:text-[var(--color-white)]">
                 <FaArrowUp className="rotate-45 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
               </span>
             </Link>
           </div>
 
           <form
-            className="rounded-[var(--radius-app)] bg-[var(--color-secondary-light)] p-8 shadow-[var(--shadow-soft)] sm:p-10"
+            className="rounded-[var(--radius-app)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-soft)] sm:p-10"
             onSubmit={handleSubmit}
           >
-            <p className="meta-text mb-5 text-[var(--color-black)]">({booking.form.eyebrow})</p>
-            <h3 className="heading-display mb-10 text-[clamp(40px,4vw,58px)] font-semibold leading-none">
+            <p className="meta-text mb-5 text-[var(--color-primary-dark)]">({booking.form.eyebrow})</p>
+            <h3 className="heading-display mb-7 text-[clamp(34px,10vw,58px)] font-semibold leading-none sm:mb-10">
               {booking.form.title}
             </h3>
 
@@ -109,7 +109,7 @@ function BookingFeatureSection({ booking }) {
                 onClick={() => openDatePicker(arrivalInputRef)}
               >
                 <input
-                  className="booking-date-input h-14 w-full rounded-[var(--radius-app)] border border-[var(--color-black)] bg-transparent px-5 pr-12 text-base text-[var(--color-black)] outline-none"
+                  className="booking-date-input h-14 w-full rounded-[var(--radius-app)] border border-[var(--color-primary-dark)] bg-transparent px-5 pr-12 text-base text-[var(--color-primary-dark)] outline-none"
                   min={today}
                   name="arrival"
                   onChange={handleChange}
@@ -120,7 +120,7 @@ function BookingFeatureSection({ booking }) {
                   value={formValues.arrival}
                 />
                 <button
-                  className="absolute right-4 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full text-[var(--color-black)] transition-colors hover:bg-[var(--color-secondary-soft)]"
+                  className="absolute right-4 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
                   type="button"
                   onClick={() => openDatePicker(arrivalInputRef)}
                   aria-label="Open arrival date calendar"
@@ -134,7 +134,7 @@ function BookingFeatureSection({ booking }) {
                 onClick={() => openDatePicker(departureInputRef)}
               >
                 <input
-                  className="booking-date-input h-14 w-full rounded-[var(--radius-app)] border border-[var(--color-black)] bg-transparent px-5 pr-12 text-base text-[var(--color-black)] outline-none"
+                  className="booking-date-input h-14 w-full rounded-[var(--radius-app)] border border-[var(--color-primary-dark)] bg-transparent px-5 pr-12 text-base text-[var(--color-primary-dark)] outline-none"
                   min={formValues.arrival || today}
                   name="departure"
                   onChange={handleChange}
@@ -145,7 +145,7 @@ function BookingFeatureSection({ booking }) {
                   value={formValues.departure}
                 />
                 <button
-                  className="absolute right-4 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full text-[var(--color-black)] transition-colors hover:bg-[var(--color-secondary-soft)]"
+                  className="absolute right-4 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
                   type="button"
                   onClick={() => openDatePicker(departureInputRef)}
                   aria-label="Open departure date calendar"
@@ -156,7 +156,7 @@ function BookingFeatureSection({ booking }) {
 
               <label className="relative block">
                 <select
-                  className="h-14 w-full appearance-none rounded-[var(--radius-app)] border border-[var(--color-black)] bg-transparent px-5 pr-12 text-base text-[var(--color-black)] outline-none"
+                  className="h-14 w-full appearance-none rounded-[var(--radius-app)] border border-[var(--color-primary-dark)] bg-transparent px-5 pr-12 text-base text-[var(--color-primary-dark)] outline-none"
                   name="people"
                   onChange={handleChange}
                   required
@@ -171,7 +171,7 @@ function BookingFeatureSection({ booking }) {
               </label>
 
               <button
-                className="h-14 rounded-[var(--radius-app)] bg-[var(--color-primary)] text-base font-semibold text-[var(--color-black)] transition-colors hover:bg-[var(--color-primary-hover)]"
+                className="h-14 rounded-[var(--radius-app)] bg-[var(--color-primary)] text-base font-semibold text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
                 type="submit"
               >
                 {booking.form.submitLabel}

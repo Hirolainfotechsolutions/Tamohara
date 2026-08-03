@@ -21,11 +21,11 @@ function FooterLinks({ items, title }) {
 
 function SiteFooter({ reveal = false }) {
   const year = new Date().getFullYear()
-  const footerPositionClass = reveal ? 'sticky bottom-0 z-0' : 'relative z-0'
+  const footerPositionClass = reveal ? 'relative z-0 lg:sticky lg:bottom-0' : 'relative z-0'
 
   return (
-    <footer className={`${footerPositionClass} min-h-[76svh] overflow-hidden bg-[#070807] px-5 py-12 text-white sm:px-8 lg:px-10`}>
-      <div className="mx-auto flex min-h-[calc(76svh-96px)] max-w-[1480px] flex-col justify-between gap-12">
+    <footer className={`${footerPositionClass} overflow-hidden bg-[var(--color-primary-dark)] px-5 py-12 text-white sm:px-8 lg:min-h-[76svh] lg:px-10`}>
+      <div className="mx-auto flex max-w-[1480px] flex-col justify-between gap-12 lg:min-h-[calc(76svh-96px)]">
         <div className="grid items-start gap-x-14 gap-y-10 sm:grid-cols-2 lg:grid-cols-[1fr_1.25fr_auto]">
           <FooterLinks items={siteData.footer.navigation} title="Pages" />
 
@@ -61,11 +61,11 @@ function SiteFooter({ reveal = false }) {
         </div>
 
         <div className="overflow-hidden">
-          <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(82px,18vw,250px)] font-semibold uppercase leading-[0.82] text-white">
+          <p className="heading-display pointer-events-none w-full select-none whitespace-nowrap text-center text-[clamp(64px,18vw,250px)] font-semibold uppercase leading-[0.82] text-white">
             {siteData.brandName}
           </p>
           <div className="mt-6 flex flex-col gap-4 text-sm font-semibold sm:flex-row sm:items-center sm:justify-between sm:text-base">
-            <p>© {year} All rights reserved.</p>
+            <p>&copy; {year} All rights reserved.</p>
             <p>{siteData.footer.tagline}</p>
           </div>
         </div>

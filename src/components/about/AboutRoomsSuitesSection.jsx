@@ -66,15 +66,15 @@ function AboutRoomsSuitesSection({ roomsSuites }) {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="section-eyebrow mb-4">{roomsSuites.eyebrow}</p>
-            <h2 className="heading-display text-[clamp(42px,5vw,72px)] font-semibold leading-none">
+            <h2 className="heading-display text-[clamp(38px,10vw,72px)] font-semibold leading-[1.02]">
               {roomsSuites.title}
             </h2>
             <p className="body-copy mt-4 max-w-xl text-base leading-7">{roomsSuites.description}</p>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 self-start">
             <button
-              className="grid h-12 w-12 place-items-center rounded-full border border-[var(--color-border)] text-[var(--color-black)] transition-colors hover:bg-[var(--color-primary-dark)] hover:text-[var(--color-white)]"
+              className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
               type="button"
               onClick={goToPrevious}
               aria-label="Previous rooms"
@@ -82,7 +82,7 @@ function AboutRoomsSuitesSection({ roomsSuites }) {
               <FaArrowLeft aria-hidden="true" />
             </button>
             <button
-              className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-primary-dark)] text-[var(--color-white)] transition-colors hover:bg-[var(--color-black)]"
+              className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
               type="button"
               onClick={goToNext}
               aria-label="Next rooms"
@@ -107,7 +107,7 @@ function AboutRoomsSuitesSection({ roomsSuites }) {
               >
                 <div className="overflow-hidden rounded-[var(--radius-app)]">
                   <img
-                    className="h-[280px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[280px]"
                     src={room.image}
                     alt={room.imageAlt}
                   />
@@ -115,9 +115,9 @@ function AboutRoomsSuitesSection({ roomsSuites }) {
                 <div className="mt-5">
                   <h3 className="heading-display text-2xl font-semibold">{room.title}</h3>
                   <p className="meta-text mt-2 text-[var(--color-primary-dark)]">{room.subtitle}</p>
-                  <p className="body-copy mt-3 min-h-[72px] text-sm leading-6">{room.description}</p>
+                  <p className="body-copy mt-3 min-h-0 text-sm leading-6 sm:min-h-[72px]">{room.description}</p>
                   <Link
-                    className="meta-text mt-5 inline-flex border-b border-[var(--color-black)] pb-1 text-[var(--color-black)] transition-colors hover:text-[var(--color-primary)]"
+                    className="meta-text mt-5 inline-flex border-b border-[var(--color-primary-dark)] pb-1 text-[var(--color-primary-dark)] transition-colors hover:text-[var(--color-primary)]"
                     to={room.href}
                   >
                     View Details
@@ -132,7 +132,7 @@ function AboutRoomsSuitesSection({ roomsSuites }) {
           {rooms.map((room, index) => (
             <button
               className={`h-2.5 rounded-full transition-all ${
-                normalizedIndex === index ? 'w-8 bg-[var(--color-primary-dark)]' : 'w-2.5 bg-[var(--color-border)]'
+                normalizedIndex === index ? 'w-8 bg-[var(--color-primary)]' : 'w-2.5 bg-[var(--color-border)]'
               }`}
               key={room.title}
               type="button"

@@ -2,39 +2,34 @@
 
 :root {
   --color-primary: #c89b63;
-  --color-primary-hover: #b8894f;
-  --color-primary-dark: #1f3d32;
-  --color-secondary: #a3b19b;
-  --color-secondary-soft: #e8eee3;
-  --color-secondary-light: #f2f6ef;
-  --color-black: #14231d;
+  --color-primary-hover: #12211b;
+  --color-primary-dark: #12211b;
   --color-white: #ffffff;
-  --color-surface: #f7f5ef;
-  --color-muted: #5f6d64;
-  --color-border: rgba(31, 61, 50, 0.22);
-  --color-overlay: rgba(20, 35, 29, 0.42);
-  --color-overlay-strong: rgba(20, 35, 29, 0.72);
-  --color-hero-overlay-start: rgba(20, 35, 29, 0.88);
-  --color-hero-overlay-mid: rgba(31, 61, 50, 0.62);
-  --color-hero-overlay-end: rgba(31, 61, 50, 0.28);
-  --color-primary-dark-overlay: rgba(31, 61, 50, 0.82);
-  --color-primary-soft-overlay: rgba(163, 177, 155, 0.58);
+  --color-surface: #ffffff;
+  --color-muted: rgba(18, 33, 27, 0.72);
+  --color-border: rgba(18, 33, 27, 0.22);
+  --color-overlay: rgba(18, 33, 27, 0.42);
+  --color-overlay-strong: rgba(18, 33, 27, 0.72);
+  --color-hero-overlay-start: rgba(18, 33, 27, 0.88);
+  --color-hero-overlay-mid: rgba(18, 33, 27, 0.62);
+  --color-hero-overlay-end: rgba(18, 33, 27, 0.28);
+  --color-primary-dark-overlay: rgba(18, 33, 27, 0.82);
+  --color-primary-soft-overlay: rgba(200, 155, 99, 0.58);
   --color-white-glow: rgba(255, 255, 255, 0.14);
-  --color-black-soft: rgba(20, 35, 29, 0.12);
-  --color-black-medium: rgba(20, 35, 29, 0.18);
-  --color-ornament: #ffffff;
+  --color-shadow-soft: rgba(18, 33, 27, 0.12);
+  --color-shadow-medium: rgba(18, 33, 27, 0.18);
 
   --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: Georgia, "Times New Roman", serif;
 
   --radius-app: 8px;
-  --shadow-soft: 0 18px 50px rgba(20, 35, 29, 0.12);
-  --shadow-round: 0 10px 28px rgba(20, 35, 29, 0.1);
-  --shadow-header: 0 10px 30px rgba(20, 35, 29, 0.08);
+  --shadow-soft: 0 18px 50px rgba(18, 33, 27, 0.12);
+  --shadow-round: 0 10px 28px rgba(18, 33, 27, 0.1);
+  --shadow-header: 0 10px 30px rgba(18, 33, 27, 0.08);
 
   font-family: var(--font-body);
-  color: var(--color-black);
-  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  background: var(--color-white);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -59,6 +54,19 @@ a {
   font: inherit;
 }
 
+button,
+a,
+[role="button"],
+summary,
+select {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
 #root {
   min-height: 100svh;
 }
@@ -66,8 +74,8 @@ a {
 @layer base {
   body {
     font-family: var(--font-body);
-    background: var(--color-surface);
-    color: var(--color-black);
+    background: var(--color-white);
+    color: var(--color-primary-dark);
   }
 
   @keyframes fadeIn {
@@ -125,17 +133,17 @@ a {
   }
 
   .soft-card {
-    background: var(--color-secondary-light);
+    background: var(--color-surface);
   }
 
   .heading-display {
     font-family: var(--font-display);
-    color: var(--color-black);
+    color: var(--color-primary-dark);
     letter-spacing: 0;
   }
 
   .section-eyebrow {
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.18em;
@@ -190,7 +198,7 @@ a {
   }
 
   .banner-eyebrow {
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.2em;
@@ -222,7 +230,7 @@ a {
     background: radial-gradient(
         circle at 6px 50%,
         transparent 5px,
-        var(--color-ornament) 5.6px,
+        var(--color-white) 5.6px,
         transparent 6.2px
       )
       0 0 / 19px 18px repeat-x;
@@ -236,7 +244,7 @@ a {
     gap: 0.625rem;
     border-radius: var(--radius-app);
     background: var(--color-primary);
-    color: var(--color-black);
+    color: var(--color-primary-dark);
     padding: 0 1.75rem;
     font-size: 0.8125rem;
     font-weight: 800;
@@ -245,11 +253,13 @@ a {
     text-transform: uppercase;
     transition:
       background-color 180ms ease,
+      color 180ms ease,
       transform 180ms ease;
   }
 
   .primary-button:hover {
     background: var(--color-primary-hover);
+    color: var(--color-white);
     transform: translateY(-1px);
   }
 

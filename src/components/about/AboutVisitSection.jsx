@@ -52,7 +52,7 @@ function AboutVisitSection() {
     <section className="app-section px-5 py-16 sm:px-8 lg:py-24">
       <div className="mx-auto grid w-[92vw] max-w-none gap-16 lg:grid-cols-[0.9fr_1fr] lg:gap-24">
         <div>
-          <div className="space-y-1 text-base leading-7 text-[var(--color-black)] sm:text-lg">
+          <div className="space-y-1 text-base leading-7 text-[var(--color-primary-dark)] sm:text-lg">
             <p>
               Email: <a className="font-semibold" href={siteData.email.href}>{siteData.email.label}</a>
             </p>
@@ -73,7 +73,7 @@ function AboutVisitSection() {
 
           <form className="mt-10 grid max-w-2xl gap-5" onSubmit={handleSubmit}>
             <label className="grid gap-2">
-              <span className="text-base font-semibold text-[var(--color-black)]">Name</span>
+              <span className="text-base font-semibold text-[var(--color-primary-dark)]">Name</span>
               <input
                 className="h-12 rounded-sm border border-transparent bg-white px-4 text-base outline-none transition-colors focus:border-[var(--color-primary-dark)]"
                 name="name"
@@ -84,7 +84,7 @@ function AboutVisitSection() {
             </label>
 
             <label className="grid gap-2">
-              <span className="text-base font-semibold text-[var(--color-black)]">Email Address</span>
+              <span className="text-base font-semibold text-[var(--color-primary-dark)]">Email Address</span>
               <input
                 className="h-12 rounded-sm border border-transparent bg-white px-4 text-base outline-none transition-colors focus:border-[var(--color-primary-dark)]"
                 name="email"
@@ -96,7 +96,7 @@ function AboutVisitSection() {
             </label>
 
             <label className="grid gap-2">
-              <span className="text-base font-semibold text-[var(--color-black)]">Message</span>
+              <span className="text-base font-semibold text-[var(--color-primary-dark)]">Message</span>
               <textarea
                 className="min-h-20 rounded-sm border border-transparent bg-white px-4 py-3 text-base outline-none transition-colors focus:border-[var(--color-primary-dark)]"
                 name="message"
@@ -107,7 +107,7 @@ function AboutVisitSection() {
             </label>
 
             <button
-              className="inline-flex w-fit items-center gap-4 rounded-full bg-[var(--color-primary)] px-6 py-3 text-base font-bold text-[var(--color-white)] transition-colors hover:bg-[var(--color-primary-dark)]"
+              className="inline-flex w-fit items-center gap-4 rounded-full bg-[var(--color-primary)] px-6 py-3 text-base font-bold text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
               type="submit"
             >
               Send Message
@@ -125,11 +125,11 @@ function AboutVisitSection() {
           <p className="body-copy mt-3 text-lg leading-7">
             Nestled in the mist-clad countryside of Sakleshpur, Karnataka.
           </p>
-          <p className="mt-1 text-base font-semibold leading-7 text-[var(--color-black)]">
+          <p className="mt-1 text-base font-semibold leading-7 text-[var(--color-primary-dark)]">
             {siteData.address}
           </p>
 
-          <div className="mt-9 overflow-hidden bg-[var(--color-sage)]">
+          <div className="mt-9 overflow-hidden bg-[var(--color-primary-dark)]">
             <iframe
               className="h-[360px] w-full border-0 sm:h-[440px]"
               title="Tamohra Resort location map"

@@ -15,14 +15,14 @@ const defaultBanner = {
 
 function ContactSplitBanner({ banner = defaultBanner, showHeader = false }) {
   return (
-    <section className="relative min-h-[calc(100svh-92px)] overflow-hidden bg-[var(--color-surface)]">
+    <section className="relative overflow-hidden bg-[var(--color-surface)]">
       {showHeader ? (
         <div className="relative z-30">
           <SiteHeader tone="dark" />
         </div>
       ) : null}
 
-      <div className="absolute right-0 top-0 h-full w-full lg:w-[44%]">
+      <div className="absolute right-0 top-0 h-[42%] w-full sm:h-full lg:w-[44%]">
         <img
           className="h-full w-full object-cover"
           src={banner.backgroundImage}
@@ -31,22 +31,22 @@ function ContactSplitBanner({ banner = defaultBanner, showHeader = false }) {
         <div className="absolute inset-0 bg-[var(--color-primary-dark)]/10" />
       </div>
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-92px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:py-20">
+      <div className="relative mx-auto grid min-h-[calc(100svh-92px)] max-w-7xl items-center gap-10 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:py-20">
         <div className="relative z-10 max-w-xl">
-          <p className="section-eyebrow mb-8">{banner.eyebrow}</p>
-          <h1 className="heading-display text-[clamp(58px,7vw,116px)] font-normal leading-[0.98] text-[var(--color-black)]">
+          <p className="section-eyebrow mb-5 sm:mb-8">{banner.eyebrow}</p>
+          <h1 className="heading-display text-[clamp(48px,14vw,116px)] font-normal leading-[0.98] text-[var(--color-primary-dark)]">
             {banner.titleLines.map((line) => (
               <span className="block" key={line}>{line}</span>
             ))}
           </h1>
-          <p className="body-copy mt-8 max-w-lg text-lg leading-8">
+          <p className="body-copy mt-6 max-w-lg text-base leading-7 sm:mt-8 sm:text-lg sm:leading-8">
             {banner.description}
           </p>
         </div>
 
-        <figure className="relative z-10 mx-auto w-full max-w-[420px] justify-self-center lg:-translate-x-[18%]">
+        <figure className="relative z-10 mx-auto w-full max-w-[360px] justify-self-center sm:max-w-[420px] lg:-translate-x-[18%]">
           <img
-            className="aspect-[4/5] w-full object-cover shadow-[0_28px_70px_rgba(18,33,27,0.24)]"
+            className="aspect-[4/5] w-full rounded-[var(--radius-app)] object-cover shadow-[0_28px_70px_var(--color-shadow-medium)] lg:rounded-none"
             src={banner.foregroundImage}
             alt={banner.foregroundAlt}
           />

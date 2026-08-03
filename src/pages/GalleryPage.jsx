@@ -60,7 +60,7 @@ function GalleryPage() {
         <section className="px-4 py-12 sm:px-6 lg:py-16">
           <div className="mx-auto max-w-7xl text-center">
             <p className="section-eyebrow mb-5">{galleryPageData.eyebrow}</p>
-            <h1 className="heading-display mx-auto max-w-5xl text-[clamp(44px,6vw,82px)] font-semibold leading-[0.98]">
+            <h1 className="heading-display mx-auto max-w-5xl text-[clamp(40px,12vw,82px)] font-semibold leading-[1]">
               {galleryPageData.title}
             </h1>
             <p className="body-copy mx-auto mt-5 max-w-2xl text-base leading-8 sm:text-lg">
@@ -72,8 +72,8 @@ function GalleryPage() {
                 <button
                   className={`rounded-full border px-5 py-3 text-sm font-semibold transition-colors ${
                     activeCategory === category
-                      ? 'border-[var(--color-primary-dark)] bg-[var(--color-primary-dark)] text-[var(--color-white)]'
-                      : 'border-[var(--color-border)] bg-[var(--color-secondary-light)] text-[var(--color-black)] hover:border-[var(--color-primary-dark)]'
+                      ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-dark)]'
+                      : 'border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-dark)] hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]'
                   }`}
                   key={category}
                   type="button"
@@ -90,12 +90,12 @@ function GalleryPage() {
           <div className="mx-auto grid w-full max-w-[90vw] gap-6 lg:gap-8">
             {imageGroups.map((group, groupIndex) => (
               <div
-                className="grid gap-5 sm:grid-cols-4 lg:grid-cols-12 lg:gap-6"
+                className="grid gap-4 sm:grid-cols-4 lg:grid-cols-12 lg:gap-6"
                 key={`gallery-group-${groupIndex}`}
               >
                 {group.map((image, index) => (
                   <button
-                    className={`group relative h-[340px] overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] text-left sm:h-[400px] lg:h-[460px] ${
+                    className={`group relative h-[300px] overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] text-left sm:h-[400px] lg:h-[460px] ${
                       layoutClasses[index] ?? 'sm:col-span-2 lg:col-span-6'
                     }`}
                     key={image.title}
@@ -107,10 +107,10 @@ function GalleryPage() {
                       src={image.src}
                       alt={image.alt}
                     />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(20,35,29,0.84)_100%)] opacity-90" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(18,33,27,0.84)_100%)] opacity-90" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 text-[var(--color-white)]">
                       <p className="meta-text mb-2 text-white/70">{image.category}</p>
-                      <h2 className="heading-display text-3xl font-semibold leading-none text-[var(--color-white)]">
+                      <h2 className="heading-display text-2xl font-semibold leading-none text-[var(--color-white)] sm:text-3xl">
                         {image.title}
                       </h2>
                     </div>
@@ -123,13 +123,13 @@ function GalleryPage() {
 
         {activeImage ? (
           <div
-            className="fixed inset-0 z-[80] grid place-items-center bg-[rgba(20,35,29,0.9)] p-4"
+            className="fixed inset-0 z-[80] grid place-items-center bg-[rgba(18,33,27,0.9)] p-4"
             role="dialog"
             aria-modal="true"
             aria-label={activeImage.title}
           >
             <button
-              className="absolute right-5 top-5 grid h-12 w-12 place-items-center rounded-full bg-[var(--color-secondary-light)] text-xl text-[var(--color-black)] transition-colors hover:bg-[var(--color-primary)]"
+              className="absolute right-5 top-5 grid h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-xl text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
               type="button"
               onClick={() => setActiveImage(null)}
               aria-label="Close image viewer"
@@ -137,7 +137,7 @@ function GalleryPage() {
               <FaXmark aria-hidden="true" />
             </button>
             <button
-              className="absolute left-5 top-1/2 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-secondary-light)] text-lg text-[var(--color-black)] transition-colors hover:bg-[var(--color-primary)] sm:grid"
+              className="absolute left-5 top-1/2 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-primary)] text-lg text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] sm:grid"
               type="button"
               onClick={showPreviousImage}
               aria-label="View previous image"
@@ -152,7 +152,7 @@ function GalleryPage() {
               />
             </div>
             <button
-              className="absolute right-5 top-1/2 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-secondary-light)] text-lg text-[var(--color-black)] transition-colors hover:bg-[var(--color-primary)] sm:grid"
+              className="absolute right-5 top-1/2 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-primary)] text-lg text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] sm:grid"
               type="button"
               onClick={showNextImage}
               aria-label="View next image"
@@ -161,7 +161,7 @@ function GalleryPage() {
             </button>
             <div className="absolute bottom-5 flex gap-3 sm:hidden">
               <button
-                className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-secondary-light)] text-lg text-[var(--color-black)]"
+                className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-lg text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
                 type="button"
                 onClick={showPreviousImage}
                 aria-label="View previous image"
@@ -169,7 +169,7 @@ function GalleryPage() {
                 <FaArrowLeft aria-hidden="true" />
               </button>
               <button
-                className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-secondary-light)] text-lg text-[var(--color-black)]"
+                className="grid h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-lg text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
                 type="button"
                 onClick={showNextImage}
                 aria-label="View next image"

@@ -13,9 +13,9 @@ function AboutResortSection({ about }) {
 
         <div>
           <p className="section-eyebrow mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-[var(--color-secondary)]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[var(--color-primary)]" aria-hidden="true" />
             {about.eyebrow}
-            <span className="h-px w-8 bg-[var(--color-secondary)]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[var(--color-primary)]" aria-hidden="true" />
           </p>
 
           <h2 className="heading-display max-w-[650px] text-[clamp(42px,5vw,64px)] font-semibold leading-[1.08]">
@@ -33,7 +33,7 @@ function AboutResortSection({ about }) {
 
             <div className="h-px flex-1 bg-[var(--color-border)]" aria-hidden="true" />
 
-            <FaUmbrellaBeach className="h-12 w-12 shrink-0 text-[var(--color-secondary)]" aria-hidden="true" />
+            <FaUmbrellaBeach className="h-12 w-12 shrink-0 text-[var(--color-primary)]" aria-hidden="true" />
           </div>
         </div>
       </div>

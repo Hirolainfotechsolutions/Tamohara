@@ -38,7 +38,7 @@ function RoomsPreviewSection({ rooms }) {
                 className={`grid border-b border-[var(--color-border)] transition-[grid-template-columns,min-height,background-color,color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] last:border-b-0 lg:grid-cols-[0fr_1fr] ${
                   isActive
                     ? 'min-h-[180px] bg-[var(--color-primary-dark)] text-[var(--color-white)] lg:grid-cols-[280px_1fr]'
-                    : 'min-h-[112px] bg-[var(--color-surface)] text-[var(--color-black)]'
+                    : 'min-h-[112px] bg-[var(--color-surface)] text-[var(--color-primary-dark)]'
                 }`}
                 key={room.title}
                 onFocus={() => setActiveRoomIndex(index)}
@@ -83,8 +83,10 @@ function RoomsPreviewSection({ rooms }) {
 function WellnessSection({ wellness }) {
   const sectionRef = useRef(null)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [canAnimateImages, setCanAnimateImages] = useState(false)
 
   useEffect(() => {
+    const updateMotionMode = () => setCanAnimateImages(window.innerWidth >= 1024)
     const updateProgress = () => {
       if (!sectionRef.current) return
 
@@ -94,13 +96,16 @@ function WellnessSection({ wellness }) {
       setScrollProgress(Math.min(Math.max(progress, 0), 1))
     }
 
+    updateMotionMode()
     updateProgress()
     window.addEventListener('scroll', updateProgress, { passive: true })
     window.addEventListener('resize', updateProgress)
+    window.addEventListener('resize', updateMotionMode)
 
     return () => {
       window.removeEventListener('scroll', updateProgress)
       window.removeEventListener('resize', updateProgress)
+      window.removeEventListener('resize', updateMotionMode)
     }
   }, [])
 
@@ -110,18 +115,18 @@ function WellnessSection({ wellness }) {
   const centerTransform = `translateY(${motion * 42}px) scale(${0.96 + motion * 0.04})`
 
   return (
-    <section ref={sectionRef} className="soft-section grid min-h-svh overflow-hidden px-4 py-14 sm:px-6 lg:py-16">
+    <section ref={sectionRef} className="soft-section grid overflow-hidden px-4 py-14 sm:px-6 lg:min-h-svh lg:py-16">
       <div className="mx-auto grid w-full max-w-6xl content-center text-center">
         <p className="section-eyebrow mb-4">{wellness.eyebrow}</p>
-        <h2 className="heading-display mx-auto max-w-5xl text-[clamp(42px,6vw,82px)] font-semibold leading-[0.95]">{wellness.title}</h2>
-        <p className="body-copy mx-auto mt-6 max-w-2xl text-lg leading-8">{wellness.description}</p>
+        <h2 className="heading-display mx-auto max-w-5xl text-[clamp(38px,11vw,82px)] font-semibold leading-[1]">{wellness.title}</h2>
+        <p className="body-copy mx-auto mt-5 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">{wellness.description}</p>
 
-        <div className="mt-12 grid items-center gap-5 lg:grid-cols-3">
+        <div className="mt-10 grid items-center gap-4 sm:grid-cols-3 sm:gap-5 lg:mt-12">
           {wellness.images.map((image, index) => (
             <img
-              className="h-[280px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] transition-transform duration-200 ease-out sm:h-[320px] lg:h-[360px]"
+              className="h-[250px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] transition-transform duration-200 ease-out sm:h-[320px] lg:h-[360px]"
               style={{
-                transform: index === 0 ? leftTransform : index === 2 ? rightTransform : centerTransform,
+                transform: canAnimateImages ? index === 0 ? leftTransform : index === 2 ? rightTransform : centerTransform : 'none',
                 zIndex: index === 1 ? 2 : 1,
               }}
               src={image.src}
@@ -156,22 +161,22 @@ function FacilitiesScrollSection({ facilities }) {
             </h2>
           </div>
 
-          <div className="grid gap-8 lg:gap-10">
+          <div className="grid gap-5 sm:gap-6 lg:gap-10">
             {facilities.items.map((item) => {
               const Icon = facilityIcons[item.icon] ?? FaLeaf
 
               return (
                 <article
-                  className="min-h-[300px] rounded-[var(--radius-app)] border border-white/10 bg-[var(--color-secondary-light)] p-8 text-[var(--color-black)] sm:p-10 lg:sticky lg:top-24 lg:min-h-[350px] lg:p-10"
+                  className="min-h-[240px] rounded-[var(--radius-app)] border border-white/10 bg-[var(--color-surface)] p-6 text-[var(--color-primary-dark)] sm:min-h-[280px] sm:p-8 lg:sticky lg:top-24 lg:min-h-[350px] lg:p-10"
                   key={item.title}
                 >
                   <div className="grid h-16 w-16 place-items-center rounded-full bg-[var(--color-primary-dark)] text-2xl text-[var(--color-white)]">
                     <Icon aria-hidden="true" />
                   </div>
-                  <h3 className="heading-display mt-8 text-3xl font-semibold leading-tight">
+                  <h3 className="heading-display mt-6 text-2xl font-semibold leading-tight sm:mt-8 sm:text-3xl">
                     {item.title}
                   </h3>
-                  <p className="body-copy mt-7 max-w-xl text-lg leading-8">
+                  <p className="body-copy mt-5 max-w-xl text-base leading-7 sm:mt-7 sm:text-lg sm:leading-8">
                     {item.description}
                   </p>
                 </article>
@@ -182,7 +187,7 @@ function FacilitiesScrollSection({ facilities }) {
 
         <div className="lg:sticky lg:top-24 lg:h-fit">
           <img
-            className="h-[420px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] sm:h-[520px] lg:h-[calc(100svh-160px)] lg:min-h-[560px]"
+            className="h-[320px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] sm:h-[460px] lg:h-[calc(100svh-160px)] lg:min-h-[560px]"
             src={facilities.image}
             alt={facilities.imageAlt}
           />
@@ -208,10 +213,10 @@ function NearbyPlacesSection({ nearbyPlaces }) {
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
             {nearbyPlaces.items.map((place) => (
               <article
-                className="flex items-center justify-between gap-5 rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-secondary-light)] px-5 py-4"
+                className="flex items-center justify-between gap-5 rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-4"
                 key={place.name}
               >
-                <h3 className="font-semibold text-[var(--color-black)]">{place.name}</h3>
+                <h3 className="font-semibold text-[var(--color-primary-dark)]">{place.name}</h3>
                 <p className="meta-text whitespace-nowrap text-[var(--color-primary-dark)]">{place.distance}</p>
               </article>
             ))}
@@ -270,7 +275,7 @@ function ElegantRoomsGallerySection({ gallery }) {
         </Button>
       </div>
 
-      <div className="relative left-1/2 mt-20 w-screen -translate-x-1/2 overflow-hidden py-10 lg:mt-24">
+      <div className="relative left-1/2 mt-12 w-screen -translate-x-1/2 overflow-hidden py-8 sm:mt-16 lg:mt-24 lg:py-10">
         <div
           className="flex w-max items-center gap-4 will-change-transform sm:gap-6"
           style={{ animation: 'roomsMarquee 34s linear infinite' }}
@@ -297,10 +302,10 @@ function FeaturedStaySection({ stay }) {
   return (
     <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
       <div className="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[1.35fr_0.75fr]">
-        <img className="min-h-[460px] rounded-[var(--radius-app)] object-cover" src={stay.image} alt={stay.imageAlt} />
+        <img className="h-[320px] w-full rounded-[var(--radius-app)] object-cover sm:h-[420px] lg:min-h-[460px]" src={stay.image} alt={stay.imageAlt} />
         <div className="grid content-end rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] p-8 text-[var(--color-white)] lg:p-14">
           <p className="banner-eyebrow mb-5">{stay.eyebrow}</p>
-          <h2 className="heading-display text-5xl font-semibold leading-none text-[var(--color-white)]">{stay.title}</h2>
+          <h2 className="heading-display text-[clamp(36px,10vw,48px)] font-semibold leading-none text-[var(--color-white)]">{stay.title}</h2>
           <p className="mt-5 max-w-sm text-lg leading-8 text-white/75">{stay.description}</p>
           <Button className="mt-8 w-fit" to={stay.button.href}>{stay.button.label}</Button>
         </div>
@@ -315,20 +320,20 @@ function ValuesSection({ values }) {
   return (
     <section className="soft-section px-4 py-16 sm:px-6 lg:py-24">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[var(--radius-app)]">
-        <img className="h-[560px] w-full object-cover" src={values.image} alt={values.imageAlt} />
+        <img className="h-[500px] w-full object-cover sm:h-[560px]" src={values.image} alt={values.imageAlt} />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-hero-overlay-start),var(--color-hero-overlay-end))]" />
-        <div className="absolute left-6 top-8 max-w-2xl text-[var(--color-white)] lg:left-10 lg:top-12">
+        <div className="absolute left-5 right-5 top-8 max-w-2xl text-[var(--color-white)] sm:left-6 sm:right-auto lg:left-10 lg:top-12">
           <p className="banner-eyebrow mb-5">{values.eyebrow}</p>
           <h2 className="banner-title max-w-2xl text-[clamp(42px,5vw,70px)]">{values.title}</h2>
           <p className="banner-copy mt-5 max-w-xl">{values.description}</p>
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto -mt-28 grid max-w-4xl gap-5 px-6 sm:grid-cols-3">
+      <div className="relative z-10 mx-auto -mt-20 grid max-w-4xl gap-4 px-4 sm:-mt-28 sm:grid-cols-3 sm:gap-5 sm:px-6">
         {values.items.map((item, index) => {
           const Icon = icons[index] ?? FaSeedling
           return (
-            <article className="soft-card grid min-h-[190px] rounded-[var(--radius-app)] border border-[var(--color-border)] p-6 shadow-[var(--shadow-soft)]" key={item}>
+            <article className="soft-card grid min-h-[150px] rounded-[var(--radius-app)] border border-[var(--color-border)] p-5 shadow-[var(--shadow-soft)] sm:min-h-[190px] sm:p-6" key={item}>
               <h3 className="heading-display text-2xl font-semibold">{item}</h3>
               <Icon className="mt-auto h-8 w-8 text-[var(--color-primary-dark)]" aria-hidden="true" />
             </article>
@@ -359,14 +364,14 @@ function ExperiencesSection({ experiences }) {
     <section className="app-section px-4 py-16 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <p className="section-eyebrow mb-5">{experiences.eyebrow}</p>
-        <h2 className="heading-display max-w-5xl text-[clamp(44px,6vw,82px)] font-semibold leading-[1.02]">{experiences.title}</h2>
-        <p className="body-copy mt-5 max-w-2xl text-lg leading-8">{experiences.description}</p>
+        <h2 className="heading-display max-w-5xl text-[clamp(38px,11vw,82px)] font-semibold leading-[1.02]">{experiences.title}</h2>
+        <p className="body-copy mt-5 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">{experiences.description}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-[1.1fr_0.75fr]">
-          <a className="group relative min-h-[520px] overflow-hidden rounded-[var(--radius-app)]" href={experiences.primary.href}>
+          <a className="group relative min-h-[360px] overflow-hidden rounded-[var(--radius-app)] sm:min-h-[460px] lg:min-h-[520px]" href={experiences.primary.href}>
             <img className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src={experiences.primary.image} alt={experiences.primary.imageAlt} />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,var(--color-overlay-strong))]" />
-            <div className="absolute bottom-8 left-8 max-w-xl text-[var(--color-white)]">
+            <div className="absolute bottom-6 left-5 right-5 max-w-xl text-[var(--color-white)] sm:bottom-8 sm:left-8 sm:right-auto">
               <h3 className="banner-title text-[clamp(40px,5vw,64px)]">{experiences.primary.title}</h3>
               <span className="primary-button mt-6">Book Now</span>
             </div>
@@ -374,10 +379,10 @@ function ExperiencesSection({ experiences }) {
 
           <div className="grid gap-4">
             {experiences.items.map((item) => (
-              <a className="group relative min-h-[160px] overflow-hidden rounded-[var(--radius-app)]" href={item.href} key={item.title}>
+              <a className="group relative min-h-[180px] overflow-hidden rounded-[var(--radius-app)] sm:min-h-[220px] lg:min-h-[160px]" href={item.href} key={item.title}>
                 <img className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src={item.image} alt={item.imageAlt} />
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,var(--color-overlay-strong))]" />
-                <h3 className="heading-display absolute bottom-6 right-6 flex items-center gap-3 text-4xl text-[var(--color-white)]">
+                <h3 className="heading-display absolute bottom-5 right-5 flex items-center gap-3 text-3xl text-[var(--color-white)] sm:bottom-6 sm:right-6 sm:text-4xl">
                   {item.title}
                   <FaArrowRight className="h-5 w-5" aria-hidden="true" />
                 </h3>

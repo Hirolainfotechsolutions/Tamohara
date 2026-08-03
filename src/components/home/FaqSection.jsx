@@ -8,14 +8,14 @@ function FaqSection({ faqs }) {
   const visibleFaqs = faqs.items.slice(0, visibleCount)
 
   return (
-    <section className="app-section px-5 py-16 text-[var(--color-black)] sm:px-8 lg:py-24">
-      <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.72fr_1fr] lg:gap-24">
+    <section className="app-section px-5 py-16 text-[var(--color-primary-dark)] sm:px-8 lg:py-24">
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-24">
         <div className="lg:sticky lg:top-28 lg:h-fit">
           <p className="section-eyebrow mb-5">{faqs.eyebrow}</p>
-          <h2 className="heading-display text-[clamp(42px,5.8vw,76px)] font-semibold leading-[0.98]">
+          <h2 className="heading-display text-[clamp(36px,10vw,76px)] font-semibold leading-[1]">
             {faqs.title}
           </h2>
-          <p className="body-copy mt-7 max-w-[430px] text-lg leading-7">
+          <p className="body-copy mt-5 max-w-[430px] text-base leading-7 sm:mt-7 sm:text-lg">
             {faqs.description}
           </p>
           <Button className="mt-8 rounded-full" to={faqs.button.href}>
@@ -33,18 +33,18 @@ function FaqSection({ faqs }) {
                 <article
                   className={`overflow-hidden rounded-[var(--radius-app)] border border-[var(--color-border)] transition-colors duration-300 ${
                     isOpen
-                      ? 'bg-[var(--color-primary-dark)] text-[var(--color-white)]'
-                      : 'soft-card text-[var(--color-black)]'
+                      ? 'bg-[var(--color-primary)] text-[var(--color-primary-dark)]'
+                      : 'soft-card text-[var(--color-primary-dark)]'
                   }`}
                   key={faq.question}
                 >
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between gap-6 px-7 py-7 text-left sm:px-8 sm:py-8"
+                    className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-8 sm:py-8"
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     aria-expanded={isOpen}
                   >
-                    <span className="text-lg font-semibold sm:text-xl">
+                    <span className="text-base font-semibold leading-6 sm:text-xl">
                       {index + 1}. {faq.question}
                     </span>
                     <FaChevronDown
@@ -60,8 +60,8 @@ function FaqSection({ faqs }) {
                   >
                     <div className="overflow-hidden">
                       <p
-                        className={`max-w-[680px] px-7 pb-8 text-base leading-7 sm:px-8 ${
-                          isOpen ? 'text-white/88' : 'body-copy'
+                        className={`max-w-[680px] px-5 pb-6 text-sm leading-6 sm:px-8 sm:pb-8 sm:text-base sm:leading-7 ${
+                          isOpen ? 'text-[var(--color-primary-dark)]' : 'body-copy'
                         }`}
                       >
                         {faq.answer}

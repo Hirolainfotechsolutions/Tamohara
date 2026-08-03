@@ -20,7 +20,7 @@ function ContactInput({ label, ...props }) {
     <label className="grid gap-3">
       <span className="meta-text text-[var(--color-muted)]">{label}</span>
       <input
-        className="h-[58px] rounded-[var(--radius-app)] border border-[var(--color-border)] bg-white px-6 text-base text-[var(--color-black)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-dark)]"
+        className="h-[58px] rounded-[var(--radius-app)] border border-[var(--color-border)] bg-white px-6 text-base text-[var(--color-primary-dark)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-dark)]"
         {...props}
       />
     </label>
@@ -33,12 +33,12 @@ function ContactSelect({ children, label, ...props }) {
       <span className="meta-text text-[var(--color-muted)]">{label}</span>
       <div className="relative">
         <select
-          className="h-[58px] w-full appearance-none rounded-[var(--radius-app)] border border-[var(--color-border)] bg-white px-6 text-base text-[var(--color-black)] outline-none transition-colors focus:border-[var(--color-primary-dark)]"
+          className="h-[58px] w-full appearance-none rounded-[var(--radius-app)] border border-[var(--color-border)] bg-white px-6 text-base text-[var(--color-primary-dark)] outline-none transition-colors focus:border-[var(--color-primary-dark)]"
           {...props}
         >
           {children}
         </select>
-        <FaChevronDown className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[var(--color-black)]" aria-hidden="true" />
+        <FaChevronDown className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[var(--color-primary-dark)]" aria-hidden="true" />
       </div>
     </label>
   )
@@ -69,8 +69,8 @@ function ContactFaq({ faq }) {
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base font-semibold text-[var(--color-black)]">{item.question}</span>
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--color-primary-dark)] text-xs text-white">
+                  <span className="text-base font-semibold text-[var(--color-primary-dark)]">{item.question}</span>
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--color-primary)] text-xs text-[var(--color-primary-dark)]">
                     <FaChevronDown className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                   </span>
                 </button>
@@ -140,22 +140,22 @@ function ContactFormPage({ data }) {
         <StickySiteHeader />
 
         <div className="p-2 sm:p-3">
-          <AboutHeroBanner hero={data.hero} />
+          <AboutHeroBanner hero={data.hero} showBooking={false} />
         </div>
 
-        <section className="px-5 py-16 sm:px-8 lg:py-24" id="contact-form">
-          <div className="mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[0.78fr_1fr] lg:gap-24">
+        <section className="px-5 py-14 sm:px-8 lg:py-24" id="contact-form">
+          <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.78fr_1fr] lg:gap-24">
             <div className="lg:pt-4">
               <p className="section-eyebrow mb-6">{data.eyebrow}</p>
-              <h1 className="heading-display max-w-xl text-[clamp(52px,6vw,86px)] font-semibold leading-[0.96]">
+              <h1 className="heading-display max-w-xl text-[clamp(42px,12vw,86px)] font-semibold leading-[1]">
                 {data.title}
               </h1>
-              <p className="body-copy mt-8 text-xl leading-8">{data.subtitle}</p>
-              <p className="body-copy mt-5 max-w-md text-xl leading-8">{data.description}</p>
+              <p className="body-copy mt-6 text-lg leading-8 sm:mt-8 sm:text-xl">{data.subtitle}</p>
+              <p className="body-copy mt-4 max-w-md text-lg leading-8 sm:mt-5 sm:text-xl">{data.description}</p>
 
-              <div className="mt-24">
-                <h2 className="heading-display text-4xl font-semibold leading-none">{data.detailsTitle}</h2>
-                <div className="mt-10 space-y-9">
+              <div className="mt-12 lg:mt-24">
+                <h2 className="heading-display text-3xl font-semibold leading-none sm:text-4xl">{data.detailsTitle}</h2>
+                <div className="mt-8 space-y-7 sm:mt-10 sm:space-y-9">
                   {data.detailGroups.map((group) => (
                     <div key={group.title}>
                       <h3 className="heading-display text-2xl font-semibold leading-none">{group.title}</h3>
@@ -170,7 +170,7 @@ function ContactFormPage({ data }) {
               </div>
             </div>
 
-            <form className="grid gap-8 lg:pt-36" onSubmit={handleSubmit}>
+            <form className="grid gap-6 lg:gap-8 lg:pt-36" onSubmit={handleSubmit}>
               <ContactInput label="Full Name*" name="fullName" onChange={handleChange} placeholder="John" required value={formValues.fullName} />
               <ContactInput label="Email Address*" name="email" onChange={handleChange} placeholder="e.g. john.smith@email.com" required type="email" value={formValues.email} />
               <ContactInput label="Phone Number*" name="phone" onChange={handleChange} placeholder="e.g. +91 98765 43210" required type="tel" value={formValues.phone} />
@@ -194,7 +194,7 @@ function ContactFormPage({ data }) {
               <label className="grid gap-2">
                 <span className="meta-text text-[var(--color-muted)]">Special Requests / Notes</span>
                 <textarea
-                  className="min-h-[220px] rounded-[var(--radius-app)] border border-[var(--color-border)] bg-white px-6 py-4 text-base text-[var(--color-black)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-dark)]"
+                  className="min-h-[220px] rounded-[var(--radius-app)] border border-[var(--color-border)] bg-white px-6 py-4 text-base text-[var(--color-primary-dark)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-dark)]"
                   name="notes"
                   onChange={handleChange}
                   placeholder="Write a message here..."

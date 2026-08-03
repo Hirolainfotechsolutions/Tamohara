@@ -8,7 +8,7 @@ function PageHeader({ page }) {
     <main className="app-section min-h-svh">
       <StickySiteHeader />
       <div className="relative z-10 bg-[var(--color-surface)] p-2 sm:p-3">
-        <section className="relative min-h-[calc(100svh-24px)] overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-black)] text-[var(--color-white)]">
+        <section className="relative min-h-[calc(100svh-24px)] overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] text-[var(--color-white)]">
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,var(--color-overlay-strong),var(--color-primary-dark-overlay)_48%,var(--color-primary-soft-overlay))]" />
           <SiteHeader />
 

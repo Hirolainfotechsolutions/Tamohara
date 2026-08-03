@@ -31,7 +31,7 @@ function RoomInfoBox({ room }) {
   ]
 
   return (
-    <div className="grid min-w-[116px] border border-[var(--color-primary-dark)] bg-[var(--color-secondary-light)] text-[var(--color-black)]">
+    <div className="grid min-w-[116px] border border-[var(--color-primary-dark)] bg-[var(--color-surface)] text-[var(--color-primary-dark)]">
       {details.map((detail) => {
         const Icon = detailIcons[detail.key]
 
@@ -54,11 +54,11 @@ function StayPage() {
           <SiteHeader isSticky />
         </div>
 
-        <section className="px-5 py-16 sm:px-8 lg:py-24">
+        <section className="px-5 py-14 sm:px-8 lg:py-24">
           <div className="mx-auto max-w-6xl">
-            <div className="mb-16 max-w-2xl">
+            <div className="mb-12 max-w-2xl sm:mb-16">
               <p className="section-eyebrow mb-4">{stayPageData.eyebrow}</p>
-              <h1 className="heading-display text-[clamp(52px,6vw,88px)] font-semibold leading-none">
+              <h1 className="heading-display text-[clamp(42px,12vw,88px)] font-semibold leading-[1]">
                 {stayPageData.title}
               </h1>
               <p className="body-copy mt-5 max-w-xl text-base leading-8">
@@ -66,18 +66,18 @@ function StayPage() {
               </p>
             </div>
 
-            <div className="grid gap-x-12 gap-y-20 md:grid-cols-2 lg:gap-x-16">
+            <div className="grid gap-x-12 gap-y-14 md:grid-cols-2 lg:gap-x-16 lg:gap-y-20">
               {stayPageData.rooms.map((room) => (
                 <article className="group" key={room.slug}>
                   <Link className="block overflow-hidden" to={`/rooms/${room.slug}`}>
                     <img
-                      className="h-[300px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[340px]"
+                      className="h-[260px] w-full rounded-[var(--radius-app)] object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[340px] sm:rounded-none"
                       src={room.image}
                       alt={room.imageAlt}
                     />
                   </Link>
 
-                  <div className="relative -mt-5 ml-auto grid w-[calc(100%-68px)] grid-cols-[1fr_auto] items-start gap-5 bg-[var(--color-surface)] pt-5">
+                  <div className="relative -mt-5 ml-auto grid w-[calc(100%-28px)] gap-5 bg-[var(--color-surface)] pt-5 sm:w-[calc(100%-68px)] sm:grid-cols-[1fr_auto]">
                     <div>
                       <h2 className="heading-display text-3xl font-semibold leading-none">
                         {room.title}
@@ -86,7 +86,7 @@ function StayPage() {
                         From <span className="text-[var(--color-primary-dark)]">{room.price}</span>
                       </p>
                       <Link
-                        className="meta-text mt-5 inline-flex border-b border-[var(--color-black)] pb-1 text-[var(--color-black)] transition-colors hover:text-[var(--color-primary)]"
+                        className="meta-text mt-5 inline-flex border-b border-[var(--color-primary-dark)] pb-1 text-[var(--color-primary-dark)] transition-colors hover:text-[var(--color-primary)]"
                         to={`/rooms/${room.slug}`}
                       >
                         {stayPageData.detailsLabel}

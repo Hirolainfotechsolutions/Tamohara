@@ -16,10 +16,10 @@ function BookingInput({ className = '', icon, ...props }) {
   return (
     <div className={`relative ${className}`}>
       <input
-        className="h-14 w-full rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 text-base text-[var(--color-black)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-dark)]"
+        className="h-14 w-full rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 text-base text-[var(--color-primary-dark)] outline-none transition-colors placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-dark)]"
         {...props}
       />
-      {icon ? <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[var(--color-black)]">{icon}</span> : null}
+      {icon ? <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[var(--color-primary-dark)]">{icon}</span> : null}
     </div>
   )
 }
@@ -72,18 +72,18 @@ function HomeBookingSection({ booking }) {
   return (
     <section id="book" className="soft-section px-4 py-16 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="heading-display text-[clamp(64px,9vw,120px)] font-normal uppercase leading-none">
+        <h2 className="heading-display text-[clamp(54px,18vw,120px)] font-normal uppercase leading-none">
           {booking.title}
         </h2>
-        <p className="mx-auto mt-7 max-w-xl text-lg leading-7 text-[var(--color-black)]">
+        <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[var(--color-primary-dark)] sm:mt-7 sm:text-lg">
           {booking.description}
         </p>
 
-        <form className="mx-auto mt-16 grid max-w-3xl gap-8 text-left" onSubmit={handleSubmit}>
-          <div className="grid gap-8 md:grid-cols-2">
+        <form className="mx-auto mt-10 grid max-w-3xl gap-5 text-left sm:mt-16 sm:gap-8" onSubmit={handleSubmit}>
+          <div className="grid gap-5 md:grid-cols-2 md:gap-8">
             <div className="relative">
               <select
-                className="h-14 w-full appearance-none rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 text-base text-[var(--color-black)] outline-none transition-colors focus:border-[var(--color-primary-dark)]"
+                className="h-14 w-full appearance-none rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 text-base text-[var(--color-primary-dark)] outline-none transition-colors focus:border-[var(--color-primary-dark)]"
                 name="room"
                 onChange={handleChange}
                 required
@@ -96,7 +96,7 @@ function HomeBookingSection({ booking }) {
                   </option>
                 ))}
               </select>
-              <FaChevronDown className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[var(--color-black)]" aria-hidden="true" />
+              <FaChevronDown className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[var(--color-primary-dark)]" aria-hidden="true" />
             </div>
 
             <BookingInput
@@ -139,7 +139,7 @@ function HomeBookingSection({ booking }) {
             value={formValues.fullName}
           />
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2 md:gap-8">
             <BookingInput
               name="email"
               onChange={handleChange}
@@ -159,7 +159,7 @@ function HomeBookingSection({ booking }) {
           </div>
 
           <button
-            className="h-14 rounded-full bg-[var(--color-black)] px-8 text-center text-base font-semibold text-[var(--color-white)] transition-colors hover:bg-[var(--color-primary-dark)]"
+            className="h-14 rounded-full bg-[var(--color-primary)] px-8 text-center text-base font-semibold text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
             type="submit"
           >
             {booking.fields.action}

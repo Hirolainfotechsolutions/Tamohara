@@ -8,12 +8,12 @@ import { homePageData } from '../../data/home.data'
 function BlogCard({ post, isLarge = false }) {
   return (
     <Link
-      className={`group grid overflow-hidden rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-secondary-light)] transition-transform duration-300 hover:-translate-y-1 ${
+      className={`group grid overflow-hidden rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] transition-transform duration-300 hover:-translate-y-1 ${
         isLarge ? 'lg:grid-cols-[1.1fr_0.9fr]' : ''
       }`}
       to={`/blogs/${post.slug}`}
     >
-      <div className={isLarge ? 'min-h-[360px]' : 'h-72'}>
+      <div className={isLarge ? 'min-h-[280px] sm:min-h-[360px]' : 'h-64 sm:h-72'}>
         <img
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           src={post.image}
@@ -30,7 +30,7 @@ function BlogCard({ post, isLarge = false }) {
               {post.readTime}
             </p>
           </div>
-          <h2 className={`heading-display mt-5 font-semibold leading-[1.02] ${isLarge ? 'text-[clamp(42px,5vw,68px)]' : 'text-4xl'}`}>
+          <h2 className={`heading-display mt-5 font-semibold leading-[1.02] ${isLarge ? 'text-[clamp(36px,10vw,68px)]' : 'text-3xl sm:text-4xl'}`}>
             {post.title}
           </h2>
           <p className="body-copy mt-5 text-base leading-7">{post.excerpt}</p>
@@ -54,16 +54,16 @@ function BlogListing({ data }) {
           <SiteHeader isSticky />
         </div>
 
-        <section className="px-4 py-14 sm:px-6 lg:py-20">
+        <section className="px-4 py-12 sm:px-6 lg:py-20">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-[0.95fr_0.9fr] lg:items-end">
               <div>
                 <p className="section-eyebrow mb-5">{data.eyebrow}</p>
-                <h1 className="heading-display max-w-4xl text-[clamp(48px,6.2vw,86px)] font-semibold leading-[0.98]">
+                <h1 className="heading-display max-w-4xl text-[clamp(42px,12vw,86px)] font-semibold leading-[1]">
                   {data.title}
                 </h1>
               </div>
-              <p className="body-copy max-w-xl text-lg leading-8 lg:pb-3">{data.description}</p>
+              <p className="body-copy max-w-xl text-base leading-7 sm:text-lg sm:leading-8 lg:pb-3">{data.description}</p>
             </div>
 
             <div className="mt-14">

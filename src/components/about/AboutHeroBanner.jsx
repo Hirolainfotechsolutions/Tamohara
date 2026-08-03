@@ -19,7 +19,7 @@ const getInitialBookingDates = () => {
 
 function BookingField({ children, icon: Icon, label }) {
   return (
-    <div className="flex min-w-0 items-center gap-3 border-b border-[var(--color-border)] px-5 py-4 sm:border-b-0 sm:border-r">
+    <div className="flex min-w-0 items-center gap-3 border-b border-[var(--color-border)] px-5 py-4 sm:border-r lg:border-b-0">
       <Icon className="h-4 w-4 shrink-0 text-[var(--color-primary)]" aria-hidden="true" />
       <div className="min-w-0">
         <p className="meta-text text-[var(--color-muted)]">
@@ -31,7 +31,7 @@ function BookingField({ children, icon: Icon, label }) {
   )
 }
 
-function AboutHeroBanner({ hero }) {
+function AboutHeroBanner({ hero, showBooking = true }) {
   const initialDates = getInitialBookingDates()
   const [formValues, setFormValues] = useState({
     checkIn: initialDates.checkIn,
@@ -79,8 +79,8 @@ function AboutHeroBanner({ hero }) {
   }
 
   return (
-    <section className="relative pb-16">
-      <div className="relative min-h-[calc(100svh-92px)] overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] text-[var(--color-white)]">
+    <section className={`relative ${showBooking ? 'pb-16' : ''}`}>
+      <div className={`relative overflow-hidden rounded-[var(--radius-app)] bg-[var(--color-primary-dark)] text-[var(--color-white)] ${showBooking ? 'min-h-[calc(100svh-92px)]' : 'min-h-[calc(100svh-16px)] sm:min-h-[calc(100svh-24px)]'}`}>
         <img
           className="absolute inset-0 h-full w-full object-cover"
           src={hero.backgroundImage}
@@ -91,7 +91,7 @@ function AboutHeroBanner({ hero }) {
 
         <SiteHeader />
 
-        <div className="relative z-10 mx-auto grid min-h-[calc(100svh-240px)] max-w-7xl content-center px-6 pb-20 pt-28 lg:px-8 lg:pb-24 lg:pt-36">
+        <div className={`relative z-10 mx-auto grid max-w-7xl content-center px-5 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-24 lg:pt-36 ${showBooking ? 'min-h-[calc(100svh-240px)]' : 'min-h-[calc(100svh-160px)]'}`}>
           <div className="max-w-2xl">
             <p className="banner-eyebrow mb-6">
               {hero.eyebrow}
@@ -105,7 +105,7 @@ function AboutHeroBanner({ hero }) {
               {hero.description}
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-5">
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
               <Button to={hero.primaryAction.href}>{hero.primaryAction.label}</Button>
 
               <a
@@ -120,77 +120,79 @@ function AboutHeroBanner({ hero }) {
         </div>
       </div>
 
-      <form
-        className="relative z-20 mx-auto -mt-10 max-w-5xl rounded-[var(--radius-app)] bg-[var(--color-white)] shadow-[var(--shadow-soft)]"
-        onSubmit={handleSubmit}
-      >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
-          <BookingField icon={FaCalendarDays} label="Check In">
-            <input
-              className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-black)] outline-none"
-              name="checkIn"
-              onChange={handleChange}
-              required
-              type="date"
-              value={formValues.checkIn}
-            />
-          </BookingField>
+      {showBooking ? (
+        <form
+          className="relative z-20 mx-4 -mt-8 rounded-[var(--radius-app)] bg-[var(--color-white)] shadow-[var(--shadow-soft)] sm:mx-auto sm:-mt-10 sm:max-w-5xl"
+          onSubmit={handleSubmit}
+        >
+          <div className="grid sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+            <BookingField icon={FaCalendarDays} label="Check In">
+              <input
+                className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-primary-dark)] outline-none"
+                name="checkIn"
+                onChange={handleChange}
+                required
+                type="date"
+                value={formValues.checkIn}
+              />
+            </BookingField>
 
-          <BookingField icon={FaCalendarDays} label="Check Out">
-            <input
-              className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-black)] outline-none"
-              name="checkOut"
-              onChange={handleChange}
-              required
-              type="date"
-              value={formValues.checkOut}
-            />
-          </BookingField>
+            <BookingField icon={FaCalendarDays} label="Check Out">
+              <input
+                className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-primary-dark)] outline-none"
+                name="checkOut"
+                onChange={handleChange}
+                required
+                type="date"
+                value={formValues.checkOut}
+              />
+            </BookingField>
 
-          <BookingField icon={FaUsers} label="Guests">
-            <select
-              className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-black)] outline-none"
-              name="guests"
-              onChange={handleChange}
-              value={formValues.guests}
-            >
-              {hero.booking.guestOptions.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </BookingField>
+            <BookingField icon={FaUsers} label="Guests">
+              <select
+                className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-primary-dark)] outline-none"
+                name="guests"
+                onChange={handleChange}
+                value={formValues.guests}
+              >
+                {hero.booking.guestOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </BookingField>
 
-          <BookingField icon={FaPhone} label="Mobile">
-            <input
-              className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-black)] outline-none"
-              name="mobile"
-              onChange={handleChange}
-              placeholder="Mobile number"
-              required
-              type="tel"
-              value={formValues.mobile}
-            />
-          </BookingField>
+            <BookingField icon={FaPhone} label="Mobile">
+              <input
+                className="mt-1 w-full bg-transparent text-sm font-bold text-[var(--color-primary-dark)] outline-none"
+                name="mobile"
+                onChange={handleChange}
+                placeholder="Mobile number"
+                required
+                type="tel"
+                value={formValues.mobile}
+              />
+            </BookingField>
 
-          <div className="grid px-5 py-4">
-            <Button className="w-full whitespace-nowrap" type="submit">
-              {hero.booking.actionLabel}
-            </Button>
+            <div className="grid px-5 py-4">
+              <Button className="w-full whitespace-nowrap" type="submit">
+                {hero.booking.actionLabel}
+              </Button>
+            </div>
           </div>
-        </div>
-        {isSubmitted ? (
-          <p className="border-t border-[var(--color-border)] px-5 py-3 text-center text-sm font-semibold text-[var(--color-primary-dark)]">
-            {hero.booking.thankYouMessage}
-          </p>
-        ) : null}
-        {submitError ? (
-          <p className="border-t border-[var(--color-border)] px-5 py-3 text-center text-sm font-semibold text-[var(--color-primary-dark)]">
-            {submitError}
-          </p>
-        ) : null}
-      </form>
+          {isSubmitted ? (
+            <p className="border-t border-[var(--color-border)] px-5 py-3 text-center text-sm font-semibold text-[var(--color-primary-dark)]">
+              {hero.booking.thankYouMessage}
+            </p>
+          ) : null}
+          {submitError ? (
+            <p className="border-t border-[var(--color-border)] px-5 py-3 text-center text-sm font-semibold text-[var(--color-primary-dark)]">
+              {submitError}
+            </p>
+          ) : null}
+        </form>
+      ) : null}
     </section>
   )
 }

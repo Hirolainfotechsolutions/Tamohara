@@ -32,12 +32,12 @@ function BlogDetailPage() {
               <div className="mt-10 grid gap-10 lg:grid-cols-[0.9fr_0.82fr] lg:items-end">
                 <div>
                   <p className="section-eyebrow mb-5">{post.category}</p>
-                  <h1 className="heading-display max-w-4xl text-[clamp(46px,6vw,82px)] font-semibold leading-[0.98]">
+                  <h1 className="heading-display max-w-4xl text-[clamp(38px,11vw,82px)] font-semibold leading-[1]">
                     {post.title}
                   </h1>
                 </div>
                 <div>
-                  <p className="body-copy text-xl leading-8">{post.excerpt}</p>
+                  <p className="body-copy text-base leading-7 sm:text-xl sm:leading-8">{post.excerpt}</p>
                   <div className="mt-6 flex flex-wrap gap-4">
                     <p className="meta-text text-[var(--color-muted)]">{post.date}</p>
                     <p className="meta-text flex items-center gap-2 text-[var(--color-muted)]">
@@ -49,7 +49,7 @@ function BlogDetailPage() {
               </div>
 
               <img
-                className="mt-12 h-[55svh] min-h-[360px] w-full rounded-[var(--radius-app)] object-cover"
+                className="mt-10 h-[300px] w-full rounded-[var(--radius-app)] object-cover sm:mt-12 sm:h-[55svh] sm:min-h-[360px]"
                 src={post.image}
                 alt={post.imageAlt}
               />
@@ -67,7 +67,7 @@ function BlogDetailPage() {
 
               <div className="space-y-8">
                 {post.body.map((paragraph) => (
-                  <p className="heading-display text-3xl leading-[1.35] text-[var(--color-black)] sm:text-4xl" key={paragraph}>
+                  <p className="heading-display text-2xl leading-[1.35] text-[var(--color-primary-dark)] sm:text-4xl" key={paragraph}>
                     {paragraph}
                   </p>
                 ))}

@@ -21,9 +21,9 @@ const facilityIcons = {
 
 function StayFacilitiesSection({ facilities }) {
   return (
-    <section className="app-section px-5 py-16 sm:px-8 lg:py-24">
+    <section className="app-section px-5 py-14 sm:px-8 lg:py-24">
       <div className="mx-auto max-w-6xl text-center">
-        <h2 className="heading-display text-[clamp(48px,6vw,86px)] font-normal leading-[0.96] text-[var(--color-primary-dark)]">
+        <h2 className="heading-display text-[clamp(38px,11vw,86px)] font-normal leading-[1] text-[var(--color-primary-dark)]">
           {facilities.titleLines.map((line) => (
             <span className="block" key={line}>
               {line}
@@ -31,7 +31,7 @@ function StayFacilitiesSection({ facilities }) {
           ))}
         </h2>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-x-16 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-10 sm:mt-16 sm:grid-cols-3 sm:gap-x-16 sm:gap-y-14 lg:grid-cols-4">
           {facilities.items.map((item, index) => {
             const Icon = facilityIcons[item.icon] ?? FaChampagneGlasses
 
@@ -40,7 +40,7 @@ function StayFacilitiesSection({ facilities }) {
                 className={`${index > 3 ? 'lg:translate-x-1/2' : ''} grid justify-items-center text-center`}
                 key={item.label}
               >
-                <Icon className="h-14 w-14 text-[var(--color-muted)]" aria-hidden="true" />
+                <Icon className="h-11 w-11 text-[var(--color-primary)] sm:h-14 sm:w-14" aria-hidden="true" />
                 <h3 className="meta-text mt-5 text-[var(--color-muted)]">{item.label}</h3>
               </article>
             )

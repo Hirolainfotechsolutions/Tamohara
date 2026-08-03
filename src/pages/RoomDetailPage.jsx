@@ -35,19 +35,19 @@ function RoomDetailPage() {
           <div className="mx-auto max-w-5xl">
             <div className="text-center">
               <p className="section-eyebrow mb-5">({roomDetailsData.eyebrow})</p>
-              <h1 className="heading-display text-[clamp(42px,6vw,76px)] font-semibold leading-none">
+              <h1 className="heading-display text-[clamp(36px,11vw,76px)] font-semibold leading-[1]">
                 {room.title}
               </h1>
               <p className="meta-text mt-4 text-[var(--color-primary-dark)]">{room.subtitle}</p>
             </div>
 
             <img
-              className="mt-10 h-[340px] w-full rounded-[var(--radius-app)] object-cover sm:h-[520px]"
+              className="mt-8 h-[280px] w-full rounded-[var(--radius-app)] object-cover sm:mt-10 sm:h-[520px]"
               src={room.image}
               alt={room.imageAlt}
             />
 
-            <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
+            <div className="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-[1fr_320px] lg:items-start">
               <div>
                 <h2 className="heading-display text-2xl font-semibold">{roomDetailsData.overviewTitle}</h2>
                 <p className="body-copy mt-4 text-base leading-7">{room.overview}</p>
@@ -60,11 +60,11 @@ function RoomDetailPage() {
                     const Icon = amenityIcons[index] ?? FaHouse
 
                     return (
-                      <div className="rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-secondary-light)] p-5" key={amenity}>
+                      <div className="rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5" key={amenity}>
                         <div className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-primary-dark)] text-sm text-[var(--color-white)]">
                           <Icon aria-hidden="true" />
                         </div>
-                        <p className="mt-4 text-sm font-semibold text-[var(--color-black)]">{amenity}</p>
+                        <p className="mt-4 text-sm font-semibold text-[var(--color-primary-dark)]">{amenity}</p>
                       </div>
                     )
                   })}
@@ -81,7 +81,7 @@ function RoomDetailPage() {
                 <p className="body-copy mt-4 text-base leading-7">{room.conclusion}</p>
               </div>
 
-              <aside className="rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-secondary-light)] p-6 lg:sticky lg:top-28">
+              <aside className="rounded-[var(--radius-app)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 lg:sticky lg:top-28">
                 <h2 className="heading-display text-2xl font-semibold">More Information</h2>
                 <div className="mt-5 grid grid-cols-2 gap-4 text-sm text-[var(--color-muted)]">
                   <p>{room.size}</p>
@@ -103,7 +103,7 @@ function RoomDetailPage() {
 
             <section className="mt-20">
               <p className="section-eyebrow mb-4">(Similar Rooms & Suites)</p>
-              <h2 className="heading-display text-[clamp(34px,5vw,54px)] font-semibold leading-none">
+              <h2 className="heading-display text-[clamp(30px,9vw,54px)] font-semibold leading-[1.05]">
                 Explore Similar Rooms and Suites
               </h2>
 
@@ -116,7 +116,7 @@ function RoomDetailPage() {
                         src={similarRoom.image}
                         alt={similarRoom.imageAlt}
                       />
-                      <span className="absolute bottom-3 right-3 rounded-full bg-[var(--color-secondary-light)] px-3 py-1 text-xs font-semibold text-[var(--color-black)]">
+                      <span className="absolute bottom-3 right-3 rounded-full bg-[var(--color-surface)] px-3 py-1 text-xs font-semibold text-[var(--color-primary-dark)]">
                         {similarRoom.price}
                       </span>
                     </div>

@@ -26,7 +26,7 @@ function AboutGuestStoriesSection({ guestStories }) {
 
         <div className="relative mx-auto mt-14 min-h-[260px] max-w-3xl">
           <button
-            className="absolute left-0 top-[92px] hidden h-12 w-12 place-items-center rounded-full text-[var(--color-black)] transition-colors hover:bg-[var(--color-secondary-soft)] sm:grid"
+            className="absolute left-0 top-[92px] hidden h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] sm:grid"
             type="button"
             aria-label="Previous guest story"
             onClick={goToPrevious}
@@ -36,7 +36,7 @@ function AboutGuestStoriesSection({ guestStories }) {
 
           <div className="mx-auto grid min-h-[260px] max-w-xl content-start">
             <div className="flex items-center justify-center gap-3">
-              <BrandMark className="scale-[0.58] text-[var(--color-black)]" subtitleClassName="text-[10px]" />
+              <BrandMark className="scale-[0.58] text-[var(--color-primary-dark)]" subtitleClassName="text-[10px]" />
               <span className="h-px w-7 bg-[var(--color-border)]" aria-hidden="true" />
               <div className="flex gap-1 text-[var(--color-primary)]" aria-label={`${activeStory.rating} star review`}>
                 {Array.from({ length: activeStory.rating }).map((_, index) => (
@@ -45,7 +45,7 @@ function AboutGuestStoriesSection({ guestStories }) {
               </div>
             </div>
 
-            <blockquote className="mx-auto mt-7 max-w-[560px] text-xl font-semibold leading-8 text-[var(--color-black)]">
+            <blockquote className="mx-auto mt-7 max-w-[560px] text-xl font-semibold leading-8 text-[var(--color-primary-dark)]">
               "{activeStory.quote}"
             </blockquote>
 
@@ -54,7 +54,7 @@ function AboutGuestStoriesSection({ guestStories }) {
           </div>
 
           <button
-            className="absolute right-0 top-[92px] hidden h-12 w-12 place-items-center rounded-full text-[var(--color-black)] transition-colors hover:bg-[var(--color-secondary-soft)] sm:grid"
+            className="absolute right-0 top-[92px] hidden h-12 w-12 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] sm:grid"
             type="button"
             aria-label="Next guest story"
             onClick={goToNext}
