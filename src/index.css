@@ -15,6 +15,7 @@
   --color-hero-overlay-end: rgba(18, 33, 27, 0.28);
   --color-primary-dark-overlay: rgba(18, 33, 27, 0.82);
   --color-primary-soft-overlay: rgba(200, 155, 99, 0.58);
+  --color-primary-tint: color-mix(in srgb, var(--color-primary) 18%, transparent);
   --color-white-glow: rgba(255, 255, 255, 0.14);
   --color-shadow-soft: rgba(18, 33, 27, 0.12);
   --color-shadow-medium: rgba(18, 33, 27, 0.18);
@@ -230,7 +231,7 @@ svg {
   }
 
   .banner-copy {
-    color: rgb(255 255 255 / 0.9);
+    color: var(--color-white);
     font-size: 1rem;
     line-height: 2rem;
   }

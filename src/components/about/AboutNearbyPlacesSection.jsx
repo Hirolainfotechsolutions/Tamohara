@@ -26,7 +26,7 @@ function AboutNearbyPlacesSection({ nearbyPlaces }) {
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--color-primary-dark)] text-[var(--color-primary)]">
                   <FaLocationDot aria-hidden="true" />
                 </div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-[rgba(200,155,99,0.18)] px-3 py-1 text-xs font-bold text-[var(--color-primary-dark)]">
+                <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-primary-tint)] px-3 py-1 text-xs font-bold text-[var(--color-primary-dark)]">
                   <FaRoute aria-hidden="true" />
                   {place.distance}
                 </span>

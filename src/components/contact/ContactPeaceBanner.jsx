@@ -12,7 +12,7 @@ function ContactPeaceBanner({ showHeader = false }) {
         alt=""
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-[rgba(18,33,27,0.28)]" />
+      <div className="absolute inset-0 bg-[var(--color-overlay)]" />
 
       {showHeader ? (
         <div className="absolute inset-x-0 top-0 z-20 px-2 pt-2 sm:px-3 sm:pt-3">

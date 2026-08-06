@@ -187,7 +187,7 @@ function BookingModalForm({ closeModal }) {
       </button>
 
       {isSubmitted ? (
-        <div className="rounded-[var(--radius-app)] bg-[rgba(200,155,99,0.18)] px-4 py-3 text-sm font-semibold text-[var(--color-primary-dark)]">
+        <div className="rounded-[var(--radius-app)] bg-[var(--color-primary-tint)] px-4 py-3 text-sm font-semibold text-[var(--color-primary-dark)]">
           {booking.thankYouMessage}
           <button className="ml-2 underline" type="button" onClick={closeModal}>
             Close
@@ -223,7 +223,7 @@ function BookingModal({ isOpen, closeModal }) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-[100] grid place-items-center bg-[rgba(18,33,27,0.82)] px-4 py-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Booking enquiry form">
+    <div className="fixed inset-0 z-[100] grid place-items-center bg-[var(--color-primary-dark-overlay)] px-4 py-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Booking enquiry form">
       <button className="absolute inset-0 h-full w-full cursor-default" type="button" onClick={closeModal} aria-label="Close booking form" />
 
       <div className="relative max-h-[92svh] w-full max-w-4xl overflow-y-auto rounded-[var(--radius-app)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">

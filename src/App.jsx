@@ -9,12 +9,14 @@ import GalleryPage from './pages/GalleryPage'
 import HomePage from './pages/HomePage'
 import RoomDetailPage from './pages/RoomDetailPage'
 import ScrollToTop from './components/layout/ScrollToTop'
+import SeoManager from './components/layout/SeoManager'
 import StayPage from './pages/StayPage'
 
 function App() {
   return (
     <BookingModalProvider>
       <ScrollToTop />
+      <SeoManager />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

@@ -176,7 +176,7 @@ function ContactFormPage({ data }) {
               <ContactInput label="Phone Number*" name="phone" onChange={handleChange} placeholder="e.g. +91 98765 43210" required type="tel" value={formValues.phone} />
 
               <ContactSelect label="Destination of Interest*" name="destination" onChange={handleChange} required value={formValues.destination}>
-                <option value="" disabled>Select Destination</option>
+                <option value="" disabled>Type Of Rooms</option>
                 {data.form.destinations.map((destination) => (
                   <option key={destination} value={destination}>{destination}</option>
                 ))}

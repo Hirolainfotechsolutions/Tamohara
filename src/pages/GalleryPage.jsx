@@ -109,7 +109,7 @@ function GalleryPage() {
                       src={image.src}
                       alt={image.alt}
                     />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(18,33,27,0.84)_100%)] opacity-90" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,var(--color-primary-dark-overlay)_100%)] opacity-90" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 text-[var(--color-white)]">
                       <p className="meta-text mb-2 text-white/70">{image.category}</p>
                       <h2 className="heading-display text-2xl font-semibold leading-none text-[var(--color-white)] sm:text-3xl">
@@ -125,7 +125,7 @@ function GalleryPage() {
 
         {activeImage ? (
           <div
-            className="fixed inset-0 z-[80] grid place-items-center bg-[rgba(18,33,27,0.9)] p-4"
+            className="fixed inset-0 z-[80] grid place-items-center bg-[var(--color-primary-dark-overlay)] p-4"
             role="dialog"
             aria-modal="true"
             aria-label={activeImage.title}

@@ -66,7 +66,7 @@ function BookingFeatureSection({ booking }) {
           src={booking.image}
           alt={booking.imageAlt}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,33,27,0.92)_0%,rgba(18,33,27,0.68)_44%,rgba(18,33,27,0.22)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-hero-overlay-start)_0%,var(--color-hero-overlay-mid)_44%,var(--color-hero-overlay-end)_100%)]" />
 
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 sm:py-12 lg:min-h-[calc(100svh-24px)] lg:grid-cols-[0.95fr_0.78fr] lg:gap-10 lg:px-10">
           <div className="max-w-2xl text-[var(--color-white)]">

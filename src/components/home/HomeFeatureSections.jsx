@@ -427,25 +427,25 @@ function ExperiencesSection({ experiences }) {
         <p className="body-copy mt-5 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">{experiences.description}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-[1.1fr_0.75fr]">
-          <a className="group relative min-h-[360px] overflow-hidden rounded-[var(--radius-app)] sm:min-h-[460px] lg:min-h-[520px]" href={experiences.primary.href}>
+          <Link className="group relative min-h-[360px] overflow-hidden rounded-[var(--radius-app)] sm:min-h-[460px] lg:min-h-[520px]" to={experiences.primary.href}>
             <img className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src={experiences.primary.image} alt={experiences.primary.imageAlt} />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,var(--color-overlay-strong))]" />
             <div className="absolute bottom-6 left-5 right-5 max-w-xl text-[var(--color-white)] sm:bottom-8 sm:left-8 sm:right-auto">
               <h3 className="banner-title text-[clamp(40px,5vw,64px)]">{experiences.primary.title}</h3>
               <span className="primary-button mt-6">Book Now</span>
             </div>
-          </a>
+          </Link>
 
           <div className="grid gap-4">
             {experiences.items.map((item) => (
-              <a className="group relative min-h-[180px] overflow-hidden rounded-[var(--radius-app)] sm:min-h-[220px] lg:min-h-[160px]" href={item.href} key={item.title}>
+              <Link className="group relative min-h-[180px] overflow-hidden rounded-[var(--radius-app)] sm:min-h-[220px] lg:min-h-[160px]" to={item.href} key={item.title}>
                 <img className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src={item.image} alt={item.imageAlt} />
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,var(--color-overlay-strong))]" />
                 <h3 className="heading-display absolute bottom-5 right-5 flex items-center gap-3 text-3xl text-[var(--color-white)] sm:bottom-6 sm:right-6 sm:text-4xl">
                   {item.title}
                   <FaArrowRight className="h-5 w-5" aria-hidden="true" />
                 </h3>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
