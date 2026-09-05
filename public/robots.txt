@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tamohraresort.com/sitemap.xml
+Sitemap: https://www.tamohararesort.com/sitemap.xml

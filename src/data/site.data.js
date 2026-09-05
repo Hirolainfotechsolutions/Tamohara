@@ -4,6 +4,10 @@ export const siteData = {
     label: '+91 70221 76432',
     href: 'tel:+917022176432',
   },
+  whatsapp: {
+    label: 'WhatsApp',
+    href: 'https://wa.me/917022176432',
+  },
   email: {
     label: 'reservations@tamohararesort.com',
     href: 'mailto:reservations@tamohararesort.com',
@@ -12,10 +16,10 @@ export const siteData = {
   addressHref:
     'https://www.google.com/maps/search/?api=1&query=Tamohara%20Resorts%20Debbegadde%20Village%20Kyamanahally%20Post%20Hanbal%20Hobali%20Sakaleshpur%20Taluk%20Mavinahalli%20Karnataka%20573165',
   socialLinks: {
-    facebook: 'https://www.facebook.com/',
-    instagram: 'https://www.instagram.com/',
-    linkedin: 'https://www.linkedin.com/',
-    twitter: 'https://twitter.com/',
+    facebook: '',
+    instagram: 'https://www.instagram.com/tamohara_resort/',
+    linkedin: '',
+    twitter: '',
   },
   booking: {
     label: 'Book Now',

@@ -1,8 +1,8 @@
-import bannerImage from '../assets/images/Tamohara-resorts-banner.jpg'
-import trailImage from '../assets/images/11.webp'
-import diningImage from '../assets/images/22.webp'
-import estateImage from '../assets/images/7.webp'
-import roomImage from '../assets/images/14.webp'
+import bannerImage from '../assets/images/tamohara-resort-arrival.jpg'
+import trailImage from '../assets/images/burma-bridge-activity.webp'
+import diningImage from '../assets/images/banquet-hall.webp'
+import estateImage from '../assets/images/coffee-estate-pathway.webp'
+import roomImage from '../assets/images/six-sharing-room.webp'
 
 export const blogsPageData = {
   eyebrow: 'Tamohara Resort Journal',

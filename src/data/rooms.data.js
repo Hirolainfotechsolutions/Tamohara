@@ -1,9 +1,9 @@
-import roomOneImage from '../assets/images/8.webp'
-import roomTwoImage from '../assets/images/13.webp'
-import roomThreeImage from '../assets/images/14.webp'
-import roomFourImage from '../assets/images/15.webp'
-import roomFiveImage from '../assets/images/24.webp'
-import villaRoomImage from '../assets/images/1.webp'
+import roomOneImage from '../assets/images/two-sharing-room.webp'
+import roomTwoImage from '../assets/images/sharing-room.webp'
+import roomThreeImage from '../assets/images/six-sharing-room.webp'
+import roomFourImage from '../assets/images/eight-sharing-room.webp'
+import roomFiveImage from '../assets/images/twelve-sharing-room.webp'
+import villaRoomImage from '../assets/images/resort-pool-exterior.webp'
 
 export const roomDetailsData = {
   eyebrow: 'Rooms & Suites Details',

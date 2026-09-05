@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import centerBannerImage from '../../assets/images/1.webp'
-import leafBackgroundImage from '../../assets/images/contactbanner.webp'
+import centerBannerImage from '../../assets/images/resort-pool-exterior.webp'
+import leafBackgroundImage from '../../assets/images/contact-leaf-background.webp'
 import SiteHeader from '../layout/SiteHeader'
 
 function ContactPeaceBanner({ showHeader = false }) {

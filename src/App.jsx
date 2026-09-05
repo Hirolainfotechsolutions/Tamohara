@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { BookingModalProvider } from './components/booking/BookingModal'
+import FloatingContactButtons from './components/layout/FloatingContactButtons'
 import AboutPage from './pages/AboutPage'
 import BlogDetailPage from './pages/BlogDetailPage'
 import BlogsPage from './pages/BlogsPage'
@@ -29,6 +30,7 @@ function App() {
         <Route path="/rooms/:slug" element={<RoomDetailPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <FloatingContactButtons />
     </BookingModalProvider>
   )
 }

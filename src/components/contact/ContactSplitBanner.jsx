@@ -1,5 +1,5 @@
-import poolImage from '../../assets/images/1.webp'
-import estateImage from '../../assets/images/7.webp'
+import poolImage from '../../assets/images/resort-pool-exterior.webp'
+import estateImage from '../../assets/images/coffee-estate-pathway.webp'
 import SiteHeader from '../layout/SiteHeader'
 
 const defaultBanner = {
@@ -18,7 +18,7 @@ function ContactSplitBanner({ banner = defaultBanner, showHeader = false }) {
     <section className="relative overflow-hidden bg-[var(--color-surface)]">
       {showHeader ? (
         <div className="relative z-30 [&_header]:!text-[var(--color-white)] lg:[&_header]:!text-[var(--color-primary-dark)]">
-          <SiteHeader tone="dark" />
+          <SiteHeader phoneClassName="lg:!text-[var(--color-white)]" tone="dark" />
         </div>
       ) : null}
 

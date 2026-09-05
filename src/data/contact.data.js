@@ -1,5 +1,5 @@
 import { siteData } from './site.data'
-import aboutBannerImage from '../assets/images/aboutbanner.webp'
+import aboutBannerImage from '../assets/images/pool-mountain-banner.webp'
 
 export const contactPageData = {
   hero: {
@@ -13,7 +13,7 @@ export const contactPageData = {
       href: '/contact#contact-form',
     },
     secondaryAction: {
-      label: 'Call Us',
+      label: 'Contact Us',
       href: siteData.phone.href,
     },
     booking: {
@@ -42,7 +42,7 @@ export const contactPageData = {
     },
     {
       title: 'Contact',
-      lines: [`Available Monday to Saturday`, `Tel: ${siteData.phone.label}`, `Email: ${siteData.email.label}`],
+      lines: [`Available Monday to Saturday`, `Tel: ${siteData.phone.label}`],
     },
   ],
   form: {

@@ -1,20 +1,20 @@
-// import heroBannerImage from '../assets/images/Tamohara-resorts-banner.jpg'
-// import heroBannerImage from '../assets/images/homebanner.webp'
-import heroBannerImage from '../assets/images/contactbanner1.webp'
+// import heroBannerImage from '../assets/images/tamohara-resort-arrival.jpg'
+// import heroBannerImage from '../assets/images/home-resort-banner.webp'
+import heroBannerImage from '../assets/images/hero-resort-banner.webp'
 
 
-import aboutBannerImage from '../assets/images/aboutbanner.webp'
-import exteriorImage from '../assets/images/1.webp'
-import roomTwoImage from '../assets/images/8.webp'
-import roomSixImage from '../assets/images/14.webp'
-import roomEightImage from '../assets/images/15.webp'
-import roomTwelveImage from '../assets/images/24.webp'
-import diningHallImage from '../assets/images/3.webp'
-import buffetImage from '../assets/images/4.webp'
-import forestBridgeImage from '../assets/images/11.webp'
-import estatePathImage from '../assets/images/7.webp'
-import nightPoolImage from '../assets/images/23.webp'
-import banquetImage from '../assets/images/22.webp'
+import aboutBannerImage from '../assets/images/pool-mountain-banner.webp'
+import exteriorImage from '../assets/images/resort-pool-exterior.webp'
+import roomTwoImage from '../assets/images/two-sharing-room.webp'
+import roomSixImage from '../assets/images/six-sharing-room.webp'
+import roomEightImage from '../assets/images/eight-sharing-room.webp'
+import roomTwelveImage from '../assets/images/twelve-sharing-room.webp'
+import diningHallImage from '../assets/images/dining-hall.webp'
+import buffetImage from '../assets/images/buffet-dining.webp'
+import forestBridgeImage from '../assets/images/burma-bridge-activity.webp'
+import estatePathImage from '../assets/images/coffee-estate-pathway.webp'
+import nightPoolImage from '../assets/images/evening-deck.webp'
+import banquetImage from '../assets/images/banquet-hall.webp'
 
 export const homePageData = {
   hero: {
@@ -200,7 +200,7 @@ export const homePageData = {
     imageAlt: 'Tamohara premium suite exterior',
     button: {
       label: 'More Info',
-      href: '/#book',
+      href: '/about#food-activities-stay-details',
     },
   },
   values: {

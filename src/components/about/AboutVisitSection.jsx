@@ -54,9 +54,6 @@ function AboutVisitSection() {
         <div>
           <div className="space-y-1 text-base leading-7 text-[var(--color-primary-dark)] sm:text-lg">
             <p>
-              Email: <a className="font-semibold" href={siteData.email.href}>{siteData.email.label}</a>
-            </p>
-            <p>
               Phone/WhatsApp: <a className="font-semibold" href={siteData.phone.href}>{siteData.phone.label}</a>
             </p>
             <p>

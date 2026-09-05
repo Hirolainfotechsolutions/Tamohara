@@ -183,7 +183,7 @@ function WellnessSection({ wellness }) {
         <div className="mt-10 grid items-center gap-4 sm:grid-cols-3 sm:gap-5 lg:mt-12">
           {wellness.images.map((image, index) => (
             <img
-              className="h-[250px] w-full rounded-[var(--radius-app)] object-cover shadow-[var(--shadow-soft)] transition-transform duration-200 ease-out sm:h-[320px] lg:h-[360px]"
+              className="h-[250px] w-full rounded-[var(--radius-app)] object-cover transition-transform duration-200 ease-out sm:h-[320px] lg:h-[360px]"
               style={{
                 transform: canAnimateImages ? index === 0 ? leftTransform : index === 2 ? rightTransform : centerTransform : 'none',
                 zIndex: index === 1 ? 2 : 1,
@@ -366,7 +366,7 @@ function FeaturedStaySection({ stay }) {
           <p className="banner-eyebrow mb-5">{stay.eyebrow}</p>
           <h2 className="heading-display text-[clamp(36px,10vw,48px)] font-semibold leading-none text-[var(--color-white)]">{stay.title}</h2>
           <p className="mt-5 max-w-sm text-lg leading-8 text-white/75">{stay.description}</p>
-          <Button className="mt-8 w-fit" to={stay.button.href}>{stay.button.label}</Button>
+          <Button className="mt-8 w-fit border border-[var(--color-primary)] hover:border-[var(--color-primary)]" to={stay.button.href}>{stay.button.label}</Button>
         </div>
       </div>
     </section>

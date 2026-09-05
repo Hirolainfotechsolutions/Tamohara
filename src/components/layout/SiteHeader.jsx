@@ -5,7 +5,7 @@ import { siteData } from '../../data/site.data'
 import BrandMark from '../ui/BrandMark'
 import Button from '../ui/Button'
 
-function SiteHeader({ isSticky = false, tone = 'light' }) {
+function SiteHeader({ isSticky = false, phoneClassName = '', tone = 'light' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const headerClasses = isSticky
     ? 'border-b border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-4 text-[var(--color-primary-dark)] shadow-[var(--shadow-header)] sm:px-6'
@@ -31,11 +31,11 @@ function SiteHeader({ isSticky = false, tone = 'light' }) {
           ))}
         </nav>
 
-        <BrandMark className="justify-self-start lg:justify-self-center" />
+        <BrandMark className="justify-self-start lg:justify-self-center" size={isSticky ? 'compact' : 'default'} />
 
         <div className="hidden flex-wrap items-center justify-center gap-x-7 gap-y-4 lg:flex lg:justify-end">
           <a
-            className="nav-text hidden items-center gap-2.5 whitespace-nowrap sm:inline-flex"
+            className={`nav-text hidden items-center gap-2.5 whitespace-nowrap sm:inline-flex ${phoneClassName}`}
             href={siteData.phone.href}
             aria-label={`Call ${siteData.brandName} Resort`}
           >

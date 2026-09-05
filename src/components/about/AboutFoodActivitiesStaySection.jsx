@@ -22,7 +22,7 @@ function AboutFoodActivitiesStaySection({ section }) {
   }
 
   return (
-    <section className="soft-section px-4 py-12 sm:px-6 lg:py-16">
+    <section id="food-activities-stay-details" className="soft-section px-4 py-12 sm:px-6 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-5xl text-center">
           <p className="section-eyebrow mb-4">{section.eyebrow}</p>

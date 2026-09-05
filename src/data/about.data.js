@@ -1,14 +1,14 @@
-import aboutBannerImage from '../assets/images/aboutbanner.webp'
-import exteriorImage from '../assets/images/1.webp'
-import diningHallImage from '../assets/images/3.webp'
-import buffetImage from '../assets/images/4.webp'
-import estatePathImage from '../assets/images/7.webp'
-import roomTwoImage from '../assets/images/8.webp'
-import forestBridgeImage from '../assets/images/11.webp'
-import roomSixImage from '../assets/images/14.webp'
-import roomEightImage from '../assets/images/15.webp'
-import nightDeckImage from '../assets/images/23.webp'
-import roomTwelveImage from '../assets/images/24.webp'
+import aboutBannerImage from '../assets/images/pool-mountain-banner.webp'
+import exteriorImage from '../assets/images/resort-pool-exterior.webp'
+import diningHallImage from '../assets/images/dining-hall.webp'
+import buffetImage from '../assets/images/buffet-dining.webp'
+import estatePathImage from '../assets/images/coffee-estate-pathway.webp'
+import roomTwoImage from '../assets/images/two-sharing-room.webp'
+import forestBridgeImage from '../assets/images/burma-bridge-activity.webp'
+import roomSixImage from '../assets/images/six-sharing-room.webp'
+import roomEightImage from '../assets/images/eight-sharing-room.webp'
+import nightDeckImage from '../assets/images/evening-deck.webp'
+import roomTwelveImage from '../assets/images/twelve-sharing-room.webp'
 
 export const aboutPageData = {
   eyebrow: 'About Tamohara',
@@ -216,10 +216,10 @@ export const aboutPageData = {
     ],
   },
   collage: {
-    eyebrow: 'Around Tamohara',
-    title: 'Timeless Sakleshpur, crafted for you',
+    eyebrow: 'Inside Tamohara',
+    title: 'Real resort moments, captured for you',
     description:
-      'Nearby places include Manzerabad Fort and Hanbal Falls at 10 km, Bettada Byraveshwara and Railway Tunnel at 25 km, Devaramane at 35 km, and Bisle Ghat, Belur, and Halebeed at 40 km.',
+      'Explore views from the resort, including the swimming pool, dining spaces, estate pathways, bungalow-style stays, and peaceful evening corners.',
     images: [
       { src: aboutBannerImage, alt: 'Tamohara Resort pool and mountain view' },
       { src: diningHallImage, alt: 'Tamohara dining and banquet hall' },

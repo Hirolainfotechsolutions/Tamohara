@@ -247,7 +247,6 @@ function BookingModal({ isOpen, closeModal }) {
             </p>
             <div className="mt-8 space-y-3 text-sm font-semibold text-white/90">
               <a className="block transition-colors hover:text-[var(--color-primary)]" href={siteData.phone.href}>{siteData.phone.label}</a>
-              <a className="block break-words transition-colors hover:text-[var(--color-primary)]" href={siteData.email.href}>{siteData.email.label}</a>
             </div>
           </div>
 
