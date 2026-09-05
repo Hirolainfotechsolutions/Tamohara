@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom'
+import logoImage from '../../assets/images/tamohara_logo.webp'
 import { siteData } from '../../data/site.data'
 
-function BrandMark({ className = '', subtitleClassName = '' }) {
+function BrandMark({ className = '', imageClassName = '' }) {
   return (
     <Link
-      className={`grid justify-items-center text-center leading-none ${className}`}
+      className={`inline-flex items-center justify-center leading-none ${className}`}
       to="/"
       aria-label={`${siteData.brandName} Resort home`}
     >
-      <span className="brand-title">
-        {siteData.brandName}
-      </span>
-      <span className={`brand-subtitle mt-1 opacity-85 ${subtitleClassName}`}>
-        Resort
-      </span>
+      <img
+        className={`h-16 w-16 object-contain sm:h-20 sm:w-20 ${imageClassName}`}
+        src={logoImage}
+        alt={`${siteData.brandName} Resorts`}
+      />
     </Link>
   )
 }

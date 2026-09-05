@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
+import logoImage from '../../assets/images/tamohara_logo.webp'
 import { siteData } from '../../data/site.data'
 
 function FooterLinks({ items, title }) {
@@ -69,6 +70,11 @@ function SiteFooter({ reveal = false }) {
         </div>
 
         <div className="relative left-1/2 w-[100dvw] -translate-x-1/2 overflow-hidden px-2 sm:left-auto sm:w-full sm:translate-x-0 sm:px-0">
+          <img
+            className="mx-auto mb-6 h-24 w-24 object-contain sm:h-32 sm:w-32"
+            src={logoImage}
+            alt={`${siteData.brandName} Resorts`}
+          />
           <p className="heading-display pointer-events-none mx-auto block w-full select-none whitespace-nowrap text-center text-[clamp(32px,13.4vw,250px)] font-semibold uppercase leading-[0.86] tracking-[-0.075em] text-white sm:w-fit sm:text-[clamp(64px,18vw,250px)] sm:tracking-[-0.045em]">
             {siteData.brandName}
           </p>

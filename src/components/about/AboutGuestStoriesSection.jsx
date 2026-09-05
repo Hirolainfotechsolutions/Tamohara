@@ -44,7 +44,7 @@ function AboutGuestStoriesSection({ guestStories }) {
 
           <div className="mx-auto grid min-h-[230px] max-w-xl content-start transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] sm:min-h-[250px]">
             <div className="flex items-center justify-center gap-3">
-              <BrandMark className="scale-[0.58] text-[var(--color-primary-dark)]" subtitleClassName="text-[10px]" />
+              <BrandMark imageClassName="h-12 w-12 sm:h-14 sm:w-14" />
               <span className="h-px w-7 bg-[var(--color-border)]" aria-hidden="true" />
               <div className="flex gap-1 text-[var(--color-primary)]" aria-label={`${activeStory.rating} star review`}>
                 {Array.from({ length: activeStory.rating }).map((_, index) => (
