@@ -12,9 +12,9 @@ export const siteData = {
     label: 'reservations@tamohararesort.com',
     href: 'mailto:reservations@tamohararesort.com',
   },
-  address: 'Debbegadde Village, Kyamanahally Post Hanbal Hobali, Sakaleshpur Taluk, Post, Mavinahalli, Karnataka 573165',
+  address: 'Debbegadde Village, Kyamanahally Post Hanbal Hobali, Sakleshpur Taluk, Post, Mavinahalli, Karnataka 573165',
   addressHref:
-    'https://www.google.com/maps/search/?api=1&query=Tamohara%20Resorts%20Debbegadde%20Village%20Kyamanahally%20Post%20Hanbal%20Hobali%20Sakaleshpur%20Taluk%20Mavinahalli%20Karnataka%20573165',
+    'https://www.google.com/maps/search/?api=1&query=Tamohara%20Resort%20Debbegadde%20Village%20Kyamanahally%20Post%20Hanbal%20Hobali%20Sakleshpur%20Taluk%20Mavinahalli%20Karnataka%20573165',
   socialLinks: {
     facebook: '',
     instagram: 'https://www.instagram.com/tamohara_resort/',

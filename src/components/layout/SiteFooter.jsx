@@ -39,13 +39,13 @@ function SiteFooter() {
             <img
               className="h-24 w-24 object-contain"
               src={logoImage}
-              alt={`${siteData.brandName} Resorts`}
+              alt={`${siteData.brandName} Resort`}
             />
             <p className="heading-display mt-5 text-4xl font-semibold uppercase leading-none text-white">
               {siteData.brandName}
             </p>
             <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-              Resorts
+              Resort
             </p>
             <Link className="primary-button mt-6 rounded-full px-6" to="/contact">
               Contact Us

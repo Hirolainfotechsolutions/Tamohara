@@ -14,7 +14,7 @@ function BrandMark({ className = '', imageClassName = '', size = 'default' }) {
       <img
         className={`${sizeClassName} object-contain ${imageClassName}`}
         src={logoImage}
-        alt={`${siteData.brandName} Resorts`}
+        alt={`${siteData.brandName} Resort`}
       />
     </Link>
   )

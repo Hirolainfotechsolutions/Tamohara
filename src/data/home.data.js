@@ -13,6 +13,7 @@ import diningHallImage from '../assets/images/dining-hall.webp'
 import buffetImage from '../assets/images/buffet-dining.webp'
 import forestBridgeImage from '../assets/images/burma-bridge-activity.webp'
 import estatePathImage from '../assets/images/coffee-estate-pathway.webp'
+import aerialResortImage from '../assets/images/aerial-resort-forest-view.jpg'
 import nightPoolImage from '../assets/images/evening-deck.webp'
 import banquetImage from '../assets/images/banquet-hall.webp'
 
@@ -34,8 +35,8 @@ export const homePageData = {
       label: 'Explore More',
       href: '/about',
     },
-    image: exteriorImage,
-    imageAlt: 'Tamohara Resort luxury exterior',
+    image: aerialResortImage,
+    imageAlt: 'Aerial view of Tamohara Resort surrounded by forest',
   },
   amenities: {
     eyebrow: 'Amenities',
@@ -193,11 +194,11 @@ export const homePageData = {
   },
   featuredStay: {
     eyebrow: 'Stay Includes',
-    title: 'Meals, mist,  mountain hospitality',
+    title: 'Meals, mist, mountain hospitality',
     description:
       'Breakfast includes South Indian dishes, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk. Lunch and dinner include buffet staples with vegetarian and non-vegetarian options.',
     image: buffetImage,
-    imageAlt: 'Tamohara premium suite exterior',
+    imageAlt: 'Tamohara buffet dining setup',
     button: {
       label: 'More Info',
       href: '/about#food-activities-stay-details',
@@ -270,7 +271,7 @@ export const homePageData = {
   bookingRequest: {
     title: 'Book',
     description: 'Ready for your next retreat? Fill out the form below and we will help you confirm your stay.',
-    thankYouMessage: 'Thank you. we will contact you in a while',
+    thankYouMessage: 'Thank you. We will contact you shortly.',
     roomOptions: ['Room for 2 Sharing', 'Villa Room - 2 Occupancy AC', 'Room for 4 Sharing', 'Room for 6 Sharing', 'Room for 8 Sharing', 'Room for 12 Sharing'],
     fields: {
       room: 'Villas',
@@ -303,7 +304,7 @@ export const homePageData = {
       people: 'Number of People',
       peopleOptions: ['2 Sharing', 'Villa 2 Occupancy AC', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
       submitLabel: 'Book a Room',
-      thankYouMessage: 'Thank you. we will contact you in a while',
+      thankYouMessage: 'Thank you. We will contact you shortly.',
     },
   },
   faqs: {
@@ -616,7 +617,7 @@ export const homePageData = {
       {
         question: 'What is the best way to contact the resort?',
         answer:
-          'Use the Book Now form, Contact page form, phone number, or email listed on the website.',
+          'Use the Book Now form, Contact page form, phone number, or WhatsApp button listed on the website.',
       },
     ],
   },

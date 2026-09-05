@@ -42,7 +42,7 @@ function AboutVisitSection() {
       }
 
       setValues(initialValues)
-      setStatus('Thank you. we will contact you in a while')
+      setStatus('Thank you. We will contact you shortly.')
     } catch {
       setStatus('Sorry, we could not send your message. Please contact us directly.')
     }
@@ -57,7 +57,7 @@ function AboutVisitSection() {
               Phone/WhatsApp: <a className="font-semibold" href={siteData.phone.href}>{siteData.phone.label}</a>
             </p>
             <p>
-              Instagram: <span className="font-semibold">@tamohararesort</span>
+              Instagram: <a className="font-semibold" href={siteData.socialLinks.instagram} rel="noreferrer" target="_blank">@tamohara_resort</a>
             </p>
           </div>
 

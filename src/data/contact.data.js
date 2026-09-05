@@ -22,7 +22,7 @@ export const contactPageData = {
       guests: '2 Sharing',
       guestOptions: ['2 Sharing', 'Villa 2 Occupancy AC', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
       actionLabel: 'Check Availability',
-      thankYouMessage: 'Thank you. we will contact you in a while',
+      thankYouMessage: 'Thank you. We will contact you shortly.',
     },
   },
   eyebrow: 'Contact Tamohara Resort',
@@ -46,7 +46,7 @@ export const contactPageData = {
     },
   ],
   form: {
-    thankYouMessage: 'Thank you. we will contact you in a while',
+    thankYouMessage: 'Thank you. We will contact you shortly.',
     submitLabel: 'Submit Enquiry',
     destinations: ['Room for 2 Sharing', 'Villa Room - 2 Occupancy AC', 'Room for 4 Sharing', 'Room for 6 Sharing', 'Room for 8 Sharing', 'Room for 12 Sharing', 'Activities enquiry', 'Banquet enquiry', 'General enquiry'],
     budgets: ['Rs 6000 + taxes', 'Rs 7000 + taxes villa', 'Rs 12000 + taxes', 'Rs 16500 + taxes', 'Rs 20000 + taxes', 'Rs 30000 + taxes', 'Group stay package'],

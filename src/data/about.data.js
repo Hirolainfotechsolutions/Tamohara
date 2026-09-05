@@ -36,7 +36,7 @@ export const aboutPageData = {
       guests: '2 Sharing',
       guestOptions: ['2 Sharing', 'Villa 2 Occupancy AC', '4 Sharing', '6 Sharing', '8 Sharing', '12 Sharing'],
       actionLabel: 'Check Availability',
-      thankYouMessage: 'Thank you. we will contact you in a while',
+      thankYouMessage: 'Thank you. We will contact you shortly.',
     },
   },
   splitBanner: {
@@ -51,7 +51,7 @@ export const aboutPageData = {
   },
   story: {
     eyebrow: 'Our Story',
-    title: 'Discover the Western Ghats  of Tamohara  ',
+    title: 'Discover the Western Ghats of Tamohara',
     image: exteriorImage,
     imageAlt: 'Tamohara Resort exterior with pool in Sakleshpur',
     paragraphs: [
@@ -70,7 +70,7 @@ export const aboutPageData = {
         icon: 'dining',
         title: 'Buffet Lunch and Dinner',
         description:
-          'Enjoy pickle, pappad, salad, soup, roti or kulcha, veg sabzi, rice varieties, sambar, rasam, curds, dessert, and seasonal non-vegetarian options.',
+          'Enjoy pickle, papad, salad, soup, roti or kulcha, veg sabzi, rice varieties, sambar, rasam, curds, dessert, and seasonal non-vegetarian options.',
       },
       {
         icon: 'coffee',
@@ -115,10 +115,10 @@ export const aboutPageData = {
         note: 'Vegetarian buffet staples with seasonal non-vegetarian dishes.',
         items: [
           'Pickle',
-          'Pappad',
+          'Papad',
           'Salad',
           'Soup',
-          'Pulkha / roti / kulcha',
+          'Phulka / roti / kulcha',
           'Veg sabzi',
           'Veg pulav / fried rice / jeera rice / ghee rice',
           'Raitha / kurma / curry',

@@ -9,7 +9,7 @@ function FloatingContactButtons() {
         href={siteData.whatsapp.href}
         target="_blank"
         rel="noreferrer"
-        aria-label={`Chat with ${siteData.brandName} Resorts on WhatsApp`}
+        aria-label={`Chat with ${siteData.brandName} Resort on WhatsApp`}
       >
         <FaWhatsapp className="h-6 w-6" aria-hidden="true" />
       </a>
@@ -17,7 +17,7 @@ function FloatingContactButtons() {
       <a
         className="grid h-13 w-13 place-items-center rounded-full bg-[var(--color-primary)] text-[var(--color-primary-dark)] shadow-[var(--shadow-round)] transition-transform hover:-translate-y-0.5 sm:h-14 sm:w-14"
         href={siteData.phone.href}
-        aria-label={`Call ${siteData.brandName} Resorts`}
+        aria-label={`Call ${siteData.brandName} Resort`}
       >
         <FaPhoneVolume className="h-5 w-5" aria-hidden="true" />
       </a>

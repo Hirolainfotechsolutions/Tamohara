@@ -40,6 +40,6 @@ export const pageSeoData = {
   '/contact': {
     title: 'Contact Tamohara Resort | Book Your Sakleshpur Stay',
     description:
-      'Contact Tamohara Resort for booking enquiries, room availability, group stays, event questions, phone support, email, and Sakleshpur resort details.',
+      'Contact Tamohara Resort for booking enquiries, room availability, group stays, event questions, phone support, WhatsApp support, and Sakleshpur resort details.',
   },
 }

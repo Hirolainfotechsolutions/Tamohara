@@ -1,6 +1,6 @@
 import bannerImage from '../assets/images/tamohara-resort-arrival.jpg'
 import trailImage from '../assets/images/burma-bridge-activity.webp'
-import diningImage from '../assets/images/banquet-hall.webp'
+import diningImage from '../assets/images/buffet-dining.webp'
 import estateImage from '../assets/images/coffee-estate-pathway.webp'
 import roomImage from '../assets/images/six-sharing-room.webp'
 
@@ -55,7 +55,7 @@ export const blogsPageData = {
       image: diningImage,
       imageAlt: 'Dining and banquet space at Tamohara Resort',
       body: [
-        'Meals shape the pace of a resort stay. Lunch and dinner at Tamohara follow a buffet format with pickle, pappad, salad, soup, roti or kulcha, veg sabzi, rice varieties, sambar, rasam, curds, dessert, and vegetarian and non-vegetarian options.',
+        'Meals shape the pace of a resort stay. Lunch and dinner at Tamohara follow a buffet format with pickle, papad, salad, soup, roti or kulcha, veg sabzi, rice varieties, sambar, rasam, curds, dessert, and vegetarian and non-vegetarian options.',
         'Breakfast includes two South Indian dishes, cut fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk. Hi-tea is served with veg pakoda or bajji, making the late afternoon feel easy after pool time or activities.',
         'For group stays, this is especially useful. Everyone can gather naturally, eat comfortably, and return to the weekend without turning every meal into a decision.',
       ],
