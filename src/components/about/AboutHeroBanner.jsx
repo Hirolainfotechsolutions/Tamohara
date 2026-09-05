@@ -59,7 +59,7 @@ function AboutHeroBanner({ hero, showBooking = true }) {
     formData.append('Check Out', formValues.checkOut)
     formData.append('Guests', formValues.guests)
     formData.append('Mobile Number', formValues.mobile)
-    formData.append('_subject', 'Tamohra Resort availability request')
+    formData.append('_subject', 'Tamohara Resort availability request')
     formData.append('_template', 'table')
 
     try {

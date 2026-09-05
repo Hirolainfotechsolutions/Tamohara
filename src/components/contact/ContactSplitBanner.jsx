@@ -3,14 +3,14 @@ import estateImage from '../../assets/images/7.webp'
 import SiteHeader from '../layout/SiteHeader'
 
 const defaultBanner = {
-  eyebrow: 'Contact Tamohra Resort',
-  titleLines: ['We are', 'Tamohra.'],
+  eyebrow: 'Contact Tamohara Resort',
+  titleLines: ['We are', 'Tamohara.'],
   description:
     'Plan your Sakleshpur stay with rooms, buffet meals, estate activities, and warm mountain hospitality.',
   foregroundImage: poolImage,
-  foregroundAlt: 'Guests relaxing beside the Tamohra Resort pool',
+  foregroundAlt: 'Guests relaxing beside the Tamohara Resort pool',
   backgroundImage: estateImage,
-  backgroundAlt: 'Tamohra Resort green coffee estate view',
+  backgroundAlt: 'Tamohara Resort green coffee estate view',
 }
 
 function ContactSplitBanner({ banner = defaultBanner, showHeader = false }) {

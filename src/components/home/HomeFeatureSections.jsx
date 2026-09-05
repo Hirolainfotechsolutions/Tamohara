@@ -89,7 +89,7 @@ function RoomsPreviewSection({ rooms }) {
           {rooms.items.map((room, index) => {
             const isActive = activeRoomIndex === index
             const roomImage = room.image ?? rooms.items[0].image
-            const roomImageAlt = room.imageAlt ?? `${room.title} at Tamohra Resort`
+            const roomImageAlt = room.imageAlt ?? `${room.title} at Tamohara Resort`
 
             return (
               <Link

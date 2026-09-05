@@ -49,7 +49,7 @@ function HomeBookingSection({ booking }) {
     formData.append('Full Name', formValues.fullName)
     formData.append('Email', formValues.email)
     formData.append('Phone', formValues.phone)
-    formData.append('_subject', 'Tamohra Resort booking request')
+    formData.append('_subject', 'Tamohara Resort booking request')
     formData.append('_template', 'table')
 
     try {

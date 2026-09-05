@@ -23,7 +23,6 @@ function FooterLinks({ items, title }) {
 }
 
 function SiteFooter({ reveal = false }) {
-  const year = new Date().getFullYear()
   const footerPositionClass = reveal ? 'relative z-0 lg:sticky lg:bottom-0' : 'relative z-0'
 
   return (
@@ -40,7 +39,7 @@ function SiteFooter({ reveal = false }) {
                 href={siteData.addressHref}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Open Tamohra Resort location in Google Maps"
+                aria-label="Open Tamohara Resort location in Google Maps"
               >
                 {siteData.address}
               </a>
@@ -73,9 +72,22 @@ function SiteFooter({ reveal = false }) {
           <p className="heading-display pointer-events-none mx-auto block w-full select-none whitespace-nowrap text-center text-[clamp(32px,13.4vw,250px)] font-semibold uppercase leading-[0.86] tracking-[-0.075em] text-white sm:w-fit sm:text-[clamp(64px,18vw,250px)] sm:tracking-[-0.045em]">
             {siteData.brandName}
           </p>
-          <div className="mt-6 flex flex-row items-start justify-between gap-4 px-2 text-left text-[11px] font-semibold sm:items-center sm:px-0 sm:text-base">
-            <p>&copy; {year} All rights reserved.</p>
-            <p className="max-w-[48%] text-right sm:max-w-none">{siteData.footer.tagline}</p>
+          <div className="mt-6 px-2 text-center text-[11px] font-semibold leading-6 text-white/82 sm:px-0 sm:text-base">
+            <p>
+              Copyright &copy; 2026{' '}
+              <Link className="text-white underline decoration-white/40 underline-offset-4 transition-colors hover:text-[var(--color-primary)]" to="/">
+                Tamohara
+              </Link>
+              {' '}All Rights Reserved. Designed by{' '}
+              <a
+                className="text-white underline decoration-white/40 underline-offset-4 transition-colors hover:text-[var(--color-primary)]"
+                href="https://hirolainfotech.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Hirola InfoTech Solutions Pvt Ltd.
+              </a>
+            </p>
           </div>
         </div>
       </div>

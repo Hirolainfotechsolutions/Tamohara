@@ -28,7 +28,7 @@ function AboutVisitSection() {
     formData.append('Name', values.name)
     formData.append('Email', values.email)
     formData.append('Message', values.message)
-    formData.append('_subject', 'Tamohra Resort about page message')
+    formData.append('_subject', 'Tamohara Resort about page message')
     formData.append('_template', 'table')
 
     try {
@@ -60,7 +60,7 @@ function AboutVisitSection() {
               Phone/WhatsApp: <a className="font-semibold" href={siteData.phone.href}>{siteData.phone.label}</a>
             </p>
             <p>
-              Instagram: <span className="font-semibold">@tamohraresort</span>
+              Instagram: <span className="font-semibold">@tamohararesort</span>
             </p>
           </div>
 
@@ -135,7 +135,7 @@ function AboutVisitSection() {
           <div className="mt-9 overflow-hidden bg-[var(--color-primary-dark)]">
             <iframe
               className="h-[360px] w-full border-0 sm:h-[440px]"
-              title="Tamohra Resort location map"
+              title="Tamohara Resort location map"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               src={`https://www.google.com/maps?q=${encodeURIComponent(siteData.address)}&output=embed`}

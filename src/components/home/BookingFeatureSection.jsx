@@ -38,7 +38,7 @@ function BookingFeatureSection({ booking }) {
     formData.append('Arrival Date', formValues.arrival)
     formData.append('Departure Date', formValues.departure)
     formData.append('Number of People', formValues.people)
-    formData.append('_subject', 'Tamohra Resort room booking request')
+    formData.append('_subject', 'Tamohara Resort room booking request')
     formData.append('_template', 'table')
 
     try {

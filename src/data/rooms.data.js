@@ -41,9 +41,9 @@ export const roomDetailsData = {
       bed: '1 Room',
       bathroom: '1 Bathroom',
       image: roomOneImage,
-      imageAlt: 'Tamohra Room 1 for 2 sharing',
+      imageAlt: 'Tamohara Room 1 for 2 sharing',
       overview:
-        'A comfortable 2-sharing room designed for couples or close friends visiting Sakleshpur. Tamohra has three rooms in this category, with extra bed available at Rs 2000 + taxes.',
+        'A comfortable 2-sharing room designed for couples or close friends visiting Sakleshpur. Tamohara has three rooms in this category, with extra bed available at Rs 2000 + taxes.',
       details:
         'Room 1 keeps the experience quiet and simple, with fresh linens, toiletries, buffet meals, pool access, and a relaxed setting for a peaceful Western Ghats weekend.',
       conclusion:
@@ -58,9 +58,9 @@ export const roomDetailsData = {
       bed: '2 Beds',
       bathroom: '1 Bathroom',
       image: roomTwoImage,
-      imageAlt: 'Tamohra Room 2 for 4 sharing',
+      imageAlt: 'Tamohara Room 2 for 4 sharing',
       overview:
-        'A relaxed 4-sharing room suited for small families and weekend groups. Tamohra has one room in this category, with extra bed available at Rs 2000 + taxes.',
+        'A relaxed 4-sharing room suited for small families and weekend groups. Tamohara has one room in this category, with extra bed available at Rs 2000 + taxes.',
       details:
         'Room 2 is a practical choice for guests who want a balanced stay with enough room to settle in and enjoy Sakleshpur without over-planning.',
       conclusion:
@@ -75,11 +75,11 @@ export const roomDetailsData = {
       bed: '1 AC Villa Room',
       bathroom: '1 Bathroom',
       image: villaRoomImage,
-      imageAlt: 'Tamohra villa room block in Sakleshpur',
+      imageAlt: 'Tamohara villa room block in Sakleshpur',
       overview:
-        'A 2-occupancy AC villa room for guests who want a quieter stay with added comfort. Tamohra has four villa block rooms in this category, with extra bed available at Rs 2500 + taxes.',
+        'A 2-occupancy AC villa room for guests who want a quieter stay with added comfort. Tamohara has four villa block rooms in this category, with extra bed available at Rs 2500 + taxes.',
       details:
-        'The villa room includes the Tamohra stay rhythm of buffet meals, breakfast, hi-tea, pool access, fresh linens, toiletries, and easy access to estate activities.',
+        'The villa room includes the Tamohara stay rhythm of buffet meals, breakfast, hi-tea, pool access, fresh linens, toiletries, and easy access to estate activities.',
       conclusion:
         'Choose the Villa Room for an AC stay with resort comfort, meals, and a calm Sakleshpur setting.',
     },
@@ -92,9 +92,9 @@ export const roomDetailsData = {
       bed: '3 Beds',
       bathroom: '1 Bathroom',
       image: roomThreeImage,
-      imageAlt: 'Tamohra Room 3 for 6 sharing',
+      imageAlt: 'Tamohara Room 3 for 6 sharing',
       overview:
-        'A group-friendly 6-sharing room for families or friends who want comfort, buffet meals, and mountain air together. Tamohra has two rooms in this category.',
+        'A group-friendly 6-sharing room for families or friends who want comfort, buffet meals, and mountain air together. Tamohara has two rooms in this category.',
       details:
         'Room 3 works well for guests who enjoy shared downtime, poolside conversations, and easy access to dining and resort facilities.',
       conclusion:
@@ -109,9 +109,9 @@ export const roomDetailsData = {
       bed: '4 Beds',
       bathroom: '2 Bathrooms',
       image: roomFourImage,
-      imageAlt: 'Tamohra Room 4 for 8 sharing',
+      imageAlt: 'Tamohara Room 4 for 8 sharing',
       overview:
-        'An 8-sharing room made for larger families, friends, and relaxed group stays. Tamohra has two rooms in this category, with extra bed available at Rs 2000 + taxes.',
+        'An 8-sharing room made for larger families, friends, and relaxed group stays. Tamohara has two rooms in this category, with extra bed available at Rs 2000 + taxes.',
       details:
         'Room 4 offers more space for groups who want to stay close, share meals, and enjoy the resort without splitting into separate plans.',
       conclusion:
@@ -126,9 +126,9 @@ export const roomDetailsData = {
       bed: '6 Beds',
       bathroom: '2 Bathrooms',
       image: roomFiveImage,
-      imageAlt: 'Tamohra Room 5 for 12 sharing',
+      imageAlt: 'Tamohara Room 5 for 12 sharing',
       overview:
-        'A spacious 12-sharing option for reunions, celebrations, and full-group retreats in Sakleshpur. Tamohra has one room in this category, with extra bed available at Rs 2000 + taxes.',
+        'A spacious 12-sharing option for reunions, celebrations, and full-group retreats in Sakleshpur. Tamohara has one room in this category, with extra bed available at Rs 2000 + taxes.',
       details:
         'Room 5 is planned for larger gatherings that need a shared base, included meals, resort amenities, and a simple group-friendly stay.',
       conclusion:

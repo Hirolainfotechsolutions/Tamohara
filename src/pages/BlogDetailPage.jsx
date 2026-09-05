@@ -59,7 +59,7 @@ function BlogDetailPage() {
           <section className="soft-section px-4 py-12 sm:px-6 lg:py-12">
             <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.35fr_1fr]">
               <aside className="lg:sticky lg:top-28 lg:h-fit">
-                <p className="section-eyebrow">Tamohra Notes</p>
+                <p className="section-eyebrow">Tamohara Notes</p>
                 <p className="body-copy mt-5 leading-7">
                   A short resort journal for guests planning thoughtful stays in Sakleshpur.
                 </p>

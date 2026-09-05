@@ -36,7 +36,7 @@ function getRouteSeo(pathname) {
 
     if (room) {
       return {
-        title: `${room.title} ${room.subtitle} | Tamohra Resort`,
+        title: `${room.title} ${room.subtitle} | Tamohara Resort`,
         description: `${room.overview} Tariff: ${room.price}. Book your Sakleshpur stay with meals, pool access, linens, toiletries, and resort activities.`,
       }
     }
@@ -48,7 +48,7 @@ function getRouteSeo(pathname) {
 
     if (post) {
       return {
-        title: `${post.title} | Tamohra Resort Blog`,
+        title: `${post.title} | Tamohara Resort Blog`,
         description: post.excerpt,
       }
     }

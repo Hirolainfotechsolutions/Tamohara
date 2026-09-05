@@ -1,12 +1,12 @@
 export const siteData = {
-  brandName: 'Tamohra',
+  brandName: 'Tamohara',
   phone: {
-    label: '800 123 4567',
-    href: 'tel:8001234567',
+    label: '+91 70221 76432',
+    href: 'tel:+917022176432',
   },
   email: {
-    label: 'reservations@tamohraresort.com',
-    href: 'mailto:reservations@tamohraresort.com',
+    label: 'reservations@tamohararesort.com',
+    href: 'mailto:reservations@tamohararesort.com',
   },
   address: 'Debbegadde Village, Kyamanahally Post Hanbal Hobali, Sakaleshpur Taluk, Post, Mavinahalli, Karnataka 573165',
   addressHref:

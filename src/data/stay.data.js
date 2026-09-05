@@ -12,7 +12,7 @@ export const stayPageData = {
     bathroom: 'Bath',
   },
   facilities: {
-    titleLines: ['Tamohra Resort', 'facilities & services'],
+    titleLines: ['Tamohara Resort', 'facilities & services'],
     items: [
       { label: 'Swimming Pool', icon: 'pool' },
       { label: 'Buffet Meals', icon: 'restaurant' },

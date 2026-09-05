@@ -114,7 +114,7 @@ function ContactFormPage({ data }) {
     formData.append('Number of Travelers', formValues.travelers)
     formData.append('Budget Range', formValues.budget)
     formData.append('Notes', formValues.notes)
-    formData.append('_subject', 'Tamohra Resort contact enquiry')
+    formData.append('_subject', 'Tamohara Resort contact enquiry')
     formData.append('_template', 'table')
 
     try {

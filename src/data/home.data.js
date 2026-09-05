@@ -18,7 +18,7 @@ import banquetImage from '../assets/images/22.webp'
 
 export const homePageData = {
   hero: {
-    ariaLabel: 'Tamohra Resort homepage',
+    ariaLabel: 'Tamohara Resort homepage',
     backgroundImage: heroBannerImage,
     eyebrow: 'Sakleshpur, Western Ghats',
     titleLines: ['Mist-Clad', 'Mountain Luxury'],
@@ -26,23 +26,23 @@ export const homePageData = {
     scrollTarget: '#about-resort',
   },
   aboutResort: {
-    eyebrow: 'About Tamohra Resort',
+    eyebrow: 'About Tamohara Resort',
     title: 'Snuggled amidst the mist-clad mountains of Sakleshpur.',
     description:
-      'Tamohra Resort brings together luxury, lifestyle, and old-school Sakleshpur hospitality. Defined by bungalow-inspired architecture, serene poolside views, thicketed mountains, and verdant estates, it is a Western Ghats getaway made for both slow weekends and adventurous escapes.',
+      'Tamohara Resort brings together luxury, lifestyle, and old-school Sakleshpur hospitality. Defined by bungalow-inspired architecture, serene poolside views, thicketed mountains, and verdant estates, it is a Western Ghats getaway made for both slow weekends and adventurous escapes.',
     button: {
       label: 'Explore More',
       href: '/about',
     },
     image: exteriorImage,
-    imageAlt: 'Tamohra Resort luxury exterior',
+    imageAlt: 'Tamohara Resort luxury exterior',
   },
   amenities: {
     eyebrow: 'Amenities',
     title:
-      'Buffet meals, pool time, estate treks, rope activities, and campfire evenings shape every stay at Tamohra Resort.',
+      'Buffet meals, pool time, estate treks, rope activities, and campfire evenings shape every stay at Tamohara Resort.',
     image: diningHallImage,
-    imageAlt: 'Tamohra Resort poolside view',
+    imageAlt: 'Tamohara Resort poolside view',
     items: [
       { label: 'Linens', icon: 'package' },
       { label: 'Toiletries', icon: 'spa' },
@@ -56,7 +56,7 @@ export const homePageData = {
     eyebrow: 'Resort Facilities',
     title: 'Facilities shaped for mountain comfort',
     image: aboutBannerImage,
-    imageAlt: 'Tamohra Resort pool and Western Ghats view',
+    imageAlt: 'Tamohara Resort pool and Western Ghats view',
     items: [
       {
         icon: 'rooms',
@@ -107,7 +107,7 @@ export const homePageData = {
         title: 'Room 1 - 2 Sharing',
         description: 'Three 2-sharing rooms are available for couples or close friends, with extra bed options on request.',
         image: roomTwoImage,
-        imageAlt: 'Tamohra Resort general room view',
+        imageAlt: 'Tamohara Resort general room view',
         href: '/rooms/room-1',
       },
       {
@@ -115,7 +115,7 @@ export const homePageData = {
         title: 'Room 2 - 4 Sharing',
         description: 'One 4-sharing room suited for small families and easy weekend getaways.',
         image: roomTwoImage,
-        imageAlt: 'Tamohra Resort 4 sharing room',
+        imageAlt: 'Tamohara Resort 4 sharing room',
         href: '/rooms/room-2',
       },
       {
@@ -123,7 +123,7 @@ export const homePageData = {
         title: 'Room 3 - 6 Sharing',
         description: 'Two 6-sharing rooms for groups who want comfort, meals, and mountain air together.',
         image: roomSixImage,
-        imageAlt: 'Tamohra Resort 6 sharing room',
+        imageAlt: 'Tamohara Resort 6 sharing room',
         href: '/rooms/room-3',
       },
       {
@@ -131,7 +131,7 @@ export const homePageData = {
         title: 'Room 4 - 8 Sharing',
         description: 'Two 8-sharing rooms made for larger families, friends, and relaxed group stays.',
         image: roomEightImage,
-        imageAlt: 'Tamohra Resort 8 sharing room',
+        imageAlt: 'Tamohara Resort 8 sharing room',
         href: '/rooms/room-4',
       },
       {
@@ -139,7 +139,7 @@ export const homePageData = {
         title: 'Room 5 - 12 Sharing',
         description: 'One spacious 12-sharing room for celebrations, reunions, and full-group retreats.',
         image: roomTwelveImage,
-        imageAlt: 'Tamohra Resort 12 sharing room',
+        imageAlt: 'Tamohara Resort 12 sharing room',
         href: '/rooms/room-5',
       },
     ],
@@ -150,18 +150,18 @@ export const homePageData = {
     description:
       'Sakleshpur is wrapped in emerald and jade, with coffee plantations, waterfalls, forest trails, orchids, frogs, birds, and grass-topped peaks waiting beyond the resort.',
     images: [
-      { src: forestBridgeImage, alt: 'Tamohra forest rope bridge trail' },
-      { src: estatePathImage, alt: 'Tamohra Western Ghats estate pathway' },
-      { src: aboutBannerImage, alt: 'Tamohra pool and mountain wellness view' },
+      { src: forestBridgeImage, alt: 'Tamohara forest rope bridge trail' },
+      { src: estatePathImage, alt: 'Tamohara Western Ghats estate pathway' },
+      { src: aboutBannerImage, alt: 'Tamohara pool and mountain wellness view' },
     ],
   },
   nearbyPlaces: {
     eyebrow: 'Nearby Places',
     title: 'Step out to forts, falls, ghats, and heritage towns.',
     description:
-      'Tamohra Resort keeps you close to Sakleshpur favourites, from quick waterfall visits to longer scenic drives through the Western Ghats.',
+      'Tamohara Resort keeps you close to Sakleshpur favourites, from quick waterfall visits to longer scenic drives through the Western Ghats.',
     image: estatePathImage,
-    imageAlt: 'Coffee estate road near Tamohra Resort',
+    imageAlt: 'Coffee estate road near Tamohara Resort',
     items: [
       { name: 'Manzerabad Fort', distance: '10 km' },
       { name: 'Hanbal Falls', distance: '10 km' },
@@ -182,13 +182,13 @@ export const homePageData = {
       href: '/#book',
     },
     images: [
-      { src: roomTwoImage, alt: 'Tamohra 2 sharing room' },
-      { src: roomSixImage, alt: 'Tamohra 6 sharing room' },
-      { src: exteriorImage, alt: 'Tamohra resort pool exterior' },
-      { src: aboutBannerImage, alt: 'Tamohra mountain pool view' },
-      { src: roomEightImage, alt: 'Tamohra 8 sharing room' },
-      { src: nightPoolImage, alt: 'Tamohra night pool seating' },
-      { src: roomTwelveImage, alt: 'Tamohra 12 sharing room' },
+      { src: roomTwoImage, alt: 'Tamohara 2 sharing room' },
+      { src: roomSixImage, alt: 'Tamohara 6 sharing room' },
+      { src: exteriorImage, alt: 'Tamohara resort pool exterior' },
+      { src: aboutBannerImage, alt: 'Tamohara mountain pool view' },
+      { src: roomEightImage, alt: 'Tamohara 8 sharing room' },
+      { src: nightPoolImage, alt: 'Tamohara night pool seating' },
+      { src: roomTwelveImage, alt: 'Tamohara 12 sharing room' },
     ],
   },
   featuredStay: {
@@ -197,7 +197,7 @@ export const homePageData = {
     description:
       'Breakfast includes South Indian dishes, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk. Lunch and dinner include buffet staples with vegetarian and non-vegetarian options.',
     image: buffetImage,
-    imageAlt: 'Tamohra premium suite exterior',
+    imageAlt: 'Tamohara premium suite exterior',
     button: {
       label: 'More Info',
       href: '/#book',
@@ -209,7 +209,7 @@ export const homePageData = {
     description:
       'Spend your day trekking estate trails, crossing the Burma bridge, playing shuttle or cricket, enjoying the pool, or ending the evening with campfire and music.',
     image: forestBridgeImage,
-    imageAlt: 'Tamohra resort landscape',
+    imageAlt: 'Tamohara resort landscape',
     items: ['Estate Activities', 'Mountain Hikes', 'Campfire Nights'],
   },
   offers: {
@@ -218,7 +218,7 @@ export const homePageData = {
     description:
       '2 sharing starts at Rs 6000 + taxes, villa 2 sharing at Rs 7000 + taxes, 4 sharing at Rs 12000 + taxes, 6 sharing at Rs 16500 + taxes, 8 sharing at Rs 20000 + taxes, and 12 sharing at Rs 30000 + taxes.',
     image: nightPoolImage,
-    imageAlt: 'Tamohra resort evening offer',
+    imageAlt: 'Tamohara resort evening offer',
     button: {
       label: 'Book Now',
       href: '/#book',
@@ -232,26 +232,26 @@ export const homePageData = {
     primary: {
       title: 'Book Your Stay',
       image: exteriorImage,
-      imageAlt: 'Tamohra guest experience',
+      imageAlt: 'Tamohara guest experience',
       href: '/#book',
     },
     items: [
       {
         title: 'Banquets',
         image: banquetImage,
-        imageAlt: 'Tamohra wedding celebration',
+        imageAlt: 'Tamohara wedding celebration',
         href: '/contact',
       },
       {
         title: 'Treks',
         image: forestBridgeImage,
-        imageAlt: 'Tamohra excursion experience',
+        imageAlt: 'Tamohara excursion experience',
         href: '/about',
       },
       {
         title: 'Amenities',
         image: aboutBannerImage,
-        imageAlt: 'Tamohra resort amenities',
+        imageAlt: 'Tamohara resort amenities',
         href: '#amenities',
       },
     ],
@@ -261,7 +261,7 @@ export const homePageData = {
     title: 'Escape Reality',
     description: 'Come for the mist-clad mountains, stay for the meals, coffee, pool, and old-school hospitality.',
     image: nightPoolImage,
-    imageAlt: 'Tamohra resort escape',
+    imageAlt: 'Tamohara resort escape',
     button: {
       label: 'Book a Room',
       href: '/#book',
@@ -290,7 +290,7 @@ export const homePageData = {
     description:
       'Share your dates and group size. We will help you choose the right room, villa option, meals, and resort experience.',
     image: nightPoolImage,
-    imageAlt: 'Tamohra Resort evening poolside stay',
+    imageAlt: 'Tamohara Resort evening poolside stay',
     action: {
       label: 'Explore Now',
       href: '/about',
@@ -310,7 +310,7 @@ export const homePageData = {
     eyebrow: 'FAQs',
     title: 'Frequently asked questions',
     description:
-      'Everything you need to know before planning your Sakleshpur stay at Tamohra Resort.',
+      'Everything you need to know before planning your Sakleshpur stay at Tamohara Resort.',
     button: {
       label: 'Book Your Stay',
       href: '/#book',
@@ -319,9 +319,9 @@ export const homePageData = {
     loadMoreCount: 10,
     items: [
       {
-        question: 'Where is Tamohra Resort located?',
+        question: 'Where is Tamohara Resort located?',
         answer:
-          'Tamohra Resort is located in Sakleshpur, Karnataka, amidst the mist-clad mountains, coffee estates, and green slopes of the Western Ghats.',
+          'Tamohara Resort is located in Sakleshpur, Karnataka, amidst the mist-clad mountains, coffee estates, and green slopes of the Western Ghats.',
       },
       {
         question: 'What is the price per person?',
@@ -331,12 +331,12 @@ export const homePageData = {
       {
         question: 'Are meals included in the stay?',
         answer:
-          'Yes. Breakfast, lunch, dinner, and hi-tea are part of the Tamohra stay rhythm. Breakfast includes South Indian dishes, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk.',
+          'Yes. Breakfast, lunch, dinner, and hi-tea are part of the Tamohara stay rhythm. Breakfast includes South Indian dishes, fruits, boiled eggs, bread, butter, jam, tea, coffee, and milk.',
       },
       {
         question: 'What room sharing options are available?',
         answer:
-          'Tamohra Resort has three 2-sharing rooms, one 4-sharing room, two 6-sharing rooms, two 8-sharing rooms, one 12-sharing room, and four AC villa rooms with 2 occupancy each.',
+          'Tamohara Resort has three 2-sharing rooms, one 4-sharing room, two 6-sharing rooms, two 8-sharing rooms, one 12-sharing room, and four AC villa rooms with 2 occupancy each.',
       },
       {
         question: 'What amenities are available at the resort?',
@@ -344,7 +344,7 @@ export const homePageData = {
           'Amenities and activities include linens, toiletries, buffet meals, swimming pool, kids pool, banquet hall, Burma bridge, rope activities, outdoor shuttle, cricket, estate trekking, coffee plantation experience in harvest season, campfire and music, rain dance, and trampoline.',
       },
       {
-        question: 'Is Tamohra suitable for families and groups?',
+        question: 'Is Tamohara suitable for families and groups?',
         answer:
           'Yes. The sharing room options are planned for couples, families, friends, and larger groups up to 12 sharing.',
       },
@@ -361,7 +361,7 @@ export const homePageData = {
       {
         question: 'Does the resort have a banquet hall?',
         answer:
-          'Yes. Tamohra Resort has banquet hall facilities suitable for gatherings and group occasions.',
+          'Yes. Tamohara Resort has banquet hall facilities suitable for gatherings and group occasions.',
       },
       {
         question: 'How do I check availability?',
@@ -396,7 +396,7 @@ export const homePageData = {
       {
         question: 'Can I book for a group celebration?',
         answer:
-          'Yes. Tamohra Resort is suitable for reunions, birthdays, group weekends, and relaxed celebrations.',
+          'Yes. Tamohara Resort is suitable for reunions, birthdays, group weekends, and relaxed celebrations.',
       },
       {
         question: 'Is there a swimming pool?',
@@ -429,7 +429,7 @@ export const homePageData = {
           'Yes. Banquet hall facilities are available for gatherings and group occasions.',
       },
       {
-        question: 'Is Tamohra Resort suitable for families with children?',
+        question: 'Is Tamohara Resort suitable for families with children?',
         answer:
           'Yes. The resort is suitable for families, with room-sharing options and relaxed spaces for a comfortable stay.',
       },
@@ -474,7 +474,7 @@ export const homePageData = {
           'Yes. Many guests come to read, rest, enjoy meals, sit by the pool, and slow down in the mountain air.',
       },
       {
-        question: 'What makes Tamohra Resort different?',
+        question: 'What makes Tamohara Resort different?',
         answer:
           'The resort combines bungalow-inspired architecture, misty mountain views, coffee-estate calm, and warm Sakleshpur hospitality.',
       },
@@ -574,7 +574,7 @@ export const homePageData = {
           'Yes, but please share mobility needs in advance so the team can guide you on room and activity suitability.',
       },
       {
-        question: 'Can we plan a reunion at Tamohra Resort?',
+        question: 'Can we plan a reunion at Tamohara Resort?',
         answer:
           'Yes. The larger sharing rooms and banquet facilities make the resort suitable for reunions and group stays.',
       },
@@ -609,7 +609,7 @@ export const homePageData = {
           'The team will contact you using the phone or email details shared in your enquiry.',
       },
       {
-        question: 'Is Tamohra Resort suitable for a weekend from Bengaluru?',
+        question: 'Is Tamohara Resort suitable for a weekend from Bengaluru?',
         answer:
           'Yes. Sakleshpur is a popular weekend getaway for guests looking for coffee country, mountains, and a slower stay.',
       },

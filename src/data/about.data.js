@@ -11,16 +11,16 @@ import nightDeckImage from '../assets/images/23.webp'
 import roomTwelveImage from '../assets/images/24.webp'
 
 export const aboutPageData = {
-  eyebrow: 'About Tamohra',
+  eyebrow: 'About Tamohara',
   title: 'A Sakleshpur resort wrapped in mist, coffee estates, and old-school hospitality.',
   description:
-    'Tamohra Resort is snuggled amidst the mist-clad mountains of the Western Ghats, with bungalow-inspired architecture, serene pool views, verdant estates, and relaxed spaces for families, friends, and group retreats.',
+    'Tamohara Resort is snuggled amidst the mist-clad mountains of the Western Ghats, with bungalow-inspired architecture, serene pool views, verdant estates, and relaxed spaces for families, friends, and group retreats.',
   highlights: ['Western Ghats setting', 'Coffee estate experiences', 'Buffet meals', 'Group-friendly stays'],
   hero: {
     eyebrow: 'Timeless comfort. Grounded hospitality.',
     title: 'A Stay That Stays With You',
     description:
-      'Experience Tamohra Resort in every detail. Discover a calm Sakleshpur retreat where nature, comfort, hearty meals, and thoughtful service come together beautifully.',
+      'Experience Tamohara Resort in every detail. Discover a calm Sakleshpur retreat where nature, comfort, hearty meals, and thoughtful service come together beautifully.',
     backgroundImage: aboutBannerImage,
     primaryAction: {
       label: 'Explore Our Resort',
@@ -40,31 +40,31 @@ export const aboutPageData = {
     },
   },
   splitBanner: {
-    eyebrow: 'About Tamohra Resort',
-    titleLines: ['We are', 'Tamohra.'],
+    eyebrow: 'About Tamohara Resort',
+    titleLines: ['We are', 'Tamohara.'],
     description:
       'A mist-clad Sakleshpur retreat shaped by coffee estates, bungalow-inspired stays, hearty buffet meals, and slow mountain hospitality.',
     foregroundImage: forestBridgeImage,
-    foregroundAlt: 'Rope activity inside the Tamohra Resort estate',
+    foregroundAlt: 'Rope activity inside the Tamohara Resort estate',
     backgroundImage: aboutBannerImage,
-    backgroundAlt: 'Tamohra Resort pool with Western Ghats views',
+    backgroundAlt: 'Tamohara Resort pool with Western Ghats views',
   },
   story: {
     eyebrow: 'Our Story',
-    title: 'Discover the Western Ghats  of Tamohra  ',
+    title: 'Discover the Western Ghats  of Tamohara  ',
     image: exteriorImage,
-    imageAlt: 'Tamohra Resort exterior with pool in Sakleshpur',
+    imageAlt: 'Tamohara Resort exterior with pool in Sakleshpur',
     paragraphs: [
-      'Tamohra Resort is set in Sakleshpur, a landscape permanently swathed in emerald and jade. The resort is shaped by misty mountain air, coffee estate calm, poolside leisure, and bungalow-inspired spaces that feel warm without losing their sense of quiet luxury.',
+      'Tamohara Resort is set in Sakleshpur, a landscape permanently swathed in emerald and jade. The resort is shaped by misty mountain air, coffee estate calm, poolside leisure, and bungalow-inspired spaces that feel warm without losing their sense of quiet luxury.',
       'The Western Ghats around us are filled with hiking trails, gurgling streams, intimate waterfalls, orchids, birds, colourful frogs, and grass-topped peaks. Some trails are gentle, while others reward effort with wind, clouds, and unforgettable views.',
-      'For slower weekends, guests can read, nap, enjoy buffet meals, sit by the pool, or gather around campfire and music. For active groups, Tamohra offers estate trekking, Burma bridge, rope activities, outdoor shuttle, cricket, rain dance, trampoline, and more.',
+      'For slower weekends, guests can read, nap, enjoy buffet meals, sit by the pool, or gather around campfire and music. For active groups, Tamohara offers estate trekking, Burma bridge, rope activities, outdoor shuttle, cricket, rain dance, trampoline, and more.',
     ],
   },
   services: {
     eyebrow: 'Services',
     title: 'Elevate your stay with our resort comforts',
     image: diningHallImage,
-    imageAlt: 'Tamohra Resort dining hall and buffet comfort',
+    imageAlt: 'Tamohara Resort dining hall and buffet comfort',
     items: [
       {
         icon: 'dining',
@@ -106,7 +106,7 @@ export const aboutPageData = {
   },
   foodActivitiesStay: {
     eyebrow: 'Food, activities and stay details',
-    title: 'Everything included in a Tamohra getaway',
+    title: 'Everything included in a Tamohara getaway',
     description:
       'From buffet meals and hi-tea snacks to estate activities, room options, tariffs, and stay timings, here is the practical plan for your Sakleshpur weekend.',
     cards: [
@@ -192,19 +192,19 @@ export const aboutPageData = {
     eyebrow: 'Our Journey, Your Story',
     title: 'Rooted in Sakleshpur, driven by warm hospitality',
     images: [
-      { src: aboutBannerImage, alt: 'Tamohra Resort pool with Western Ghats views' },
-      { src: forestBridgeImage, alt: 'Tamohra Resort rope activity in the estate' },
+      { src: aboutBannerImage, alt: 'Tamohara Resort pool with Western Ghats views' },
+      { src: forestBridgeImage, alt: 'Tamohara Resort rope activity in the estate' },
     ],
     paragraphs: [
-      'Tamohra Resort began with the simple idea of making Sakleshpur stays feel generous, calm, and close to nature. Misty hills, coffee estate paths, poolside afternoons, and bungalow-inspired spaces shape every part of the experience.',
+      'Tamohara Resort began with the simple idea of making Sakleshpur stays feel generous, calm, and close to nature. Misty hills, coffee estate paths, poolside afternoons, and bungalow-inspired spaces shape every part of the experience.',
       'From family weekends to group retreats, each stay is planned around comfort, hearty buffet meals, estate activities, and thoughtful service that lets guests slow down without losing the joy of discovery.',
     ],
   },
   nearbyPlaces: {
     eyebrow: 'Nearby places to visit',
-    title: 'Explore Sakleshpur around Tamohra',
+    title: 'Explore Sakleshpur around Tamohara',
     description:
-      'Step out from Tamohra Resort to forts, waterfalls, temple hills, tunnels, ghats, and heritage towns within an easy scenic drive.',
+      'Step out from Tamohara Resort to forts, waterfalls, temple hills, tunnels, ghats, and heritage towns within an easy scenic drive.',
     items: [
       { name: 'Manzerabad Fort', distance: '10 km' },
       { name: 'Hanbal Falls', distance: '10 km' },
@@ -216,16 +216,16 @@ export const aboutPageData = {
     ],
   },
   collage: {
-    eyebrow: 'Around Tamohra',
+    eyebrow: 'Around Tamohara',
     title: 'Timeless Sakleshpur, crafted for you',
     description:
       'Nearby places include Manzerabad Fort and Hanbal Falls at 10 km, Bettada Byraveshwara and Railway Tunnel at 25 km, Devaramane at 35 km, and Bisle Ghat, Belur, and Halebeed at 40 km.',
     images: [
-      { src: aboutBannerImage, alt: 'Tamohra Resort pool and mountain view' },
-      { src: diningHallImage, alt: 'Tamohra dining and banquet hall' },
-      { src: estatePathImage, alt: 'Coffee estate path near Tamohra Resort' },
-      { src: exteriorImage, alt: 'Tamohra Resort exterior in Sakleshpur' },
-      { src: nightDeckImage, alt: 'Tamohra Resort evening deck' },
+      { src: aboutBannerImage, alt: 'Tamohara Resort pool and mountain view' },
+      { src: diningHallImage, alt: 'Tamohara dining and banquet hall' },
+      { src: estatePathImage, alt: 'Coffee estate path near Tamohara Resort' },
+      { src: exteriorImage, alt: 'Tamohara Resort exterior in Sakleshpur' },
+      { src: nightDeckImage, alt: 'Tamohara Resort evening deck' },
     ],
   },
   elegantRooms: {
@@ -238,13 +238,13 @@ export const aboutPageData = {
       href: '/#book',
     },
     images: [
-      { src: roomTwoImage, alt: 'Tamohra 2 sharing room' },
-      { src: roomSixImage, alt: 'Tamohra 6 sharing room' },
-      { src: exteriorImage, alt: 'Tamohra resort exterior' },
-      { src: aboutBannerImage, alt: 'Tamohra pool and mountain view' },
-      { src: roomEightImage, alt: 'Tamohra 8 sharing room' },
-      { src: nightDeckImage, alt: 'Tamohra night deck' },
-      { src: roomTwelveImage, alt: 'Tamohra 12 sharing room' },
+      { src: roomTwoImage, alt: 'Tamohara 2 sharing room' },
+      { src: roomSixImage, alt: 'Tamohara 6 sharing room' },
+      { src: exteriorImage, alt: 'Tamohara resort exterior' },
+      { src: aboutBannerImage, alt: 'Tamohara pool and mountain view' },
+      { src: roomEightImage, alt: 'Tamohara 8 sharing room' },
+      { src: nightDeckImage, alt: 'Tamohara night deck' },
+      { src: roomTwelveImage, alt: 'Tamohara 12 sharing room' },
     ],
   },
   roomsSuites: {
@@ -258,7 +258,7 @@ export const aboutPageData = {
         subtitle: 'Rs 6000 + taxes',
         description: 'Three rooms available. Extra bed at Rs 2000 + taxes.',
         image: roomTwoImage,
-        imageAlt: 'Tamohra 2 sharing room',
+        imageAlt: 'Tamohara 2 sharing room',
         href: '/rooms/room-1',
       },
       {
@@ -266,7 +266,7 @@ export const aboutPageData = {
         subtitle: '2 Occupancy AC',
         description: 'Four AC villa rooms with 2 occupancy each. Extra bed at Rs 2500 + taxes.',
         image: exteriorImage,
-        imageAlt: 'Tamohra villa block',
+        imageAlt: 'Tamohara villa block',
         href: '/rooms/villa-room',
       },
       {
@@ -274,7 +274,7 @@ export const aboutPageData = {
         subtitle: 'Rs 12000 + taxes',
         description: 'One room available. Extra bed at Rs 2000 + taxes.',
         image: roomTwoImage,
-        imageAlt: 'Tamohra 4 sharing room',
+        imageAlt: 'Tamohara 4 sharing room',
         href: '/rooms/room-2',
       },
       {
@@ -282,7 +282,7 @@ export const aboutPageData = {
         subtitle: 'Rs 16500 + taxes',
         description: 'Two rooms available for families and groups.',
         image: roomSixImage,
-        imageAlt: 'Tamohra 6 sharing room',
+        imageAlt: 'Tamohara 6 sharing room',
         href: '/rooms/room-3',
       },
       {
@@ -290,7 +290,7 @@ export const aboutPageData = {
         subtitle: 'Rs 20000 + taxes',
         description: 'Two rooms available. Extra bed at Rs 2000 + taxes.',
         image: roomEightImage,
-        imageAlt: 'Tamohra 8 sharing room',
+        imageAlt: 'Tamohara 8 sharing room',
         href: '/rooms/room-4',
       },
       {
@@ -298,7 +298,7 @@ export const aboutPageData = {
         subtitle: 'Rs 30000 + taxes',
         description: 'One room available for reunions and large group retreats.',
         image: roomTwelveImage,
-        imageAlt: 'Tamohra 12 sharing room',
+        imageAlt: 'Tamohara 12 sharing room',
         href: '/rooms/room-5',
       },
     ],
@@ -318,7 +318,7 @@ export const aboutPageData = {
         quote:
           'Breakfast, hi-tea, and the buffet meals kept the whole trip simple for our family.',
         guestName: 'Family Traveller',
-        guestMeta: 'Stayed at Tamohra Resort',
+        guestMeta: 'Stayed at Tamohara Resort',
       },
       {
         rating: 5,
@@ -329,14 +329,14 @@ export const aboutPageData = {
       },
     ],
     images: [
-      { src: exteriorImage, alt: 'Tamohra Resort pool exterior' },
-      { src: estatePathImage, alt: 'Tamohra coffee estate road' },
-      { src: aboutBannerImage, alt: 'Tamohra pool mountain reflection' },
-      { src: forestBridgeImage, alt: 'Tamohra rope bridge activity' },
-      { src: nightDeckImage, alt: 'Tamohra campfire style deck' },
-      { src: diningHallImage, alt: 'Tamohra dining hall' },
-      { src: buffetImage, alt: 'Tamohra dining experience' },
-      { src: roomSixImage, alt: 'Tamohra group room' },
+      { src: exteriorImage, alt: 'Tamohara Resort pool exterior' },
+      { src: estatePathImage, alt: 'Tamohara coffee estate road' },
+      { src: aboutBannerImage, alt: 'Tamohara pool mountain reflection' },
+      { src: forestBridgeImage, alt: 'Tamohara rope bridge activity' },
+      { src: nightDeckImage, alt: 'Tamohara campfire style deck' },
+      { src: diningHallImage, alt: 'Tamohara dining hall' },
+      { src: buffetImage, alt: 'Tamohara dining experience' },
+      { src: roomSixImage, alt: 'Tamohara group room' },
     ],
   },
 }

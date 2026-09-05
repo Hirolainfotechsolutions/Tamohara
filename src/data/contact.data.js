@@ -4,7 +4,7 @@ import aboutBannerImage from '../assets/images/aboutbanner.webp'
 export const contactPageData = {
   hero: {
     eyebrow: 'Plan Your Sakleshpur Stay',
-    title: 'Let Us Help You Plan Tamohra',
+    title: 'Let Us Help You Plan Tamohara',
     description:
       'Tell us your dates, group size, and room preference. Our team will help you confirm the right stay with meals, activities, and resort details.',
     backgroundImage: aboutBannerImage,
@@ -25,7 +25,7 @@ export const contactPageData = {
       thankYouMessage: 'Thank you. we will contact you in a while',
     },
   },
-  eyebrow: 'Contact Tamohra Resort',
+  eyebrow: 'Contact Tamohara Resort',
   title: 'Get in touch',
   subtitle: 'Got questions or need travel advice?',
   description:
@@ -34,7 +34,7 @@ export const contactPageData = {
   detailGroups: [
     {
       title: 'Office address:',
-      lines: ['Tamohra Resort', 'Debbegadde Village, Kyamanahally Post', 'Hanbal Hobali, Sakleshpur Taluk', 'Mavinahalli, Karnataka 573165'],
+      lines: ['Tamohara Resort', 'Debbegadde Village, Kyamanahally Post', 'Hanbal Hobali, Sakleshpur Taluk', 'Mavinahalli, Karnataka 573165'],
     },
     {
       title: 'Registered Address',
@@ -76,8 +76,8 @@ export const contactPageData = {
         answer: 'Yes. Rooms are available for couples, families, friends, and larger groups up to 12 sharing.',
       },
       {
-        question: 'Why should I choose Tamohra Resort?',
-        answer: 'Tamohra Resort combines Western Ghats views, coffee-country calm, buffet meals, activities, and warm Sakleshpur hospitality.',
+        question: 'Why should I choose Tamohara Resort?',
+        answer: 'Tamohara Resort combines Western Ghats views, coffee-country calm, buffet meals, activities, and warm Sakleshpur hospitality.',
       },
     ],
   },

@@ -51,7 +51,7 @@ function BookingModalForm({ closeModal }) {
     formData.append('Email', values.email)
     formData.append('Phone', values.phone)
     formData.append('Message', values.message)
-    formData.append('_subject', 'Tamohra Resort popup booking request')
+    formData.append('_subject', 'Tamohara Resort popup booking request')
     formData.append('_template', 'table')
 
     try {
@@ -238,7 +238,7 @@ function BookingModal({ isOpen, closeModal }) {
 
         <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
           <div className="bg-[var(--color-primary-dark)] p-6 text-white sm:p-8 lg:p-10">
-            <p className="section-eyebrow text-[var(--color-primary)]">Book Tamohra Resort</p>
+            <p className="section-eyebrow text-[var(--color-primary)]">Book Tamohara Resort</p>
             <h2 className="heading-display mt-5 text-[clamp(34px,11vw,64px)] font-semibold leading-[0.98] text-white">
               Plan your Sakleshpur stay
             </h2>
@@ -267,11 +267,11 @@ export function BookingModalProvider({ children }) {
   const closeModal = useCallback(() => setIsOpen(false), [])
 
   useEffect(() => {
-    const hasShownPopup = sessionStorage.getItem('tamohra-booking-popup-shown')
+    const hasShownPopup = sessionStorage.getItem('Tamohara-booking-popup-shown')
     if (hasShownPopup) return undefined
 
     const timer = window.setTimeout(() => {
-      sessionStorage.setItem('tamohra-booking-popup-shown', 'true')
+      sessionStorage.setItem('Tamohara-booking-popup-shown', 'true')
       openModal()
     }, 10000)
 

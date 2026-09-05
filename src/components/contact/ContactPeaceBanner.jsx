@@ -25,7 +25,7 @@ function ContactPeaceBanner({ showHeader = false }) {
           <img
             className="h-[min(58svh,420px)] w-full rounded-[var(--radius-app)] object-cover sm:h-[min(62svh,470px)] lg:h-[470px] lg:rounded-none"
             src={centerBannerImage}
-            alt="Tamohra Resort pool and peaceful Sakleshpur greenery"
+            alt="Tamohara Resort pool and peaceful Sakleshpur greenery"
           />
 
           <div className="absolute bottom-8 left-4 right-4 hidden w-auto sm:left-8 sm:right-auto sm:top-1/2 sm:block sm:w-[min(560px,76vw)] sm:-translate-y-1/2 lg:-translate-x-[32%]">
