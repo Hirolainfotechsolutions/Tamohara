@@ -66,7 +66,7 @@ function HomeBookingSection({ booking }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost/tamohara/contact.php", {
+      const response = await fetch("https://tamohararesort.in/forms/contact.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

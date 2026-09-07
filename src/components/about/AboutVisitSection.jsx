@@ -44,7 +44,7 @@ function AboutVisitSection() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost/tamohara/contact-form-two.php", {
+      const response = await fetch("https://tamohararesort.in/forms/contact-form-two.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

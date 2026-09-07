@@ -212,7 +212,7 @@ function ContactFormPage({ data }) {
 
     try {
       const response = await fetch(
-        "http://localhost/tamohara/contact.php",
+        "https://tamohararesort.in/forms/contact.php",
         {
           method: "POST",
           headers: {
