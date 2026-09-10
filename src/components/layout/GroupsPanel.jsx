@@ -64,14 +64,14 @@ function GroupsPanel({ isOpen, onClose }) {
             <FaXmark className="h-5 w-5" aria-hidden="true" />
           </button>
 
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid auto-rows-fr gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {groupsData.hotels.map((hotel) => (
               <article
-                className="flex h-full flex-col rounded-[var(--radius-app)] border border-[var(--color-primary)] bg-[var(--color-primary-dark)] p-4 shadow-[var(--shadow-soft)]"
+                className="flex min-h-[330px] flex-col rounded-[var(--radius-app)] border border-[var(--color-primary)] bg-[var(--color-primary-dark)] p-4 shadow-[var(--shadow-soft)] sm:min-h-[350px]"
                 key={hotel.name}
               >
                 {hotel.imageFit === 'logo' ? (
-                  <div className="relative aspect-[16/7.8] shrink-0 overflow-hidden rounded-[4px] border border-[var(--color-primary)] bg-[var(--color-primary-dark)]">
+                  <div className="relative aspect-[16/8.6] shrink-0 overflow-hidden rounded-[4px] border border-[var(--color-primary)] bg-[var(--color-primary-dark)]">
                     <img
                       className="absolute left-1/2 top-1/2 block max-h-[82%] max-w-[82%] -translate-x-1/2 -translate-y-1/2 object-contain"
                       src={hotel.image}
@@ -79,40 +79,42 @@ function GroupsPanel({ isOpen, onClose }) {
                     />
                   </div>
                 ) : (
-                  <div className="grid aspect-[16/7.8] shrink-0 place-items-center overflow-hidden rounded-[4px] border border-[var(--color-primary)] bg-[var(--color-primary-dark)]">
+                  <div className="grid aspect-[16/8.6] shrink-0 place-items-center overflow-hidden rounded-[4px] border border-[var(--color-primary)] bg-[var(--color-primary-dark)]">
                     <img className="h-full w-full object-cover" src={hotel.image} alt={hotel.name} />
                   </div>
                 )}
 
-                <h2 className="mt-5 min-h-[3rem] text-2xl font-black uppercase leading-none tracking-[0.01em] text-[var(--color-primary)]">
+                <h2 className="mt-5 min-h-[3.75rem] text-2xl font-black uppercase leading-none tracking-[0.01em] text-[var(--color-primary)]">
                   {hotel.name}
                 </h2>
 
-                <p className="mt-3 flex items-center gap-2 text-sm font-extrabold text-[var(--color-primary)]">
-                  <FaLocationDot className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                  {hotel.location}
-                </p>
+                <div className="mt-auto">
+                  <p className="mb-3 flex min-h-5 items-center gap-2 text-sm font-extrabold leading-tight text-[var(--color-primary)]">
+                    <FaLocationDot className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                    {hotel.location}
+                  </p>
 
-                {hotel.isComingSoon ? (
-                  <button
-                    className="mt-auto flex min-h-10 w-full items-center justify-center border border-[var(--color-primary)] px-4 text-xs font-black uppercase tracking-[0.12em] text-[var(--color-primary)] opacity-70"
-                    type="button"
-                    disabled
-                  >
-                    Coming Soon
-                  </button>
-                ) : (
-                  <a
-                    className="mt-auto flex min-h-10 w-full items-center justify-center gap-3 border border-[var(--color-primary)] px-4 text-xs font-black uppercase tracking-[0.12em] text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"
-                    href={hotel.href}
-                    target={hotel.href?.startsWith('http') ? '_blank' : undefined}
-                    rel={hotel.href?.startsWith('http') ? 'noreferrer' : undefined}
-                    onClick={onClose}
-                  >
-                    Explore More
-                    <FaArrowUpRightFromSquare aria-hidden="true" />
-                  </a>
-                )}
+                  {hotel.isComingSoon ? (
+                    <button
+                      className="flex min-h-10 w-full items-center justify-center border border-[var(--color-primary)] px-4 text-xs font-black uppercase tracking-[0.12em] text-[var(--color-primary)] opacity-70"
+                      type="button"
+                      disabled
+                    >
+                      Coming Soon
+                    </button>
+                  ) : (
+                    <a
+                      className="flex min-h-10 w-full items-center justify-center gap-3 border border-[var(--color-primary)] px-4 text-xs font-black uppercase tracking-[0.12em] text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"
+                      href={hotel.href}
+                      target={hotel.href?.startsWith('http') ? '_blank' : undefined}
+                      rel={hotel.href?.startsWith('http') ? 'noreferrer' : undefined}
+                      onClick={onClose}
+                    >
+                      Explore More
+                      <FaArrowUpRightFromSquare aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
               </article>
             ))}
           </div>
