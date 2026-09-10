@@ -1,45 +1,75 @@
 export const seoDefaults = {
   siteName: 'Tamohara Resort',
-  baseUrl: 'https://www.tamohararesort.com',
-  title: 'Tamohara Resort | Luxury Stay in Sakleshpur',
+  baseUrl: 'https://tamohararesort.in',
+  title: 'Luxury Resort in Sakleshpur | Tamohara Resort',
   description:
-    'Tamohara Resort in Sakleshpur offers mist-clad Western Ghats views, comfortable sharing rooms, buffet meals, pool time, estate activities, and warm mountain hospitality.',
+    'Stay at Tamohara Resort, a luxury resort in Sakleshpur near the Western Ghats, offering comfortable rooms, pool, dining, activities and a peaceful nature retreat.',
 }
 
 export const pageSeoData = {
   '/': {
-    title: 'Tamohara Resort | Sakleshpur Mountain Resort',
+    title: 'Luxury Resort in Sakleshpur | Tamohara Resort',
     description:
-      'Plan a peaceful Sakleshpur stay at Tamohara Resort with coffee estate calm, Western Ghats views, sharing rooms, buffet meals, pool time, and resort activities.',
+      'Stay at Tamohara Resort, a luxury resort in Sakleshpur near the Western Ghats, offering comfortable rooms, pool, dining, activities and a peaceful nature retreat.',
   },
   '/about': {
-    title: 'About Tamohara Resort | Western Ghats Hospitality',
+    title: 'About Tamohara Resort | Luxury Coffee Estate Resort in Sakleshpur',
     description:
-      'Discover Tamohara Resort in Sakleshpur, a mist-clad mountain retreat shaped by bungalow-inspired spaces, estate activities, warm meals, and old-school hospitality.',
+      'Discover Tamohara Resort, a luxury coffee estate resort in Sakleshpur surrounded by the Western Ghats, offering peaceful stays, nature, warm hospitality and memorable experiences.',
   },
   '/stay': {
-    title: 'Stay at Tamohara Resort | Rooms and Tariffs',
+    title: 'Rooms in Sakleshpur | Stay at Tamohara Resort',
     description:
-      'Explore Tamohara Resort room options including 2, 4, 6, 8, and 12 sharing rooms plus AC villa rooms, with meals and resort comforts included.',
+      'Explore comfortable rooms in Sakleshpur at Tamohara Resort, with 2 to 12 sharing options, modern amenities, meals, pool access and a peaceful Western Ghats stay.',
   },
   '/gallery': {
-    title: 'Tamohara Resort Gallery | Sakleshpur Photos',
+    title: 'Sakleshpur Resort Photos & Gallery | Tamohara Resort',
     description:
-      'View Tamohara Resort photos featuring rooms, pool views, coffee estate greenery, dining spaces, activities, and the calm Western Ghats setting.',
+      'Explore Tamohara Resort through our Sakleshpur resort photos and gallery, featuring rooms, pool, dining, nature, activities and peaceful Western Ghats views.',
   },
   '/blogs': {
-    title: 'Tamohara Resort Blogs | Sakleshpur Travel Stories',
+    title: 'Sakleshpur Travel Blog | Western Ghats Guide | Tamohara Resort',
     description:
-      'Read Tamohara Resort travel stories about Sakleshpur weekends, Western Ghats trails, coffee estate mornings, buffet meals, rooms, and nearby places.',
+      'Explore the Sakleshpur Travel Blog by Tamohara Resort for Western Ghats travel tips, local attractions, coffee estate experiences, stays and weekend getaway ideas.',
   },
   '/faq': {
-    title: 'Tamohara Resort FAQs | Booking, Rooms and Amenities',
+    title: 'Tamohara Resort FAQs | Rooms, Pricing & Stay in Sakleshpur',
     description:
-      'Find answers about Tamohara Resort location, room sharing options, tariffs, meals, check-in, check-out, activities, nearby places, and booking enquiries.',
+      'Find answers about Tamohara Resort in Sakleshpur, including room options, pricing, meals, amenities, group stays, activities, bookings and what your stay includes.',
   },
   '/contact': {
     title: 'Contact Tamohara Resort | Book Your Sakleshpur Stay',
     description:
-      'Contact Tamohara Resort for booking enquiries, room availability, group stays, event questions, phone support, WhatsApp support, and Sakleshpur resort details.',
+      'Contact Tamohara Resort in Sakleshpur to plan your stay, check room options, share your travel dates and make a booking for a peaceful Western Ghats getaway.',
+  },
+  '/rooms/room-1': {
+    title: '2 Sharing Room in Sakleshpur | Tamohara Resort',
+    description:
+      'Enjoy a comfortable 2-sharing room in Sakleshpur at Tamohara Resort, with modern amenities, meals, pool access and a peaceful Western Ghats stay for couples or friends.',
+  },
+  '/rooms/room-2': {
+    title: '4 Sharing Room in Sakleshpur | Tamohara Resort',
+    description:
+      'Enjoy a spacious 4-sharing room in Sakleshpur at Tamohara Resort, with comfortable beds, modern amenities, meals, pool access and a peaceful Western Ghats stay.',
+  },
+  '/rooms/villa-room': {
+    title: 'Villa Room in Sakleshpur | Tamohara Resort',
+    description:
+      'Stay in a comfortable villa room in Sakleshpur at Tamohara Resort, with AC, pool access, meals, modern amenities and a peaceful Western Ghats setting.',
+  },
+  '/rooms/room-3': {
+    title: '6 Sharing Room in Sakleshpur | Tamohara Resort',
+    description:
+      'Stay in a spacious 6-sharing room in Sakleshpur at Tamohara Resort, with comfortable beds, modern amenities, meals, pool access and a peaceful Western Ghats setting.',
+  },
+  '/rooms/room-4': {
+    title: '8 Sharing Room in Sakleshpur | Tamohara Resort',
+    description:
+      'Stay in an 8-sharing room in Sakleshpur at Tamohara Resort, offering comfortable beds, modern amenities, meals, pool access and a peaceful Western Ghats setting.',
+  },
+  '/rooms/room-5': {
+    title: '12 Sharing Room in Sakleshpur | Tamohara Resort',
+    description:
+      'Stay in a spacious 12-sharing room in Sakleshpur at Tamohara Resort, ideal for groups and celebrations, with comfortable beds, meals, pool access and nature experiences.',
   },
 }

@@ -1,7 +1,5 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { blogsPageData } from '../../data/blogs.data'
-import { roomDetailsData } from '../../data/rooms.data'
 import { pageSeoData, seoDefaults } from '../../data/seo.data'
 
 function setMetaTag(selector, attributes) {
@@ -30,30 +28,6 @@ function setLinkTag(rel, href) {
 }
 
 function getRouteSeo(pathname) {
-  if (pathname.startsWith('/rooms/')) {
-    const slug = pathname.split('/').filter(Boolean)[1]
-    const room = roomDetailsData.rooms.find((item) => item.slug === slug)
-
-    if (room) {
-      return {
-        title: `${room.title} ${room.subtitle} | Tamohara Resort`,
-        description: `${room.overview} Tariff: ${room.price}. Book your Sakleshpur stay with meals, pool access, linens, toiletries, and resort activities.`,
-      }
-    }
-  }
-
-  if (pathname.startsWith('/blogs/')) {
-    const slug = pathname.split('/').filter(Boolean)[1]
-    const post = blogsPageData.posts.find((item) => item.slug === slug)
-
-    if (post) {
-      return {
-        title: `${post.title} | Tamohara Resort Blog`,
-        description: post.excerpt,
-      }
-    }
-  }
-
   return pageSeoData[pathname] ?? seoDefaults
 }
 
