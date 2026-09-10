@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 import { siteData } from '../../data/site.data'
 import BrandMark from '../ui/BrandMark'
 import Button from '../ui/Button'
+import GroupsPanel from './GroupsPanel'
 
 function SiteHeader({ isSticky = false, phoneClassName = '', tone = 'light' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isGroupsOpen, setIsGroupsOpen] = useState(false)
   const headerClasses = isSticky
     ? 'border-b border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-4 text-[var(--color-primary-dark)] shadow-[var(--shadow-header)] sm:px-6'
     : `relative z-20 px-5 pt-5 sm:px-6 sm:pt-6 ${
@@ -34,6 +36,14 @@ function SiteHeader({ isSticky = false, phoneClassName = '', tone = 'light' }) {
         <BrandMark className="justify-self-start lg:justify-self-center" size={isSticky ? 'compact' : 'default'} />
 
         <div className="hidden flex-wrap items-center justify-center gap-x-7 gap-y-4 lg:flex lg:justify-end">
+          <button
+            className="nav-text inline-flex min-h-12 items-center justify-center rounded-[var(--radius-app)] border border-[var(--color-primary)] bg-[var(--color-primary)] px-5 text-[var(--color-primary-dark)] shadow-[var(--shadow-round)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)]"
+            type="button"
+            onClick={() => setIsGroupsOpen(true)}
+          >
+            Our Groups
+          </button>
+
           <a
             className={`nav-text hidden items-center gap-2.5 whitespace-nowrap sm:inline-flex ${phoneClassName}`}
             href={siteData.phone.href}
@@ -47,6 +57,21 @@ function SiteHeader({ isSticky = false, phoneClassName = '', tone = 'light' }) {
             {siteData.booking.label}
           </Button>
         </div>
+
+        <button
+          className={`nav-text absolute right-20 top-5 min-h-11 rounded-full border border-[var(--color-primary)] px-3 text-[10px] shadow-[var(--shadow-round)] transition-colors sm:right-22 sm:px-4 sm:text-[11px] lg:hidden ${
+            tone === 'dark' || isSticky
+              ? 'bg-[var(--color-primary-dark)] text-[var(--color-white)] hover:bg-[var(--color-primary)] hover:text-[var(--color-primary-dark)]'
+              : 'bg-[rgba(18,33,27,0.72)] text-[var(--color-white)] hover:bg-[var(--color-primary)] hover:text-[var(--color-primary-dark)]'
+          }`}
+          type="button"
+          onClick={() => {
+            setIsMenuOpen(false)
+            setIsGroupsOpen(true)
+          }}
+        >
+          Our Groups
+        </button>
 
         <button
           className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-dark)] shadow-[var(--shadow-round)] transition-colors hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-white)] lg:hidden"
@@ -93,6 +118,8 @@ function SiteHeader({ isSticky = false, phoneClassName = '', tone = 'light' }) {
           </nav>
         </div>
       </div>
+
+      <GroupsPanel isOpen={isGroupsOpen} onClose={() => setIsGroupsOpen(false)} />
     </header>
   )
 }

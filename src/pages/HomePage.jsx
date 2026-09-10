@@ -4,6 +4,7 @@ import AboutRoomsSuitesSection from "../components/about/AboutRoomsSuitesSection
 import ContactPeaceBanner from "../components/contact/ContactPeaceBanner";
 import FaqSection from "../components/home/FaqSection";
 import BookingFeatureSection from "../components/home/BookingFeatureSection";
+import GroupsNameTicker from "../components/home/GroupsNameTicker";
 import HomeBookingSection from "../components/home/HomeBookingSection";
 import SiteFooter from "../components/layout/SiteFooter";
 import {
@@ -31,6 +32,7 @@ function HomePage() {
       <div className="relative z-10 bg-[var(--color-surface)]">
         {/* Previous home hero is hidden for now. Restore HeroBanner here if needed. */}
         <ContactPeaceBanner showHeader />
+        <GroupsNameTicker />
         <AboutResortSection about={homePageData.aboutResort} />
         <WellnessSection wellness={homePageData.wellness} />
 

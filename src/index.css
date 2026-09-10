@@ -137,6 +137,16 @@ svg {
       transform: translateX(-50%);
     }
   }
+
+  @keyframes groupsTicker {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-33.333%);
+    }
+  }
 }
 
 @layer components {
